@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <set name="gallery_pref">
+        <string>location://variable/currentv1</string>
+        <string>hdr10plus_auto_convert</string>
+        <string>cloud_switch_status</string>
+        <string>is_people_tag_shown</string>
+        <string>new_posts</string>
+        <string>auto_play_motion_photo</string>
+        <string>timelineSimilarPhotoMode</string>
+        <string>location_auth</string>
+        <string>new_albums</string>
+        <string>split_mode</string>
+        <string>gallery_labs</string>
+        <string>SaLogAlbumPicturesColCount</string>
+        <string>PhotoStrip30_On</string>
+        <string>build_id</string>
+        <string>SaLogTimelineColumnCount</string>
+        <string>auto_create_event</string>
+        <string>use_trash</string>
+        <string>SaLogAlbumsColumnCount</string>
+        <string>shared_album_notification</string>
+        <string>member_updates</string>
+        <string>full_screen_scrolling_v2</string>
+    </set>
+    <int name="enable_device" value="1" />
+    <long name="status_sent_date" value="1701069645334" />
+    <set name="AppPrefs">
+        <string>gallery_pref</string>
+    </set>
+</map>
