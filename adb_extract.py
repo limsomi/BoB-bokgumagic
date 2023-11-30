@@ -1,9 +1,18 @@
 import subprocess
 import os
+
+def get_androidVersion():
+    try:
+        # adb shell getprop 명령어를 실행하여 안드로이드 버전 정보 가져오기
+        result = subprocess.check_output(['adb', 'shell', 'getprop', 'ro.build.version.release'])
+        android_version = result.strip().decode('utf-8')  # 바이트를 문자열로 변환
+        return android_version
+    except Exception as e:
+        return f"Error getting Android version: {e}"
+
+
 def extract_data(path_list,destination_dir):
-    # print(path_list)
     for path in path_list:
-        # print(path)
         source_path=os.path.join(destination_dir,path)
         copy_command = f'''adb shell "su -c 'cd {source_path} && cp -r {path} /sdcard'"'''
 

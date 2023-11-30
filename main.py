@@ -3,11 +3,14 @@ from cache_image import *
 from clipboard import *
 from full_shared_prefs import *
 from contacts import *
+from usage import *
 
-android_version=''
-
+android_version=get_androidVersion()
+usage_pathlist=['usagestats']
+destination_dir='/data/system_ce/0'
+extract_data(usage_pathlist,destination_dir)
 #adb extract usage
-
+usagestats(android_version)
 #adb extract all data
 clipboard_name=''
 package_name='Usage에서 받아오기'
