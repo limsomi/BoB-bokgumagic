@@ -20,7 +20,7 @@ def move_files_to_directory(file_list, destination_dir):
     for file_path in file_list:
         shutil.move(file_path, destination_dir)
 
-def cache_image(renamed_files_dir):
+def cache_image(destination_dir,renamed_files_dir):
 
     # package_name = ['com.sec.android.gallery3d']
     # destination_dir = './data/data'
@@ -28,7 +28,7 @@ def cache_image(renamed_files_dir):
 
     # extract_data(package_name,destination_dir)
 
-    destination_dir='./'
+    # destination_dir='./'
     renamed_files = rename_files_with_extension(destination_dir, '0', 'jpg')
     
     if not os.path.exists(renamed_files_dir):
@@ -36,4 +36,5 @@ def cache_image(renamed_files_dir):
 
     move_files_to_directory(renamed_files, renamed_files_dir)
     print(f"Renamed files moved to {renamed_files_dir}")
+
 

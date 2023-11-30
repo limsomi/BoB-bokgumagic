@@ -24,7 +24,7 @@
         <string>full_screen_scrolling_v2</string>
     </set>
     <int name="enable_device" value="1" />
-    <long name="status_sent_date" value="1701069645334" />
+    <long name="status_sent_date" value="1701245892816" />
     <set name="AppPrefs">
         <string>gallery_pref</string>
     </set>

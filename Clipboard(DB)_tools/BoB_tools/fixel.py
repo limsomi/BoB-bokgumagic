@@ -9,14 +9,19 @@ def uri_parsing(uri):
     pattern = re.compile(r'(com\.samsung\.android\.honeyboard/.*)')
     result = re.search(pattern, uri)
     if result==None:
-        pattern = re.compile(r'(com.google.android.inputmethod.latin.fileprovider/.*)')
+        print(uri)
+        pattern = re.compile(r'(com\.google\.android\.inputmethod\.latin\.fileprovider/.*)')
         result = re.search(pattern, uri)
 
     file_name=uri.split('/')
     pattern = re.compile(rf'{file_name[-1]}(?![a-zA-Z0-9])')
 
     # 정규 표현식을 사용하여 문자열 자르기
-    midium = re.split(pattern, result.group(1), maxsplit=1)[0]
+    try:
+        midium = re.split(pattern, result.group(1), maxsplit=1)[0]
+    except:
+        print("result : "+result[0])
+        midium=result
     return midium,file_name[-1]
 
 def extract_data(path,destination_dir):
@@ -50,7 +55,7 @@ def rename_clip_to_jpg(time_stamp,directory):
 
 
 # 데이터베이스 파일 경로 설정
-db_path = 'databases/Clipitem.db'
+db_path = 'databases/gboard_clipboard.db'
 
 # 데이터베이스 연결
 conn = sqlite3.connect(db_path)
@@ -58,17 +63,15 @@ conn = sqlite3.connect(db_path)
 # 커서 생성 및 쿼리 실행
 query = """
     SELECT 
-        id, 
-        strftime('%Y-%m-%d %H:%M:%S', datetime(time_stamp / 1000, 'unixepoch', 'localtime')) AS formatted_time_stamp,
-        type, 
+        _id, 
+        strftime('%Y-%m-%d %H:%M:%S', datetime(timestamp / 1000, 'unixepoch', 'localtime')) AS formatted_time_stamp,
         text, 
-        html, 
-        uri, 
-        uri_list,
-        mime_type
-    FROM clip_table
-    WHERE type IN (1, 2, 4)
-    ORDER BY time_stamp
+        html_text, 
+        item_type, 
+        entity_type,
+        uri
+    FROM clips
+    ORDER BY timestamp
 """
 cur = conn.cursor()
 cur.execute(query)
@@ -86,7 +89,7 @@ conn.close()
 pattern = re.compile(r'^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$')
 
 # type이 1인 레코드 필터링 및 'clipboard has been wiped' 메시지 확인
-filtered_df_1 = clip_table_df[clip_table_df['type'] == 1]
+filtered_df_1 = clip_table_df[clip_table_df['uri'] =='']
 clipboard_wiped = filtered_df_1['text'].str.match(pattern).any()
 
 # 특정 패턴이 존재하는 경우 'clipboard has been wiped' 메시지 출력
@@ -100,19 +103,19 @@ if not non_pattern_df_1.empty:
     print(non_pattern_df_1)
 
 # type이 2인 레코드에 대한 메시지 반복 출력
-for _, row in clip_table_df[clip_table_df['type'] == 2].iterrows():
-    print(f"{row['mime_type']} image has been wiped. you can find your image at {row['uri']}")
+for _, row in clip_table_df[clip_table_df['uri'] !=''].iterrows():
+    print(f"{row['item_type']} image has been wiped. you can find your image at {row['uri']}")
     midium,path_list=uri_parsing(row['uri'])
     destination_dir='/data/data/'+midium
     print(path_list,midium)
     if not os.path.exists('clip'):
         os.makedirs('clip')
     extract_data(path_list,destination_dir)
-    rename_clip_to_jpg(row['id'],"./clip")
+    rename_clip_to_jpg(row['_id'],"./clip")
 # type이 4인 레코드에 대한 메시지 반복 출력
-for _, row in clip_table_df[clip_table_df['type'] == 4].iterrows():
-    print(f"html data has been wiped. you can find your image at {row['uri']}")
-    print(f"and text data is this : {row['text']}")
+# for _, row in clip_table_df[clip_table_df['type'] == 4].iterrows():
+#     print(f"html data has been wiped. you can find your image at {row['uri']}")
+#     print(f"and text data is this : {row['text']}")
     # with open('clip.txt')
     #text 파일 만들기 
     #이미지 파일 크롤링

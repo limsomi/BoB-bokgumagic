@@ -10,7 +10,7 @@ android_version=''
 
 #adb extract all data
 clipboard_name=''
-package_name=''
+package_name='Usage에서 받아오기'
 data_list=['com.sec.android.gallery3d',{clipboard_name},{package_name},'com.samsung.android.providers.contacts']
 destination_dir='/data/data'
 extract_data(data_list,destination_dir)
@@ -27,6 +27,12 @@ if android_version<11:
 else:
     clipboardDB_wiping()
 
-#clipboard_wiping
+#contacts
 contacts_wiping()
 
+
+#application folder
+full_shared_prefs('package_path(수정바람)')
+folder_destination_dir='./'
+folder_renamed_files_dir='(수정바람)'
+cache_image(folder_destination_dir,folder_renamed_files_dir)

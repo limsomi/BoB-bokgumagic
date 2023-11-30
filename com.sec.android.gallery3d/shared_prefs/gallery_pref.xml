@@ -2,9 +2,9 @@
 <map>
     <string name="year_cache_data_stamp_v2">3423087.0_2147483764_862</string>
     <boolean name="timeline_sync_success" value="false" />
-    <long name="latest_content_file_id" value="2147483831" />
+    <long name="latest_content_file_id" value="2147483836" />
     <boolean name="hide_badge" value="true" />
-    <string name="lac_1310300008">2023-11-28 13:52:39 = 6</string>
+    <string name="lac_1310300008">2023-11-29 17:19:30 = 3</string>
     <boolean name="lastUseSmallKindThumb" value="false" />
     <int name="latest_update_album" value="-1" />
     <int name="albumPicturesViewColCnt" value="1" />
@@ -12,7 +12,7 @@
     <string name="one_drive_migration_status">Unknown</string>
     <int name="auto_create_event" value="1" />
     <int name="SaLogAlbumsColumnCount" value="3" />
-    <int name="backup_update_check_result" value="-1" />
+    <int name="backup_update_check_result" value="0" />
     <boolean name="is_scloud_sync_on" value="false" />
     <boolean name="app_rating_never_show" value="true" />
     <string name="location://variable/currentv1">location://albums</string>
@@ -26,7 +26,7 @@
     <long name="last_scanned_id" value="2147483826" />
     <string name="one_drive_link_state">Unknown</string>
     <string name="lfc_1310300008">2023-11-24 01:52:21 = 3</string>
-    <long name="latest_album_modified_time" value="1701146587" />
+    <long name="latest_album_modified_time" value="1701245969" />
     <int name="trashColCnt" value="1" />
     <string name="build_id">13.1.03.8#1310300008#1646879864356</string>
     <int name="SaLogAlbumPicturesColCount" value="4" />
@@ -36,5 +36,5 @@
     <boolean name="show_bottom_tab_menu_badge" value="true" />
     <boolean name="one_drive_supported" value="true" />
     <boolean name="hide_trash_badge" value="true" />
-    <long name="key_recent_app_update_check_time" value="1701146352942" />
+    <long name="key_recent_app_update_check_time" value="1701245898372" />
 </map>

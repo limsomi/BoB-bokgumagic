@@ -3,9 +3,9 @@ import pandas as pd
 import re
 import os
 
-def db_wiping():
+def clipboardDB_wiping():
     # 데이터베이스 파일 경로 설정
-    db_path = 'databases/ClipItem.db'
+    db_path = 'databases/ClipItem.db' #수정필요
 
     # 데이터베이스 연결
     conn = sqlite3.connect(db_path)
@@ -63,7 +63,7 @@ def db_wiping():
         print(f"html data has been wiped. you can find your image at {row['uri']}")
         print(f"and text data is this : {row['text']}")
 
-def file_wiping(folder_path):
+def clipboardFile_wiping(folder_path):
     # UUID 형태의 정규 표현식 패턴 정의
     pattern = r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
     wiped_found = False
