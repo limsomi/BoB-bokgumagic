@@ -1,0 +1,5 @@
+2023/12/01-23:58:44.119 2cbb Recovering log #52
+2023/12/01-23:58:44.121 2cbb Level-0 table #55: started
+2023/12/01-23:58:44.143 2cbb Level-0 table #55: 124 bytes OK
+2023/12/01-23:58:44.168 2cbb Delete type=0 #52
+2023/12/01-23:58:44.169 2cbb Delete type=3 #50

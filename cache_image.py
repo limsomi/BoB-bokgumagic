@@ -22,19 +22,12 @@ def move_files_to_directory(file_list, destination_dir):
 
 def cache_image(destination_dir,renamed_files_dir):
 
-    # package_name = ['com.sec.android.gallery3d']
-    # destination_dir = './data/data'
-
-
-    # extract_data(package_name,destination_dir)
-
-    # destination_dir='./'
     renamed_files = rename_files_with_extension(destination_dir, '0', 'jpg')
     
     if not os.path.exists(renamed_files_dir):
         os.makedirs(renamed_files_dir)
 
     move_files_to_directory(renamed_files, renamed_files_dir)
-    print(f"Renamed files moved to {renamed_files_dir}")
+    # print(f"Renamed files moved to {renamed_files_dir}")
 
 

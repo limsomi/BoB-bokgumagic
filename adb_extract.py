@@ -3,32 +3,30 @@ import os
 
 def get_androidVersion():
     try:
-        # adb shell getprop 명령어를 실행하여 안드로이드 버전 정보 가져오기
         result = subprocess.check_output(['adb', 'shell', 'getprop', 'ro.build.version.release'])
-        android_version = result.strip().decode('utf-8')  # 바이트를 문자열로 변환
+        android_version = result.strip().decode('utf-8') 
         return android_version
     except Exception as e:
         return f"Error getting Android version: {e}"
 
 
-def extract_data(path_list,destination_dir):
-    for path in path_list:
-        source_path=os.path.join(destination_dir,path)
-        copy_command = f'''adb shell "su -c 'cd {source_path} && cp -r {path} /sdcard'"'''
+def extract_data(file_name,destination_dir):
+    copy_command = f'''adb shell "su -c 'cd {destination_dir} && cp -r {file_name} /sdcard'"'''
 
-        try:
-            subprocess.run(copy_command, shell=True, check=True)
-            print("ADB command executed successfully.")
-        except subprocess.CalledProcessError as e:
-            print(f"Error executing ADB command: {e}")
+    try:
+        subprocess.run(copy_command, shell=True, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error executing ADB command: {e}")
 
-    for path in path_list:
-        try:
-            pull_command=f"adb pull /sdcard/{path}"
-            subprocess.run(pull_command, shell=True, check=True)
-            print("ADB command executed successfully.")
-        except subprocess.CalledProcessError as e:
-            print(f"Error executing ADB command: {e}")
+    if not os.path.exists('extractdata'):
+        os.makedirs('extractdata')
+
+    try:
+        pull_command=f"adb pull /sdcard/{file_name} ./extractdata"
+        subprocess.run(pull_command, shell=True, check=True)
+        print(f"ADB extract {file_name} successfully.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error executing ADB command: {e}")
 
 def extract_shared_prefs(device, package_name):
     # ADB shell 명령어를 사용하여 파일 추출

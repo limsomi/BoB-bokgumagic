@@ -1,0 +1,5 @@
+2023/12/01-23:58:43.826 2cbc Recovering log #49
+2023/12/01-23:58:43.850 2cbc Level-0 table #51: started
+2023/12/01-23:58:43.872 2cbc Level-0 table #51: 441 bytes OK
+2023/12/01-23:58:43.894 2cbc Delete type=0 #49
+2023/12/01-23:58:43.895 2cbc Delete type=3 #48

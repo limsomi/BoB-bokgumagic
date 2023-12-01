@@ -3,9 +3,11 @@ import pandas as pd
 import re
 import os
 
-def clipboardDB_wiping():
+def clipboardDB_wiping(destination_dir,folder_name,clipboard_name):
     # 데이터베이스 파일 경로 설정
-    db_path = 'databases/ClipItem.db' #수정필요
+    db_path = os.path.join(destination_dir,folder_name,clipboard_name) #수정필요
+
+    # db_path = destination_dir+'./databases/ClipItem.db' #수정필요
 
     # 데이터베이스 연결
     conn = sqlite3.connect(db_path)

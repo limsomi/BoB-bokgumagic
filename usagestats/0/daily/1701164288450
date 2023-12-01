@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<usagestats version="1" endTime="86399999">
+    <interactive count="0" time="0" />
+    <non-interactive count="0" time="0" />
+    <keyguard-shown count="0" time="0" />
+    <keyguard-hidden count="0" time="0" />
+    <packages>
+        <package lastTimeActive="-1701164288450" package="com.sec.location.nsflp2" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.app.chromecustomizations" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.app.aodservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.ext.services" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.providers.telephony" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.googlequicksearchbox" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.providers.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.incallui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.daemonapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.ims" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.sve" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.net.wifi.wifiguider" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.nfc" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.stk" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.app.telephonyui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="76605050" package="com.google.android.gm" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.UsimRegistrationKOR" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.providers.context" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.imsservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.se" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.game.gametools" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.inputmethod" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.app.simsettingmgr" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.crane" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.gms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.gsf" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.app.launcher" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="1004382" package="com.topjohnwu.magisk" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.syncadapters.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.trustonic.teeservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.enterprise.mdm.services.simpin" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.projectstar.ishredder.android.standard" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.lool" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.sdhms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.app.spage" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.providers.contacts" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.phone" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.providers.blockednumber" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.providers.userdictionary" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.skt.skaf.OA00412131" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.epdg" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.systemui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="40338310" package="com.skt.skaf.A000Z00040" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sktelecom.smartcard.SmartcardService" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.bluetooth" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.sec.android.application.csc" timeActive="0" lastEvent="0" />
+    </packages>
+    <configurations />
+    <event-log>
+        <event time="287" package="com.sec.android.app.chromecustomizations" flags="0" type="11" standbyBucket="2621952" />
+        <event time="287" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="2621952" />
+        <event time="299" package="com.google.android.gm" flags="0" type="11" standbyBucket="2621952" />
+        <event time="310" package="com.google.android.syncadapters.calendar" flags="0" type="11" standbyBucket="2621952" />
+        <event time="792248" package="com.samsung.android.app.spage" flags="0" type="11" standbyBucket="656129" />
+        <event time="792250" package="com.google.android.ext.services" flags="0" type="11" standbyBucket="656129" />
+        <event time="792250" package="com.sktelecom.smartcard.SmartcardService" flags="0" type="11" standbyBucket="656129" />
+        <event time="792250" package="com.samsung.android.providers.context" flags="0" type="11" standbyBucket="656129" />
+        <event time="990534" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="656129" />
+        <event time="990555" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="656129" />
+        <event time="990626" package="com.google.android.gm" flags="0" type="11" standbyBucket="656136" />
+        <event time="1004382" package="com.topjohnwu.magisk" flags="0" type="12" />
+        <event time="1242037" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="1512187" package="com.samsung.android.net.wifi.wifiguider" flags="0" type="11" standbyBucket="656129" />
+        <event time="1830114" package="com.samsung.android.app.spage" flags="0" type="11" standbyBucket="2621952" />
+        <event time="1830115" package="com.google.android.ext.services" flags="0" type="11" standbyBucket="2621952" />
+        <event time="1830116" package="com.sktelecom.smartcard.SmartcardService" flags="0" type="11" standbyBucket="2621952" />
+        <event time="1830116" package="com.samsung.android.providers.context" flags="0" type="11" standbyBucket="2621952" />
+        <event time="1838805" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="2621952" />
+        <event time="1838807" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="2621952" />
+        <event time="4809033" package="com.google.android.gsf" flags="0" type="11" standbyBucket="2621952" />
+        <event time="8016730" package="com.samsung.android.app.spage" flags="0" type="11" standbyBucket="656129" />
+        <event time="8016763" package="com.google.android.ext.services" flags="0" type="11" standbyBucket="656129" />
+        <event time="8016782" package="com.sktelecom.smartcard.SmartcardService" flags="0" type="11" standbyBucket="656129" />
+        <event time="8016782" package="com.samsung.android.providers.context" flags="0" type="11" standbyBucket="656129" />
+        <event time="10127763" package="com.samsung.android.net.wifi.wifiguider" flags="0" type="11" standbyBucket="2621952" />
+        <event time="19961272" package="com.google.android.syncadapters.calendar" flags="0" type="11" standbyBucket="656136" />
+        <event time="19961605" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="656129" />
+        <event time="29211850" package="com.skt.skaf.A000Z00040" flags="0" type="12" />
+        <event time="33942754" package="com.skt.skaf.A000Z00040" flags="0" type="12" />
+        <event time="34281912" package="com.skt.skaf.A000Z00040" flags="0" type="12" />
+        <event time="40338310" package="com.skt.skaf.A000Z00040" flags="0" type="12" />
+        <event time="55468257" package="com.projectstar.ishredder.android.standard" flags="0" type="11" standbyBucket="1967360" />
+        <event time="76596248" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="76598972" package="com.projectstar.ishredder.android.standard" flags="0" type="11" standbyBucket="2622720" />
+        <event time="76599574" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="656129" />
+        <event time="76599574" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="656129" />
+        <event time="76605050" package="com.google.android.gm" flags="0" type="8" shortcutId="bokgumagic@gmail.com" />
+    </event-log>
+</usagestats>

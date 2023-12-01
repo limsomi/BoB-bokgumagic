@@ -1,9 +1,11 @@
 import sqlite3
 import pandas as pd
+import os 
 
-def contacts_wiping():
+def contacts_wiping(destination_dir,db_name):
     # 파일 이름 고치기
-    conn = sqlite3.connect('contacts2.db')
+    db_path=os.path.join(destination_dir,db_name)
+    conn = sqlite3.connect(db_path)
     cur = conn.cursor()
 
     cur.execute(

@@ -1,0 +1,29 @@
+
+{
+	"adaptive-wildcards" : 
+	{
+		"insert-probability" : 0.0002970297064166516,
+		"num-swap-samples" : 101,
+		"num-wildcard-samples" : 101,
+		"replace-probability" : 0.0002970297064166516,
+		"skip-probability" : 4.059405910084024e-05,
+		"swap-probability" : 4.059405910084024e-05
+	},
+	"contact-specific" : 
+	{
+		"contact-model-weights" : {},
+		"enabled" : true,
+		"min-weight" : 9.999999717180685e-10,
+		"weight-decay-exponent" : 0.009999999776482582
+	},
+	"overall" : 
+	{
+		"use-learned-parameters" : true
+	},
+	"prefix-probability" : 
+	{
+		"enabled" : true,
+		"num-words" : 11,
+		"rolling-mean" : 0.2000000029802322
+	}
+}

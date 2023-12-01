@@ -1,0 +1,1140 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<usagestats version="1" endTime="86399999">
+    <interactive count="14" time="1701158414519" />
+    <non-interactive count="12" time="1701163682616" />
+    <keyguard-shown count="5" time="1701163682616" />
+    <keyguard-hidden count="5" time="1701158419612" />
+    <packages>
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.provider.filterprovider" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.ledcoverdream" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.gd.mobicore.pa" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.smartswitchassistant" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.galaxyfinder" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.location.nsflp2" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="71898489" package="stericson.busybox" timeActive="151514" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="72479401" package="com.samsung.android.themestore" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.chromecustomizations" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.aodservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.cocktailbarservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.google.android.ext.services" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.providers.telephony" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.parser" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="80968996" package="com.google.android.googlequicksearchbox" timeActive="84301" lastEvent="2" appLaunchCount="2" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.providers.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.osp.app.signin" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.clipboardsaveservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.automation" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.service.airviewdictionary" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.providers.media" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.campmobile.snow" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.smartmirroring" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.skms.android.agent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.safetyassurance" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.incallui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.knox.containercore" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.kidsinstaller" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.factory.camera" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.vsimservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.usbsettings" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.easysetup" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.documentsui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.easyonehand" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.factory" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.whatsapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.mms.service" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.rubin.app" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.wallpapercropper2" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.providers.downloads" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.cover.ledcover" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.ucs.agent.boot" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.wsomacp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.faceservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.zerdava.fileshredder" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.widgetapp.easymodecontactswidget" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="80170825" package="com.samsung.android.MtpApplication" timeActive="25778" lastEvent="2" appLaunchCount="3" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.factorykeystring" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="77671312" package="com.sec.android.app.samsungapps" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.emergencymode.service" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.wlantest" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.skt.hps20client" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.game.gamehome" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.desktoplauncher" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="79694124" package="com.sec.android.daemonapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.ims" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.sve" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.vending" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.joeykrim.rootcheck" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.AutoPreconfig" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.SettingsReceiver" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.soundalive" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.providers.security" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.provider.badge" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.securitylogagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.knox.containeragent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.assistantmenu" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.SMT" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.cmh" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.mlp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.factory.iris.usercamera" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="80104820" package="android" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.hotwordenrollment.xgoogle" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.sm.devicesecurity" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="81135872" package="com.samsung.android.net.wifi.wifiguider" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.bixby.service" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.smartface" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.nfc" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.stk" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.vb2labs.android.sdelete" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="81132335" package="com.samsung.android.messaging" timeActive="1298020" lastEvent="2" appLaunchCount="5" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.klmsagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.smartfitting" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.SecSetupWizard" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.skt.prod.dialer" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.telephonyui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.preloadapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.samsungpositioning" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="83326959" package="com.google.android.gm" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.bixby.agent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.UsimRegistrationKOR" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.hwmoduletest" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.settings.intelligence" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.bcservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.modem.settings" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.server.iris" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.hidden.SKT" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.providers.context" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.servicemodeapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.preloadinstaller" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.uibcvirtualsoftkey" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.google.android.setupwizard" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.gallery3d" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.providers.settings" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.accessibility" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.imsservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.mobileservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.printspooler" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.hotwordenrollment.okgoogle" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.hmt.vrsvc" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.cbinnovations.androideraser" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.storyservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.se" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.inputdevices" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.kgclient" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.knox.securefolder" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.game.gametools" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.simplesharing" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.hiddennetworksetting" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.service.peoplestripe" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.da.daagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.brightnessbackupservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.reminder" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.smartcapture" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.desktopmode.uiservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.google.android.apps.docs" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.google.android.apps.maps" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.advp.imssettings" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.inputmethod" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.advsounddetector" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.clockpackage" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="me.twrp.twrpapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.RilServiceModeApp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.mdecservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.simsettingmgr" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.server.telecom" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.crane" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.imslogger" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.clipboarduiservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.keychain" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="79530947" package="com.android.chrome" timeActive="37247" lastEvent="2" appLaunchCount="2" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.ipsgeofence" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.themecenter" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="79386057" package="com.google.android.packageinstaller" timeActive="1765" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="80193458" package="com.google.android.gms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.google.android.gsf" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.diagmonagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.knox.containerdesktop" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.spp.push" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.dsi.ant.server" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.allshare.service.fileshare" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.skt.t_smart_charge" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.mimage.photoretouching" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="80200932" package="com.sec.android.app.launcher" timeActive="1180867" lastEvent="2" appLaunchCount="17" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.universalswitch" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.apex" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="77671315" package="com.topjohnwu.magisk" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="79384142" package="com.google.android.apps.photos" timeActive="5519" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="-1701077282617" package="com.google.android.syncadapters.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.visionprovider" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.authfw" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.dialer" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.dqagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.app.highlightplayer" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.ringtoneBR" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.game.gos" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.providers.partnerbookmarks" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.vb2labs.android.sdelete.pro" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sem.factoryapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.trustonic.teeservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.beaconmanager" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.enterprise.mdm.services.simpin" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.skt.prod.phone.phonemodesetupwizard" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.ims.dm" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.tms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.stickercenter" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.soagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.quicktool" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.fmm" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.unifiedwfc" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.phone" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="Com.sktelecom.minit" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.bixby.wakeup" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="80058212" package="com.projectstar.ishredder.android.standard" timeActive="6799" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.samsungpass" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="77671315" package="recover.deleted.data.mobile.data.recovery.app.diskdigger" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.scloud" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.soundpicker" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.app.RilErrorNotifier" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.spayfw" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.peace.SilentCamera" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="80084133" package="com.android.settings" timeActive="8140" lastEvent="2" appLaunchCount="3" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.dsms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.lool" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.notes" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.bluetoothtest" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.sdhms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.spage" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.sm.policy" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.emergencylauncher" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.google.android.apps.turbo" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.bluelightfilter" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.bbc.bbcagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.palmtronix.shreddit.v1" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.knox.vpn.proxyhandler" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.splitsound" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.svcagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.networkdiagnostic" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.service.aircommand" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.shortcutbackupservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.providers.contacts" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.skt.skaf.OA00018282" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.phone" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.google.vr.vrcore" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.shell" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.wallpaperbackup" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.providers.blockednumber" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="77998194" package="com.samsung.android.app.omcagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.shredder.fileshredder.securewipe" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.skt.skaf.OA00199800" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.providers.userdictionary" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.dtv.dmb" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.enterprise.knox.cloudmdm.smdms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.wssyncmldm" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.skt.skaf.OA00412131" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.location.fused" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.app.appsedge" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.samsungpassautofill" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.epdg" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="80179141" package="com.android.systemui" timeActive="3870" lastEvent="2" appLaunchCount="3" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.personalization" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.sdk.handwriting" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.aasaservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.allshare.service.mediashare" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="41215604" package="com.skt.skaf.A000Z00040" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.applinker" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sktelecom.smartcard.SmartcardService" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.app.camera" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.android.bluetooth" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.contacts" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.ipservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.sec.android.QRreader" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.sec.android.application.csc" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.bio.face.service" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.bixby.agent.dummy" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.samsung.android.video" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701077282617" package="com.google.android.apps.restore" timeActive="0" lastEvent="0" />
+    </packages>
+    <configurations>
+        <config lastTimeActive="79583986" timeActive="10" count="1" fs="1065353216" locales="ko-KR" touch="1" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" width="411" height="845" sw="411" density="420" />
+        <config lastTimeActive="80080997" timeActive="9" count="1" fs="1065353216" locales="ko-KR" touch="1" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" width="411" height="845" sw="411" density="420" />
+        <config lastTimeActive="79584374" timeActive="360" count="1" fs="1065353216" locales="ko-KR" touch="1" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="80081421" timeActive="396" count="1" fs="1065353216" locales="ko-KR" touch="1" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="79585724" timeActive="1350" count="1" fs="1065353216" locales="ko-KR" touch="3" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="80082734" timeActive="1313" count="1" fs="1065353216" locales="ko-KR" touch="3" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="80080988" timeActive="495260" count="1" fs="1066192077" locales="ko-KR" touch="3" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="86399998" timeActive="6317259" count="1" active="true" fs="1066192077" locales="ko-KR" touch="3" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="79584014" timeActive="28" count="1" fs="1065353216" locales="ko-KR" touch="1" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="80081025" timeActive="28" count="1" fs="1065353216" locales="ko-KR" touch="1" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="79585729" timeActive="5" count="1" fs="1066192077" locales="ko-KR" touch="3" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="354" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="80082739" timeActive="5" count="1" fs="1066192077" locales="ko-KR" touch="3" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="354" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+    </configurations>
+    <event-log>
+        <event time="48750" package="com.samsung.android.kidsinstaller" flags="0" type="11" standbyBucket="2621952" />
+        <event time="48843" package="com.google.android.gsf" flags="0" type="11" standbyBucket="2621952" />
+        <event time="1836654" package="android" flags="0" type="15" />
+        <event time="1841662" package="android" flags="0" type="16" />
+        <event time="2052762" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="2052934" package="com.samsung.android.net.wifi.wifiguider" flags="0" type="11" standbyBucket="656129" />
+        <event time="6197223" package="com.sec.android.app.launcher" flags="0" type="11" standbyBucket="656129" />
+        <event time="6197225" package="com.samsung.android.app.spage" flags="0" type="11" standbyBucket="656129" />
+        <event time="6197226" package="com.google.android.ext.services" flags="0" type="11" standbyBucket="656129" />
+        <event time="6197226" package="com.sktelecom.smartcard.SmartcardService" flags="0" type="11" standbyBucket="656129" />
+        <event time="6197226" package="com.samsung.android.providers.context" flags="0" type="11" standbyBucket="656129" />
+        <event time="6197227" package="com.android.systemui" flags="0" type="11" standbyBucket="656129" />
+        <event time="8969938" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="656129" />
+        <event time="8969939" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="656129" />
+        <event time="8969954" package="com.google.android.gm" flags="0" type="11" standbyBucket="656136" />
+        <event time="15721128" package="com.google.android.gsf" flags="0" type="11" standbyBucket="2621952" />
+        <event time="15721294" package="com.samsung.android.net.wifi.wifiguider" flags="0" type="11" standbyBucket="2621952" />
+        <event time="21691548" package="com.google.android.syncadapters.calendar" flags="0" type="11" standbyBucket="656136" />
+        <event time="21691821" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="656129" />
+        <event time="21692547" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="21693234" package="com.google.android.apps.photos" flags="0" type="11" standbyBucket="656129" />
+        <event time="21696668" package="com.google.android.gm" flags="0" type="8" shortcutId="bokgumagic@gmail.com" />
+        <event time="24834613" package="com.skt.skaf.A000Z00040" flags="0" type="12" />
+        <event time="29818644" package="com.skt.skaf.A000Z00040" flags="0" type="12" />
+        <event time="35437152" package="com.skt.skaf.A000Z00040" flags="0" type="12" />
+        <event time="41215604" package="com.skt.skaf.A000Z00040" flags="0" type="12" />
+        <event time="45132273" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.cmas.CmasDialogRegionalActivity" flags="0" type="1" />
+        <event time="45132301" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.cmas.CmasDialogRegionalActivity" flags="0" type="2" />
+        <event time="45134265" package="com.sec.android.provider.badge" flags="0" type="11" standbyBucket="656129" />
+        <event time="45272896" package="com.samsung.android.messaging" flags="0" type="12" />
+        <event time="68083464" package="com.google.android.gsf" flags="0" type="11" standbyBucket="2621952" />
+        <event time="69705139" package="com.google.android.gm" flags="0" type="8" shortcutId="bokgumagic@gmail.com" />
+        <event time="69707286" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="69877672" package="com.sec.android.app.launcher" flags="0" type="11" standbyBucket="1311232" />
+        <event time="69877673" package="com.samsung.android.app.spage" flags="0" type="11" standbyBucket="2621952" />
+        <event time="69877691" package="com.google.android.ext.services" flags="0" type="11" standbyBucket="2621952" />
+        <event time="69877691" package="com.sktelecom.smartcard.SmartcardService" flags="0" type="11" standbyBucket="2621952" />
+        <event time="69877692" package="com.samsung.android.providers.context" flags="0" type="11" standbyBucket="2621952" />
+        <event time="69877696" package="com.android.systemui" flags="0" type="11" standbyBucket="2621952" />
+        <event time="70183940" package="com.sec.android.app.soundalive" flags="0" type="11" standbyBucket="656129" />
+        <event time="70183970" package="com.sec.android.app.camera" flags="0" type="11" standbyBucket="656129" />
+        <event time="70357176" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="2621952" />
+        <event time="70357907" package="com.google.android.gsf" flags="0" type="11" standbyBucket="2621952" />
+        <event time="70358596" package="com.google.android.apps.photos" flags="0" type="11" standbyBucket="2621952" />
+        <event time="70362115" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="2621952" />
+        <event time="70362117" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="2621952" />
+        <event time="71321836" package="com.samsung.android.net.wifi.wifiguider" flags="0" type="11" standbyBucket="656129" />
+        <event time="71323332" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="71325832" package="recover.deleted.data.mobile.data.recovery.app.diskdigger" flags="0" type="12" />
+        <event time="71333177" package="com.google.android.googlequicksearchbox" flags="0" type="12" />
+        <event time="71333189" package="com.google.android.googlequicksearchbox" flags="0" type="12" />
+        <event time="71337516" package="com.sec.android.app.samsungapps" flags="0" type="12" />
+        <event time="71338332" package="com.google.android.gms" flags="0" type="12" />
+        <event time="71342817" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="656129" />
+        <event time="71354577" package="com.google.android.gm" flags="0" type="12" />
+        <event time="71354741" package="com.google.android.gm" flags="0" type="12" />
+        <event time="71355024" package="com.google.android.gm" flags="0" type="12" />
+        <event time="71355348" package="com.google.android.gm" flags="0" type="12" />
+        <event time="71355667" package="com.google.android.gm" flags="0" type="12" />
+        <event time="71355818" package="com.google.android.gm" flags="0" type="12" />
+        <event time="71355978" package="com.google.android.gm" flags="0" type="12" />
+        <event time="71356359" package="com.google.android.gm" flags="0" type="12" />
+        <event time="71496027" package="android" flags="0" type="15" />
+        <event time="71496260" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.cmas.CmasDialogRegionalActivity" flags="0" type="1" />
+        <event time="71505907" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.cmas.CmasDialogRegionalActivity" flags="0" type="2" />
+        <event time="71505931" package="stericson.busybox" flags="0" type="11" standbyBucket="656129" />
+        <event time="71505950" package="stericson.busybox" class="stericson.busybox.activity.MainActivity" flags="0" type="1" />
+        <event time="71505965" package="stericson.busybox" class="stericson.busybox.activity.MainActivity" flags="0" type="2" />
+        <event time="71512194" package="android" flags="0" type="16" />
+        <event time="71737141" package="android" flags="0" type="12" />
+        <event time="71739037" package="com.google.android.apps.photos" flags="0" type="11" standbyBucket="656129" />
+        <event time="71739756" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="656129" />
+        <event time="71739758" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="656129" />
+        <event time="71739847" package="com.android.systemui" flags="0" type="12" />
+        <event time="71742942" package="android" flags="0" type="15" />
+        <event time="71746990" package="stericson.busybox" class="stericson.busybox.activity.MainActivity" flags="0" type="1" />
+        <event time="71747336" package="android" flags="0" type="18" />
+        <event time="71895966" package="com.sec.android.app.soundalive" flags="0" type="11" standbyBucket="2621952" />
+        <event time="71896004" package="com.sec.android.app.camera" flags="0" type="11" standbyBucket="2622721" />
+        <event time="71898489" package="stericson.busybox" class="stericson.busybox.activity.MainActivity" flags="0" type="2" />
+        <event time="71898497" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="71898497" package="com.sec.android.app.launcher" flags="0" type="11" standbyBucket="656132" />
+        <event time="71906305" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="656129" />
+        <event time="72210686" package="com.samsung.android.net.wifi.wifiguider" flags="0" type="11" standbyBucket="2621952" />
+        <event time="72225607" package="com.sec.android.provider.badge" flags="0" type="11" standbyBucket="2621952" />
+        <event time="72231664" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="2621952" />
+        <event time="72340006" package="com.google.android.apps.photos" flags="0" type="11" standbyBucket="2621952" />
+        <event time="72341205" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="2621952" />
+        <event time="72341206" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="2621952" />
+        <event time="72479401" package="com.samsung.android.themestore" flags="0" type="12" />
+        <event time="72492717" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="656129" />
+        <event time="72492734" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="656129" />
+        <event time="72506316" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="2621952" />
+        <event time="72509131" package="android" flags="0" type="16" />
+        <event time="72509565" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="72514223" package="android" flags="0" type="17" />
+        <event time="72556852" package="com.samsung.android.kidsinstaller" flags="0" type="11" standbyBucket="656129" />
+        <event time="72787078" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="656129" />
+        <event time="73021434" package="com.google.android.gsf" flags="0" type="11" standbyBucket="2621952" />
+        <event time="73092774" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="2621952" />
+        <event time="73092775" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="2621952" />
+        <event time="73156867" package="com.samsung.android.kidsinstaller" flags="0" type="11" standbyBucket="2621952" />
+        <event time="73387162" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="2621952" />
+        <event time="73484751" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="656129" />
+        <event time="73484752" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="656129" />
+        <event time="73487155" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="73496739" package="com.google.android.gm" flags="0" type="8" shortcutId="bokgumagic@gmail.com" />
+        <event time="74084870" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="2621952" />
+        <event time="74084871" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="2621952" />
+        <event time="74106979" package="com.google.android.gsf" flags="0" type="11" standbyBucket="2621952" />
+        <event time="74465336" package="android" flags="0" type="15" />
+        <event time="74474169" package="android" flags="0" type="16" />
+        <event time="74792509" package="com.samsung.android.net.wifi.wifiguider" flags="0" type="11" standbyBucket="656129" />
+        <event time="74812839" package="android" flags="0" type="12" />
+        <event time="74815989" package="com.android.systemui" flags="0" type="12" />
+        <event time="75289679" package="com.samsung.android.app.spage" flags="0" type="11" standbyBucket="656129" />
+        <event time="75289762" package="com.google.android.ext.services" flags="0" type="11" standbyBucket="656129" />
+        <event time="75289763" package="com.sktelecom.smartcard.SmartcardService" flags="0" type="11" standbyBucket="656129" />
+        <event time="75289763" package="com.samsung.android.providers.context" flags="0" type="11" standbyBucket="656129" />
+        <event time="75289763" package="com.android.systemui" flags="0" type="11" standbyBucket="656129" />
+        <event time="75328485" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="656129" />
+        <event time="75380360" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="75381009" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="656129" />
+        <event time="75381010" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="656129" />
+        <event time="75540481" package="com.samsung.android.net.wifi.wifiguider" flags="0" type="11" standbyBucket="2621952" />
+        <event time="75574714" package="stericson.busybox" flags="0" type="11" standbyBucket="1312001" />
+        <event time="75768201" package="com.sec.android.app.camera" flags="0" type="11" standbyBucket="656129" />
+        <event time="75889681" package="com.samsung.android.app.spage" flags="0" type="11" standbyBucket="2621952" />
+        <event time="75889764" package="com.google.android.ext.services" flags="0" type="11" standbyBucket="2621952" />
+        <event time="75889764" package="com.sktelecom.smartcard.SmartcardService" flags="0" type="11" standbyBucket="2621952" />
+        <event time="75889764" package="com.samsung.android.providers.context" flags="0" type="11" standbyBucket="2621952" />
+        <event time="75889771" package="com.android.systemui" flags="0" type="11" standbyBucket="2621952" />
+        <event time="75928514" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="2621952" />
+        <event time="75982618" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="2621952" />
+        <event time="75982619" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="2621952" />
+        <event time="75992434" package="com.google.android.gsf" flags="0" type="11" standbyBucket="2621952" />
+        <event time="76367104" package="com.sec.android.app.soundalive" flags="0" type="11" standbyBucket="656129" />
+        <event time="76368202" package="com.sec.android.app.camera" flags="0" type="11" standbyBucket="2622721" />
+        <event time="76900202" package="stericson.busybox" flags="0" type="11" standbyBucket="1967360" />
+        <event time="76967130" package="com.sec.android.app.soundalive" flags="0" type="11" standbyBucket="2621952" />
+        <event time="77665938" package="android" flags="0" type="15" />
+        <event time="77669856" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="77669948" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="77670193" package="android" flags="0" type="18" />
+        <event time="77671312" package="com.sec.android.app.samsungapps" flags="0" type="10" />
+        <event time="77671314" package="com.google.android.gms" flags="0" type="10" />
+        <event time="77671315" package="com.topjohnwu.magisk" flags="0" type="10" />
+        <event time="77671315" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="1311490" />
+        <event time="77671315" package="com.samsung.android.messaging" flags="0" type="10" />
+        <event time="77671315" package="recover.deleted.data.mobile.data.recovery.app.diskdigger" flags="0" type="10" />
+        <event time="77671333" package="recover.deleted.data.mobile.data.recovery.app.diskdigger" flags="0" type="11" standbyBucket="1311490" />
+        <event time="77671687" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="77671745" package="com.android.settings" class="com.android.settings.Settings" flags="0" type="1" />
+        <event time="77674670" package="com.android.settings" class="com.android.settings.Settings" flags="0" type="2" />
+        <event time="77674685" package="com.android.settings" class="com.android.settings.Settings$DeviceInfoSettingsActivity" flags="0" type="1" />
+        <event time="77677578" package="android" flags="0" type="16" />
+        <event time="77677985" package="com.android.settings" class="com.android.settings.Settings$DeviceInfoSettingsActivity" flags="0" type="2" />
+        <event time="77678455" package="android" flags="0" type="17" />
+        <event time="77689090" package="com.samsung.android.kidsinstaller" flags="0" type="11" standbyBucket="656129" />
+        <event time="77998194" package="com.samsung.android.app.omcagent" flags="0" type="12" />
+        <event time="78131729" package="android" flags="0" type="15" />
+        <event time="78134164" package="android" flags="0" type="16" />
+        <event time="78901294" package="android" flags="0" type="12" />
+        <event time="78901981" package="com.google.android.googlequicksearchbox" flags="0" type="12" />
+        <event time="78901991" package="com.google.android.googlequicksearchbox" flags="0" type="12" />
+        <event time="78903970" package="com.android.systemui" flags="0" type="12" />
+        <event time="78906975" package="android" flags="0" type="15" />
+        <event time="78911999" package="android" flags="0" type="16" />
+        <event time="78935952" package="android" flags="0" type="15" />
+        <event time="78942127" package="android" flags="0" type="16" />
+        <event time="78943898" package="android" flags="0" type="15" />
+        <event time="78947409" package="com.android.settings" class="com.android.settings.Settings$DeviceInfoSettingsActivity" flags="0" type="1" />
+        <event time="78947487" package="android" flags="0" type="18" />
+        <event time="78949315" package="com.android.settings" class="com.android.settings.Settings$DeviceInfoSettingsActivity" flags="0" type="2" />
+        <event time="78949326" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="78961599" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="78961615" package="com.samsung.android.MtpApplication" class="com.samsung.android.MtpApplication.USBConnection" flags="0" type="1" />
+        <event time="78970332" package="com.google.android.gsf" flags="0" type="11" standbyBucket="2621952" />
+        <event time="78981235" package="com.samsung.android.MtpApplication" class="com.samsung.android.MtpApplication.USBConnection" flags="0" type="2" />
+        <event time="78981254" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="78988305" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="78988322" package="com.android.systemui" class="com.android.systemui.usb.UsbDebuggingActivity" flags="0" type="1" />
+        <event time="78988338" package="com.android.systemui" flags="0" type="11" standbyBucket="656132" />
+        <event time="78989449" package="com.android.systemui" class="com.android.systemui.usb.UsbDebuggingActivity" flags="0" type="2" />
+        <event time="78989473" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="78989575" package="com.samsung.android.kidsinstaller" flags="0" type="11" standbyBucket="2621952" />
+        <event time="78994132" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="656129" />
+        <event time="79256097" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="79256117" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.main.WithActivity" flags="0" type="1" />
+        <event time="79257354" package="com.wsomacp" flags="0" type="11" standbyBucket="656129" />
+        <event time="79258425" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="656129" />
+        <event time="79258428" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="656129" />
+        <event time="79261543" package="com.samsung.android.samsungpassautofill" flags="0" type="11" standbyBucket="656129" />
+        <event time="79374596" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.main.WithActivity" flags="0" type="2" />
+        <event time="79374606" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="79378593" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="79378622" package="com.google.android.apps.photos" flags="0" type="11" standbyBucket="656129" />
+        <event time="79378623" package="com.google.android.apps.photos" class="com.google.android.apps.photos.home.HomeActivity" flags="0" type="1" />
+        <event time="79379130" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="79384142" package="com.google.android.apps.photos" class="com.google.android.apps.photos.home.HomeActivity" flags="0" type="2" />
+        <event time="79384288" package="com.google.android.packageinstaller" flags="0" type="11" standbyBucket="656129" />
+        <event time="79384292" package="com.google.android.packageinstaller" class="com.android.packageinstaller.permission.ui.GrantPermissionsActivity" flags="0" type="1" />
+        <event time="79386057" package="com.google.android.packageinstaller" class="com.android.packageinstaller.permission.ui.GrantPermissionsActivity" flags="0" type="2" />
+        <event time="79386069" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="79389486" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="79389511" package="com.google.android.googlequicksearchbox" class="com.google.android.apps.search.googleapp.activity.GoogleAppActivity" flags="0" type="1" />
+        <event time="79390580" package="com.google.android.googlequicksearchbox" class="com.google.android.apps.search.googleapp.activity.GoogleAppActivity" flags="0" type="2" />
+        <event time="79390805" package="com.google.android.googlequicksearchbox" class="com.google.android.apps.search.lens.LensExportedActivity" flags="0" type="1" />
+        <event time="79393306" package="com.google.android.googlequicksearchbox" class="com.google.android.apps.search.lens.LensExportedActivity" flags="0" type="2" />
+        <event time="79393339" package="com.google.android.googlequicksearchbox" class="com.google.android.apps.search.googleapp.activity.GoogleAppActivity" flags="0" type="1" />
+        <event time="79394579" package="com.android.chrome" flags="0" type="11" standbyBucket="656129" />
+        <event time="79394635" package="com.sec.android.desktopmode.uiservice" flags="0" type="11" standbyBucket="656129" />
+        <event time="79410399" package="com.sec.android.app.soundalive" flags="0" type="11" standbyBucket="656129" />
+        <event time="79410845" package="com.samsung.android.sm.policy" flags="0" type="11" standbyBucket="656129" />
+        <event time="79423254" package="com.google.android.googlequicksearchbox" class="com.google.android.apps.search.googleapp.activity.GoogleAppActivity" flags="0" type="2" />
+        <event time="79423281" package="com.android.chrome" class="org.chromium.chrome.browser.document.ChromeLauncherActivity" flags="0" type="1" />
+        <event time="79423335" package="com.android.chrome" class="org.chromium.chrome.browser.document.ChromeLauncherActivity" flags="0" type="2" />
+        <event time="79423363" package="com.android.chrome" class="org.chromium.chrome.browser.customtabs.CustomTabActivity" flags="0" type="1" />
+        <event time="79423419" package="com.sec.android.app.chromecustomizations" flags="0" type="11" standbyBucket="656129" />
+        <event time="79426547" package="com.android.providers.partnerbookmarks" flags="0" type="11" standbyBucket="656129" />
+        <event time="79448569" package="com.android.chrome" class="org.chromium.chrome.browser.customtabs.CustomTabActivity" flags="0" type="2" />
+        <event time="79448601" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="79454032" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="79454072" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.main.WithActivity" flags="0" type="1" />
+        <event time="79458153" package="com.google.android.syncadapters.calendar" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79464979" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.main.WithActivity" flags="0" type="2" />
+        <event time="79464990" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="79468063" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="79468086" package="com.google.android.googlequicksearchbox" class="com.google.android.apps.search.googleapp.activity.GoogleAppActivity" flags="0" type="1" />
+        <event time="79518902" package="com.google.android.googlequicksearchbox" class="com.google.android.apps.search.googleapp.activity.GoogleAppActivity" flags="0" type="2" />
+        <event time="79518928" package="com.android.chrome" class="org.chromium.chrome.browser.document.ChromeLauncherActivity" flags="0" type="1" />
+        <event time="79518970" package="com.android.chrome" class="org.chromium.chrome.browser.document.ChromeLauncherActivity" flags="0" type="2" />
+        <event time="79519002" package="com.android.chrome" class="org.chromium.chrome.browser.customtabs.CustomTabActivity" flags="0" type="1" />
+        <event time="79530947" package="com.android.chrome" class="org.chromium.chrome.browser.customtabs.CustomTabActivity" flags="0" type="2" />
+        <event time="79530988" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="79567847" package="com.sec.android.provider.badge" flags="0" type="11" standbyBucket="656129" />
+        <event time="79567981" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="79583977" package="android" flags="0" type="5" fs="1065353216" locales="ko-KR" touch="1" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" width="411" height="845" sw="411" density="420" />
+        <event time="79583987" package="android" flags="0" type="5" fs="0" height="773" />
+        <event time="79584015" package="android" flags="0" type="5" fs="0" ui="17" />
+        <event time="79584375" package="android" flags="0" type="5" fs="0" touch="3" />
+        <event time="79585708" package="android" flags="0" type="15" />
+        <event time="79585725" package="android" flags="0" type="5" fs="1066192077" />
+        <event time="79585730" package="android" flags="0" type="5" fs="0" />
+        <event time="79585777" package="com.android.providers.telephony" flags="0" type="11" standbyBucket="328449" />
+        <event time="79585777" package="com.android.phone" flags="0" type="11" standbyBucket="328449" />
+        <event time="79586377" package="com.android.bluetooth" flags="0" type="11" standbyBucket="328449" />
+        <event time="79586377" package="com.android.systemui" flags="0" type="11" standbyBucket="656129" />
+        <event time="79586409" package="android" flags="0" type="11" standbyBucket="328449" />
+        <event time="79586567" package="com.sec.location.nsflp2" flags="0" type="11" standbyBucket="328449" />
+        <event time="79586933" package="com.samsung.android.provider.filterprovider" flags="0" type="11" standbyBucket="327936" />
+        <event time="79586934" package="com.samsung.android.app.ledcoverdream" flags="0" type="11" standbyBucket="327936" />
+        <event time="79586948" package="com.gd.mobicore.pa" flags="0" type="11" standbyBucket="327936" />
+        <event time="79586948" package="com.samsung.android.smartswitchassistant" flags="0" type="11" standbyBucket="327936" />
+        <event time="79586995" package="android" flags="0" type="17" />
+        <event time="79587016" package="com.samsung.android.app.galaxyfinder" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587040" package="com.samsung.android.app.aodservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587040" package="com.samsung.android.app.cocktailbarservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587040" package="com.sec.android.app.parser" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587040" package="com.google.android.googlequicksearchbox" flags="0" type="11" standbyBucket="655616" />
+        <event time="79587095" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587110" package="com.android.providers.calendar" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587110" package="com.osp.app.signin" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587110" package="com.samsung.clipboardsaveservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587110" package="com.sec.automation" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587111" package="com.samsung.android.service.airviewdictionary" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587120" package="com.android.providers.media" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587151" package="com.campmobile.snow" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587152" package="com.samsung.android.smartmirroring" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587156" package="com.skms.android.agent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587160" package="com.sec.android.app.safetyassurance" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587160" package="com.samsung.android.incallui" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587168" package="com.samsung.android.knox.containercore" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587171" package="com.android.settings" class="com.android.settings.FallbackHome" flags="0" type="1" />
+        <event time="79587172" package="com.sec.factory.camera" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587173" package="com.sec.vsimservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587174" package="com.android.settings" class="com.android.settings.FallbackHome" flags="0" type="2" />
+        <event time="79587174" package="com.sec.usbsettings" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587175" package="com.samsung.android.easysetup" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587194" package="com.android.documentsui" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587201" package="com.sec.android.easyonehand" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587204" package="com.sec.factory" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587209" package="com.whatsapp" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587215" package="com.android.mms.service" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587215" package="com.samsung.android.rubin.app" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587215" package="com.sec.android.wallpapercropper2" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587215" package="com.android.providers.downloads" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587216" package="com.sec.android.cover.ledcover" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587216" package="com.samsung.ucs.agent.boot" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587216" package="com.samsung.faceservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587274" package="com.sec.android.widgetapp.easymodecontactswidget" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587275" package="com.samsung.android.MtpApplication" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587299" package="com.sec.android.app.factorykeystring" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587309" package="com.sec.android.app.samsungapps" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587310" package="com.sec.android.emergencymode.service" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587310" package="com.sec.android.app.wlantest" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587312" package="com.skt.hps20client" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587320" package="com.samsung.android.game.gamehome" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587331" package="com.sec.android.app.desktoplauncher" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587343" package="com.sec.android.daemonapp" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587344" package="com.sec.ims" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587344" package="com.sec.sve" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587344" package="com.android.vending" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587344" package="com.sec.android.AutoPreconfig" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587350" package="com.samsung.android.SettingsReceiver" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587351" package="com.sec.android.providers.security" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587359" package="com.samsung.android.securitylogagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587365" package="com.samsung.android.knox.containeragent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587366" package="com.samsung.android.app.assistantmenu" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587367" package="com.samsung.SMT" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587372" package="com.samsung.cmh" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587373" package="com.samsung.mlp" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587373" package="com.sec.factory.iris.usercamera" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587374" package="com.android.hotwordenrollment.xgoogle" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587374" package="com.samsung.android.sm.devicesecurity" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587374" package="com.samsung.android.bixby.service" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587375" package="com.samsung.android.smartface" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587375" package="com.android.nfc" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587375" package="com.android.stk" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587376" package="com.samsung.android.messaging" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587376" package="com.samsung.klmsagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587377" package="com.samsung.android.smartfitting" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587378" package="com.sec.android.app.SecSetupWizard" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587378" package="com.skt.prod.dialer" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587380" package="com.samsung.android.app.telephonyui" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587381" package="com.samsung.preloadapp" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587387" package="com.samsung.android.samsungpositioning" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587387" package="com.google.android.gm" flags="0" type="11" standbyBucket="656136" />
+        <event time="79587398" package="com.samsung.android.bixby.agent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587398" package="com.sec.android.UsimRegistrationKOR" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587399" package="com.sec.android.app.hwmoduletest" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587399" package="com.android.settings.intelligence" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587399" package="com.sec.bcservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587399" package="com.sec.modem.settings" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587400" package="com.samsung.android.server.iris" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587400" package="com.samsung.hidden.SKT" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587400" package="com.sec.android.app.servicemodeapp" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587400" package="com.sec.android.preloadinstaller" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587404" package="com.sec.android.uibcvirtualsoftkey" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587408" package="com.google.android.setupwizard" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587433" package="com.android.providers.settings" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587434" package="com.samsung.accessibility" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587434" package="com.sec.imsservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587434" package="com.samsung.android.mobileservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587434" package="com.android.hotwordenrollment.okgoogle" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587435" package="com.samsung.android.hmt.vrsvc" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587435" package="com.samsung.storyservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587439" package="com.android.se" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587439" package="com.android.inputdevices" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587439" package="com.samsung.android.kgclient" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587440" package="com.samsung.knox.securefolder" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587440" package="com.samsung.android.game.gametools" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587441" package="com.samsung.android.app.simplesharing" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587449" package="com.samsung.hiddennetworksetting" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587449" package="com.samsung.android.service.peoplestripe" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587449" package="com.samsung.android.da.daagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587450" package="com.samsung.android.brightnessbackupservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587455" package="com.samsung.android.app.reminder" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587458" package="com.samsung.android.app.smartcapture" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587458" package="com.google.android.apps.docs" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587459" package="com.google.android.apps.maps" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587461" package="com.samsung.advp.imssettings" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587461" package="com.sec.android.inputmethod" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587461" package="com.samsung.android.app.advsounddetector" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587462" package="com.sec.android.app.clockpackage" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587464" package="me.twrp.twrpapp" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587467" package="com.sec.android.RilServiceModeApp" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587467" package="com.samsung.android.mdecservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587467" package="com.sec.android.app.simsettingmgr" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587467" package="com.android.server.telecom" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587468" package="com.samsung.crane" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587468" package="com.sec.imslogger" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587472" package="com.samsung.android.clipboarduiservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587472" package="com.android.keychain" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587472" package="com.samsung.android.ipsgeofence" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587472" package="com.samsung.android.themecenter" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587472" package="com.google.android.gms" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587478" package="com.sec.android.diagmonagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587478" package="com.samsung.android.knox.containerdesktop" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587478" package="com.sec.spp.push" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587479" package="com.dsi.ant.server" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587480" package="com.samsung.android.allshare.service.fileshare" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587480" package="com.skt.t_smart_charge" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587481" package="com.sec.android.mimage.photoretouching" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587482" package="com.samsung.android.universalswitch" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587482" package="com.sec.android.app.apex" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587483" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="656129" />
+        <event time="79587483" package="com.samsung.visionprovider" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587487" package="com.samsung.android.authfw" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587488" package="com.samsung.android.dialer" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587488" package="com.samsung.android.dqagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587488" package="com.samsung.app.highlightplayer" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587510" package="com.sec.android.app.ringtoneBR" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587515" package="com.samsung.android.game.gos" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587538" package="com.sem.factoryapp" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587539" package="com.trustonic.teeservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587539" package="com.samsung.android.beaconmanager" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587539" package="com.sec.enterprise.mdm.services.simpin" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587540" package="com.skt.prod.phone.phonemodesetupwizard" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587540" package="com.ims.dm" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587540" package="com.tms" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587540" package="com.samsung.android.stickercenter" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587540" package="com.sec.android.soagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587540" package="com.sec.android.app.quicktool" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587540" package="com.samsung.android.fmm" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587541" package="com.sec.unifiedwfc" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587542" package="com.sec.phone" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587542" package="Com.sktelecom.minit" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587543" package="com.samsung.android.bixby.wakeup" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587544" package="com.samsung.android.samsungpass" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587544" package="recover.deleted.data.mobile.data.recovery.app.diskdigger" flags="0" type="11" standbyBucket="1311490" />
+        <event time="79587545" package="com.samsung.android.scloud" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587545" package="com.samsung.android.app.soundpicker" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587548" package="com.sec.app.RilErrorNotifier" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587548" package="com.samsung.android.spayfw" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587548" package="com.peace.SilentCamera" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587549" package="com.android.settings" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587549" package="com.samsung.android.dsms" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587549" package="com.samsung.android.lool" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587549" package="com.samsung.android.app.notes" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587550" package="com.sec.android.app.bluetoothtest" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587550" package="com.sec.android.sdhms" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587551" package="com.sec.android.emergencylauncher" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587556" package="com.google.android.apps.turbo" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587556" package="com.samsung.android.bluelightfilter" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587558" package="com.samsung.android.bbc.bbcagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587558" package="com.knox.vpn.proxyhandler" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587558" package="com.sec.android.splitsound" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587558" package="com.samsung.android.svcagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587559" package="com.samsung.android.networkdiagnostic" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587559" package="com.samsung.android.service.aircommand" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587559" package="com.samsung.android.shortcutbackupservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587559" package="com.samsung.android.providers.contacts" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587560" package="com.skt.skaf.OA00018282" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587561" package="com.android.shell" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587561" package="com.android.wallpaperbackup" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587561" package="com.samsung.android.app.omcagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587562" package="com.skt.skaf.OA00199800" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587562" package="com.samsung.android.app.dtv.dmb" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587570" package="com.sec.enterprise.knox.cloudmdm.smdms" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587582" package="com.wssyncmldm" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587583" package="com.skt.skaf.OA00412131" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587583" package="com.android.location.fused" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587583" package="com.samsung.android.app.appsedge" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587583" package="com.sec.epdg" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587584" package="com.sec.android.app.personalization" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587584" package="com.samsung.android.sdk.handwriting" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587584" package="com.samsung.aasaservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587585" package="com.samsung.android.allshare.service.mediashare" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587587" package="com.skt.skaf.A000Z00040" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587588" package="com.sec.android.app.applinker" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587607" package="com.samsung.android.contacts" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587623" package="com.samsung.ipservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587624" package="com.sec.android.QRreader" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587626" package="com.samsung.sec.android.application.csc" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587628" package="com.samsung.android.bio.face.service" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587628" package="com.samsung.android.bixby.agent.dummy" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587628" package="com.samsung.android.video" flags="0" type="11" standbyBucket="327936" />
+        <event time="79587629" package="com.google.android.apps.restore" flags="0" type="11" standbyBucket="2621952" />
+        <event time="79587664" package="com.sec.android.desktopmode.uiservice" flags="0" type="11" standbyBucket="656129" />
+        <event time="79587984" package="com.google.android.ext.services" flags="0" type="11" standbyBucket="656129" />
+        <event time="79590195" package="com.google.vr.vrcore" flags="0" type="11" standbyBucket="656129" />
+        <event time="79591836" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="79591842" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="79596411" package="android" flags="0" type="16" />
+        <event time="79597412" package="android" flags="0" type="12" />
+        <event time="79600112" package="com.android.systemui" flags="0" type="12" />
+        <event time="79600778" package="android" flags="0" type="15" />
+        <event time="79606393" package="com.samsung.android.providers.context" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606403" package="com.sktelecom.smartcard.SmartcardService" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606423" package="com.samsung.android.sm.policy" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606436" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606441" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606446" package="com.sec.android.app.soundalive" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606446" package="com.sec.android.app.launcher" flags="0" type="11" standbyBucket="656132" />
+        <event time="79606447" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606452" package="com.sec.android.app.camera" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606456" package="com.samsung.android.kidsinstaller" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606460" package="com.sec.android.provider.badge" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606463" package="com.samsung.android.app.spage" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606477" package="com.google.android.syncadapters.calendar" flags="0" type="11" standbyBucket="656136" />
+        <event time="79606482" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="656129" />
+        <event time="79606498" package="com.android.printspooler" flags="0" type="11" standbyBucket="656129" />
+        <event time="79608238" package="android" flags="0" type="12" />
+        <event time="79608587" package="android" flags="0" type="12" />
+        <event time="79609648" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="79609907" package="android" flags="0" type="18" />
+        <event time="79623567" package="com.google.android.gm" flags="0" type="8" shortcutId="bokgumagic@gmail.com" />
+        <event time="79624182" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="79624211" package="com.android.systemui" class="com.android.systemui.usb.UsbDebuggingActivity" flags="0" type="1" />
+        <event time="79625723" package="com.android.systemui" class="com.android.systemui.usb.UsbDebuggingActivity" flags="0" type="2" />
+        <event time="79625750" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="79636759" package="com.google.android.gm" flags="0" type="12" />
+        <event time="79636777" package="com.google.android.gm" flags="0" type="12" />
+        <event time="79636856" package="com.google.android.gm" flags="0" type="12" />
+        <event time="79636911" package="com.google.android.gm" flags="0" type="12" />
+        <event time="79636936" package="com.google.android.gm" flags="0" type="12" />
+        <event time="79637153" package="com.google.android.gm" flags="0" type="12" />
+        <event time="79637296" package="com.google.android.gm" flags="0" type="12" />
+        <event time="79637489" package="com.google.android.gm" flags="0" type="12" />
+        <event time="79668689" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="79668709" package="com.samsung.android.MtpApplication" class="com.samsung.android.MtpApplication.USBConnection" flags="0" type="1" />
+        <event time="79672803" package="com.samsung.android.MtpApplication" class="com.samsung.android.MtpApplication.USBConnection" flags="0" type="2" />
+        <event time="79672823" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="79694124" package="com.sec.android.daemonapp" flags="0" type="12" />
+        <event time="79698898" package="com.google.android.gms" flags="0" type="12" />
+        <event time="79700522" package="com.google.android.gm" flags="0" type="8" shortcutId="bokgumagic@gmail.com" />
+        <event time="79741012" package="stericson.busybox" flags="0" type="11" standbyBucket="1967360" />
+        <event time="79741012" package="com.zerdava.fileshredder" flags="0" type="11" standbyBucket="2622720" />
+        <event time="79741016" package="com.joeykrim.rootcheck" flags="0" type="11" standbyBucket="2622720" />
+        <event time="79741016" package="com.vb2labs.android.sdelete" flags="0" type="11" standbyBucket="2622720" />
+        <event time="79741017" package="com.sec.android.gallery3d" flags="0" type="11" standbyBucket="2622720" />
+        <event time="79741018" package="com.cbinnovations.androideraser" flags="0" type="11" standbyBucket="2622720" />
+        <event time="79741018" package="com.google.android.apps.photos" flags="0" type="11" standbyBucket="656133" />
+        <event time="79741018" package="com.vb2labs.android.sdelete.pro" flags="0" type="11" standbyBucket="2622720" />
+        <event time="79741018" package="com.projectstar.ishredder.android.standard" flags="0" type="11" standbyBucket="2622720" />
+        <event time="79741018" package="com.palmtronix.shreddit.v1" flags="0" type="11" standbyBucket="2622720" />
+        <event time="79741019" package="com.shredder.fileshredder.securewipe" flags="0" type="11" standbyBucket="2622720" />
+        <event time="79807962" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="79807982" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.main.WithActivity" flags="0" type="1" />
+        <event time="79809238" package="com.wsomacp" flags="0" type="11" standbyBucket="656129" />
+        <event time="79809887" package="com.samsung.android.samsungpassautofill" flags="0" type="11" standbyBucket="656129" />
+        <event time="80035572" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.main.WithActivity" flags="0" type="2" />
+        <event time="80035583" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="80037162" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="80037183" package="com.projectstar.ishredder.android.standard" flags="0" type="11" standbyBucket="656129" />
+        <event time="80037190" package="com.projectstar.ishredder.android.standard" class="com.protectstar.ishredder.activity.ActivityFirstlaunch" flags="0" type="1" />
+        <event time="80037269" package="com.projectstar.ishredder.android.standard" class="com.protectstar.ishredder.activity.ActivityFirstlaunch" flags="0" type="2" />
+        <event time="80037292" package="com.projectstar.ishredder.android.standard" class="com.protectstar.ishredder.activity.Home" flags="0" type="1" />
+        <event time="80038259" package="com.projectstar.ishredder.android.standard" class="com.protectstar.ishredder.activity.Home" flags="0" type="2" />
+        <event time="80038268" package="com.projectstar.ishredder.android.standard" class="com.protectstar.ishredder.activity.ActivityErasing" flags="0" type="1" />
+        <event time="80052097" package="com.projectstar.ishredder.android.standard" flags="0" type="12" />
+        <event time="80052343" package="com.projectstar.ishredder.android.standard" flags="0" type="10" />
+        <event time="80052924" package="com.projectstar.ishredder.android.standard" class="com.protectstar.ishredder.activity.ActivityErasing" flags="0" type="2" />
+        <event time="80052974" package="com.projectstar.ishredder.android.standard" class="com.protectstar.ishredder.activity.ActivityErasingDone" flags="0" type="1" />
+        <event time="80053023" package="com.projectstar.ishredder.android.standard" flags="0" type="12" />
+        <event time="80056420" package="com.projectstar.ishredder.android.standard" class="com.protectstar.ishredder.activity.ActivityErasingDone" flags="0" type="2" />
+        <event time="80056437" package="com.projectstar.ishredder.android.standard" class="com.protectstar.ishredder.activity.Home" flags="0" type="1" />
+        <event time="80058212" package="com.projectstar.ishredder.android.standard" class="com.protectstar.ishredder.activity.Home" flags="0" type="2" />
+        <event time="80058221" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="80064417" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="80080989" package="android" flags="0" type="5" fs="1065353216" touch="1" height="845" />
+        <event time="80080998" package="android" flags="0" type="5" fs="0" height="773" />
+        <event time="80081026" package="android" flags="0" type="5" fs="0" ui="17" />
+        <event time="80081422" package="android" flags="0" type="5" fs="0" touch="3" />
+        <event time="80082718" package="android" flags="0" type="15" />
+        <event time="80082735" package="android" flags="0" type="5" fs="1066192077" />
+        <event time="80082740" package="android" flags="0" type="5" fs="0" />
+        <event time="80082782" package="com.android.providers.telephony" flags="0" type="11" standbyBucket="328449" />
+        <event time="80082783" package="com.android.phone" flags="0" type="11" standbyBucket="328449" />
+        <event time="80083410" package="com.android.bluetooth" flags="0" type="11" standbyBucket="328449" />
+        <event time="80083410" package="com.android.systemui" flags="0" type="11" standbyBucket="656129" />
+        <event time="80083418" package="android" flags="0" type="11" standbyBucket="328449" />
+        <event time="80083565" package="com.sec.location.nsflp2" flags="0" type="11" standbyBucket="328449" />
+        <event time="80083830" package="com.samsung.android.provider.filterprovider" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083831" package="com.samsung.android.app.ledcoverdream" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083831" package="com.gd.mobicore.pa" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083832" package="com.samsung.android.smartswitchassistant" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083832" package="com.samsung.android.app.galaxyfinder" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083833" package="com.samsung.android.app.aodservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083836" package="com.samsung.android.app.cocktailbarservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083848" package="com.sec.android.app.parser" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083862" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="656129" />
+        <event time="80083867" package="com.android.providers.calendar" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083874" package="com.osp.app.signin" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083874" package="com.samsung.clipboardsaveservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083875" package="com.sec.automation" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083875" package="com.samsung.android.service.airviewdictionary" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083880" package="com.android.providers.media" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083940" package="com.campmobile.snow" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80083974" package="com.samsung.android.smartmirroring" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083974" package="com.skms.android.agent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083975" package="com.sec.android.app.safetyassurance" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083975" package="com.samsung.android.incallui" flags="0" type="11" standbyBucket="327936" />
+        <event time="80083975" package="com.samsung.android.knox.containercore" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084000" package="android" flags="0" type="17" />
+        <event time="80084021" package="com.sec.factory.camera" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084021" package="com.sec.vsimservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084028" package="com.sec.usbsettings" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084028" package="com.samsung.android.easysetup" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084097" package="com.android.documentsui" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084118" package="com.sec.android.easyonehand" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084127" package="com.android.settings" class="com.android.settings.FallbackHome" flags="0" type="1" />
+        <event time="80084133" package="com.android.settings" class="com.android.settings.FallbackHome" flags="0" type="2" />
+        <event time="80084155" package="com.sec.factory" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084155" package="com.whatsapp" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084186" package="com.android.mms.service" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084203" package="com.samsung.android.rubin.app" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084204" package="com.sec.android.wallpapercropper2" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084212" package="com.android.providers.downloads" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084213" package="com.sec.android.cover.ledcover" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084214" package="com.samsung.ucs.agent.boot" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084214" package="com.samsung.faceservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084214" package="com.sec.android.widgetapp.easymodecontactswidget" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084215" package="com.samsung.android.MtpApplication" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084215" package="com.sec.android.app.factorykeystring" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084215" package="com.sec.android.app.samsungapps" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084215" package="com.sec.android.emergencymode.service" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084215" package="com.sec.android.app.wlantest" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084234" package="com.skt.hps20client" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084240" package="com.samsung.android.game.gamehome" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084241" package="com.sec.android.app.desktoplauncher" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084241" package="com.sec.android.daemonapp" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084241" package="com.sec.ims" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084244" package="com.sec.sve" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084245" package="com.android.vending" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084245" package="com.sec.android.AutoPreconfig" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084245" package="com.samsung.android.SettingsReceiver" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084245" package="com.sec.android.providers.security" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084245" package="com.samsung.android.securitylogagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084246" package="com.samsung.android.knox.containeragent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084247" package="com.samsung.android.app.assistantmenu" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084247" package="com.samsung.SMT" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084247" package="com.samsung.cmh" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084247" package="com.samsung.mlp" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084247" package="com.sec.factory.iris.usercamera" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084247" package="com.android.hotwordenrollment.xgoogle" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084247" package="com.samsung.android.sm.devicesecurity" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084259" package="com.samsung.android.bixby.service" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084260" package="com.samsung.android.smartface" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084260" package="com.android.nfc" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084265" package="com.android.stk" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084290" package="com.samsung.android.messaging" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084311" package="com.samsung.klmsagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084322" package="com.samsung.android.smartfitting" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084331" package="com.sec.android.app.SecSetupWizard" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084331" package="com.skt.prod.dialer" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084334" package="com.samsung.android.app.telephonyui" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084335" package="com.samsung.preloadapp" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084337" package="com.samsung.android.samsungpositioning" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084339" package="com.google.android.gm" flags="0" type="11" standbyBucket="656136" />
+        <event time="80084341" package="com.samsung.android.bixby.agent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084342" package="com.sec.android.UsimRegistrationKOR" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084342" package="com.sec.android.app.hwmoduletest" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084342" package="com.android.settings.intelligence" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084343" package="com.sec.bcservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084343" package="com.sec.modem.settings" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084345" package="com.samsung.android.server.iris" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084346" package="com.samsung.hidden.SKT" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084350" package="com.sec.android.app.servicemodeapp" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084354" package="com.sec.android.preloadinstaller" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084355" package="com.sec.android.uibcvirtualsoftkey" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084355" package="com.google.android.setupwizard" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084355" package="com.android.providers.settings" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084356" package="com.samsung.accessibility" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084356" package="com.sec.imsservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084356" package="com.samsung.android.mobileservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084356" package="com.android.hotwordenrollment.okgoogle" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084357" package="com.samsung.android.hmt.vrsvc" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084371" package="com.samsung.storyservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084371" package="com.android.se" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084372" package="com.android.inputdevices" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084372" package="com.samsung.android.kgclient" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084373" package="com.samsung.knox.securefolder" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084374" package="com.samsung.android.game.gametools" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084374" package="com.samsung.android.app.simplesharing" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084375" package="com.samsung.hiddennetworksetting" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084376" package="com.samsung.android.service.peoplestripe" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084376" package="com.samsung.android.da.daagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084377" package="com.samsung.android.brightnessbackupservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084377" package="com.samsung.android.app.reminder" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084377" package="com.samsung.android.app.smartcapture" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084378" package="com.google.android.apps.docs" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084379" package="com.google.android.apps.maps" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084379" package="com.samsung.advp.imssettings" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084381" package="com.sec.android.inputmethod" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084381" package="com.samsung.android.app.advsounddetector" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084381" package="com.sec.android.app.clockpackage" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084387" package="me.twrp.twrpapp" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084391" package="com.sec.android.RilServiceModeApp" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084393" package="com.samsung.android.mdecservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084394" package="com.sec.android.app.simsettingmgr" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084394" package="com.android.server.telecom" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084396" package="com.samsung.crane" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084396" package="com.sec.imslogger" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084397" package="com.samsung.android.clipboarduiservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084397" package="com.android.keychain" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084397" package="com.samsung.android.ipsgeofence" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084397" package="com.samsung.android.themecenter" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084398" package="com.google.android.gms" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084402" package="com.sec.android.diagmonagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084404" package="com.samsung.android.knox.containerdesktop" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084404" package="com.sec.spp.push" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084406" package="com.dsi.ant.server" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084410" package="com.samsung.android.allshare.service.fileshare" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084413" package="com.skt.t_smart_charge" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084415" package="com.sec.android.mimage.photoretouching" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084416" package="com.samsung.android.universalswitch" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084417" package="com.sec.android.app.apex" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084418" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="656129" />
+        <event time="80084420" package="com.samsung.visionprovider" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084420" package="com.samsung.android.authfw" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084421" package="com.samsung.android.dialer" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084421" package="com.samsung.android.dqagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084422" package="com.samsung.app.highlightplayer" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084425" package="com.sec.android.app.ringtoneBR" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084426" package="com.samsung.android.game.gos" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084426" package="com.android.providers.partnerbookmarks" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084428" package="com.sem.factoryapp" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084428" package="com.trustonic.teeservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084428" package="com.samsung.android.beaconmanager" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084429" package="com.sec.enterprise.mdm.services.simpin" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084429" package="com.skt.prod.phone.phonemodesetupwizard" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084430" package="com.ims.dm" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084430" package="com.tms" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084433" package="com.samsung.android.stickercenter" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084433" package="com.sec.android.soagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084433" package="com.sec.android.app.quicktool" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084434" package="com.samsung.android.fmm" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084434" package="com.sec.unifiedwfc" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084434" package="com.sec.phone" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084435" package="Com.sktelecom.minit" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084435" package="com.samsung.android.bixby.wakeup" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084435" package="com.samsung.android.samsungpass" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084435" package="recover.deleted.data.mobile.data.recovery.app.diskdigger" flags="0" type="11" standbyBucket="1311490" />
+        <event time="80084436" package="com.samsung.android.scloud" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084436" package="com.samsung.android.app.soundpicker" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084437" package="com.sec.app.RilErrorNotifier" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084437" package="com.samsung.android.spayfw" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084437" package="com.peace.SilentCamera" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084438" package="com.android.settings" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084440" package="com.samsung.android.dsms" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084441" package="com.samsung.android.lool" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084441" package="com.samsung.android.app.notes" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084441" package="com.sec.android.app.bluetoothtest" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084442" package="com.sec.android.sdhms" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084442" package="com.sec.android.emergencylauncher" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084442" package="com.google.android.apps.turbo" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084442" package="com.samsung.android.bluelightfilter" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084461" package="com.samsung.android.bbc.bbcagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084462" package="com.knox.vpn.proxyhandler" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084462" package="com.sec.android.splitsound" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084474" package="com.samsung.android.svcagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084481" package="com.samsung.android.networkdiagnostic" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084481" package="com.samsung.android.service.aircommand" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084481" package="com.samsung.android.shortcutbackupservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084482" package="com.samsung.android.providers.contacts" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084485" package="com.skt.skaf.OA00018282" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084485" package="com.android.shell" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084485" package="com.android.wallpaperbackup" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084488" package="com.samsung.android.app.omcagent" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084489" package="com.skt.skaf.OA00199800" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084504" package="com.samsung.android.app.dtv.dmb" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084512" package="com.sec.enterprise.knox.cloudmdm.smdms" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084514" package="com.wssyncmldm" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084515" package="com.skt.skaf.OA00412131" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084516" package="com.android.location.fused" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084533" package="com.samsung.android.app.appsedge" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084533" package="com.sec.epdg" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084544" package="com.sec.android.app.personalization" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084544" package="com.samsung.android.sdk.handwriting" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084545" package="com.samsung.aasaservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084552" package="com.samsung.android.allshare.service.mediashare" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084552" package="com.skt.skaf.A000Z00040" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084552" package="com.sec.android.app.applinker" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084553" package="com.samsung.android.contacts" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084553" package="com.samsung.ipservice" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084553" package="com.sec.android.QRreader" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084553" package="com.samsung.sec.android.application.csc" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084554" package="com.samsung.android.bio.face.service" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084554" package="com.samsung.android.bixby.agent.dummy" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084554" package="com.samsung.android.video" flags="0" type="11" standbyBucket="327936" />
+        <event time="80084554" package="com.google.android.apps.restore" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80084637" package="com.sec.android.desktopmode.uiservice" flags="0" type="11" standbyBucket="656129" />
+        <event time="80085002" package="com.google.android.ext.services" flags="0" type="11" standbyBucket="656129" />
+        <event time="80085405" package="android" flags="0" type="12" />
+        <event time="80087232" package="com.google.vr.vrcore" flags="0" type="11" standbyBucket="656129" />
+        <event time="80088868" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="80088871" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="80093480" package="android" flags="0" type="16" />
+        <event time="80104459" package="android" flags="0" type="12" />
+        <event time="80104820" package="android" flags="0" type="12" />
+        <event time="80104885" package="com.google.android.googlequicksearchbox" flags="0" type="11" standbyBucket="656129" />
+        <event time="80104939" package="com.samsung.android.providers.context" flags="0" type="11" standbyBucket="656129" />
+        <event time="80104939" package="com.sktelecom.smartcard.SmartcardService" flags="0" type="11" standbyBucket="656129" />
+        <event time="80104961" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="656129" />
+        <event time="80104961" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="656129" />
+        <event time="80104962" package="com.sec.android.app.launcher" flags="0" type="11" standbyBucket="656132" />
+        <event time="80104962" package="com.google.android.gsf" flags="0" type="11" standbyBucket="656129" />
+        <event time="80104963" package="com.samsung.android.sm.policy" flags="0" type="11" standbyBucket="656129" />
+        <event time="80104992" package="com.sec.android.app.soundalive" flags="0" type="11" standbyBucket="656129" />
+        <event time="80105009" package="com.sec.android.app.camera" flags="0" type="11" standbyBucket="656129" />
+        <event time="80105019" package="com.samsung.android.kidsinstaller" flags="0" type="11" standbyBucket="656129" />
+        <event time="80105020" package="com.sec.android.provider.badge" flags="0" type="11" standbyBucket="656129" />
+        <event time="80105022" package="com.samsung.android.app.spage" flags="0" type="11" standbyBucket="656129" />
+        <event time="80105054" package="com.google.android.syncadapters.calendar" flags="0" type="11" standbyBucket="656136" />
+        <event time="80105105" package="com.android.printspooler" flags="0" type="11" standbyBucket="656129" />
+        <event time="80117787" package="com.google.android.gm" flags="0" type="8" shortcutId="bokgumagic@gmail.com" />
+        <event time="80132378" package="com.google.android.gm" flags="0" type="12" />
+        <event time="80132389" package="com.google.android.gm" flags="0" type="12" />
+        <event time="80132403" package="com.google.android.gm" flags="0" type="12" />
+        <event time="80132473" package="com.google.android.gm" flags="0" type="12" />
+        <event time="80132538" package="com.google.android.gm" flags="0" type="12" />
+        <event time="80132590" package="com.google.android.gm" flags="0" type="12" />
+        <event time="80132772" package="com.google.android.gm" flags="0" type="12" />
+        <event time="80134279" package="com.google.android.gm" flags="0" type="12" />
+        <event time="80150698" package="android" flags="0" type="15" />
+        <event time="80156858" package="android" flags="0" type="16" />
+        <event time="80163097" package="android" flags="0" type="15" />
+        <event time="80164970" package="com.samsung.android.MtpApplication" class="com.samsung.android.MtpApplication.USBConnection" flags="0" type="1" />
+        <event time="80164974" package="com.samsung.android.MtpApplication" class="com.samsung.android.MtpApplication.USBConnection" flags="0" type="2" />
+        <event time="80168765" package="com.samsung.android.MtpApplication" class="com.samsung.android.MtpApplication.USBConnection" flags="0" type="1" />
+        <event time="80169032" package="android" flags="0" type="18" />
+        <event time="80170825" package="com.samsung.android.MtpApplication" class="com.samsung.android.MtpApplication.USBConnection" flags="0" type="2" />
+        <event time="80170844" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="80177891" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="80177910" package="com.android.systemui" class="com.android.systemui.usb.UsbDebuggingActivity" flags="0" type="1" />
+        <event time="80179141" package="com.android.systemui" class="com.android.systemui.usb.UsbDebuggingActivity" flags="0" type="2" />
+        <event time="80179164" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="1" />
+        <event time="80191985" package="com.google.android.gm" flags="0" type="8" shortcutId="bokgumagic@gmail.com" />
+        <event time="80193458" package="com.google.android.gms" flags="0" type="12" />
+        <event time="80200932" package="com.sec.android.app.launcher" class="com.android.launcher3.infra.activity.Launcher" flags="0" type="2" />
+        <event time="80200966" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.main.WithActivity" flags="0" type="1" />
+        <event time="80202195" package="com.wsomacp" flags="0" type="11" standbyBucket="656129" />
+        <event time="80203009" package="com.samsung.android.samsungpassautofill" flags="0" type="11" standbyBucket="656129" />
+        <event time="80235599" package="stericson.busybox" flags="0" type="11" standbyBucket="1967360" />
+        <event time="80235599" package="com.zerdava.fileshredder" flags="0" type="11" standbyBucket="2622720" />
+        <event time="80235600" package="com.joeykrim.rootcheck" flags="0" type="11" standbyBucket="2622720" />
+        <event time="80235600" package="com.vb2labs.android.sdelete" flags="0" type="11" standbyBucket="2622720" />
+        <event time="80235601" package="com.sec.android.gallery3d" flags="0" type="11" standbyBucket="1967360" />
+        <event time="80235613" package="com.cbinnovations.androideraser" flags="0" type="11" standbyBucket="2622720" />
+        <event time="80235614" package="com.google.android.apps.photos" flags="0" type="11" standbyBucket="656133" />
+        <event time="80235614" package="com.vb2labs.android.sdelete.pro" flags="0" type="11" standbyBucket="2622720" />
+        <event time="80235615" package="com.projectstar.ishredder.android.standard" flags="0" type="11" standbyBucket="656640" />
+        <event time="80235615" package="com.palmtronix.shreddit.v1" flags="0" type="11" standbyBucket="2622720" />
+        <event time="80235616" package="com.shredder.fileshredder.securewipe" flags="0" type="11" standbyBucket="2622720" />
+        <event time="80687234" package="com.google.vr.vrcore" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80695629" package="com.google.android.googlequicksearchbox" flags="0" type="11" standbyBucket="327936" />
+        <event time="80695881" package="com.samsung.android.providers.context" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80696018" package="com.sktelecom.smartcard.SmartcardService" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80697456" package="com.sec.android.app.soundalive" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80697637" package="com.sec.android.app.camera" flags="0" type="11" standbyBucket="2622721" />
+        <event time="80698010" package="com.samsung.android.kidsinstaller" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80698939" package="com.google.android.ext.services" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80700343" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80704851" package="com.android.printspooler" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80705068" package="com.sec.android.desktopmode.uiservice" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80710585" package="com.samsung.android.sm.policy" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80746687" package="com.samsung.android.app.spage" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80799370" package="com.sec.android.provider.badge" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80802198" package="com.wsomacp" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80802595" package="com.google.android.gsf" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80804278" package="com.android.providers.blockednumber" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80804279" package="com.android.providers.userdictionary" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80804349" package="com.samsung.android.samsungpassautofill" flags="0" type="11" standbyBucket="2621952" />
+        <event time="80855156" package="com.topjohnwu.magisk" flags="0" type="11" standbyBucket="1311495" />
+        <event time="80968988" package="com.google.android.googlequicksearchbox" flags="0" type="12" />
+        <event time="80968996" package="com.google.android.googlequicksearchbox" flags="0" type="12" />
+        <event time="81131902" package="android" flags="0" type="16" />
+        <event time="81132335" package="com.samsung.android.messaging" class="com.samsung.android.messaging.ui.view.main.WithActivity" flags="0" type="2" />
+        <event time="81135872" package="com.samsung.android.net.wifi.wifiguider" flags="0" type="12" />
+        <event time="81135924" package="com.samsung.android.calendar" flags="0" type="11" standbyBucket="656129" />
+        <event time="81136995" package="android" flags="0" type="17" />
+        <event time="81139216" package="com.google.android.gm" flags="0" type="8" shortcutId="bokgumagic@gmail.com" />
+        <event time="83325750" package="com.google.android.gm" flags="0" type="12" />
+        <event time="83325931" package="com.google.android.gm" flags="0" type="12" />
+        <event time="83326129" package="com.google.android.gm" flags="0" type="12" />
+        <event time="83326261" package="com.google.android.gm" flags="0" type="12" />
+        <event time="83326401" package="com.google.android.gm" flags="0" type="12" />
+        <event time="83326522" package="com.google.android.gm" flags="0" type="12" />
+        <event time="83326668" package="com.google.android.gm" flags="0" type="12" />
+        <event time="83326802" package="com.google.android.gm" flags="0" type="12" />
+        <event time="83326959" package="com.google.android.gm" flags="0" type="12" />
+        <event time="84532045" package="stericson.busybox" flags="0" type="11" standbyBucket="2622720" />
+        <event time="84532045" package="com.sec.android.gallery3d" flags="0" type="11" standbyBucket="2622720" />
+        <event time="84532058" package="com.google.android.apps.photos" flags="0" type="11" standbyBucket="2622720" />
+        <event time="84532071" package="com.projectstar.ishredder.android.standard" flags="0" type="11" standbyBucket="1311495" />
+    </event-log>
+</usagestats>

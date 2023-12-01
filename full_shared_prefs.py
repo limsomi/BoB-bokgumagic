@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import re
 from ppadb.client import Client as AdbClient
-
+import os 
 def extract_elements(elements):
     extracted_elements = {
         "startDate": None,
@@ -54,7 +54,14 @@ def parse_xml(xml_content):
     return result_lists
 
 
-def full_shared_prefs(package_path):
+def full_shared_prefs(destination_dir,package_name):
+    package_path=os.path.join(destination_dir,package_name,'shared_prefs')
+    sharedprefs_list=os.listdir(package_path)
+    for filename in sharedprefs_list:
+        if package_name in filename:
+            xml_filename=filename
+            break
+    package_path=os.path.join(package_path,xml_filename)
     tree = ET.parse(package_path)
     root = tree.getroot()
 
