@@ -1,5 +1,5 @@
-2023/12/02-00:08:54.698 2b8a Recovering log #52
-2023/12/02-00:08:54.720 2b8a Level-0 table #54: started
-2023/12/02-00:08:54.740 2b8a Level-0 table #54: 188 bytes OK
-2023/12/02-00:08:54.761 2b8a Delete type=0 #52
-2023/12/02-00:08:54.763 2b8a Delete type=3 #50
+2023/12/02-23:10:50.484 2b7d Recovering log #62
+2023/12/02-23:10:50.508 2b7d Level-0 table #64: started
+2023/12/02-23:10:50.510 2b7d Level-0 table #64: 188 bytes OK
+2023/12/02-23:10:50.533 2b7d Delete type=0 #62
+2023/12/02-23:10:50.534 2b7d Delete type=3 #60

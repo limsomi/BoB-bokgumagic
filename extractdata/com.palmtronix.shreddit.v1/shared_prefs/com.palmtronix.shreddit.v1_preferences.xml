@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' standalone='yes' ?>
 <map>
     <boolean name="bg_startup_tracing" value="false" />
-    <int name="shredjob.count" value="4" />
+    <int name="shredjob.count" value="5" />
     <int name="tooltip.flags.grp1" value="1" />
     <int name="jobs.under.progress" value="0" />
     <int name="app.pre.gold" value="67" />

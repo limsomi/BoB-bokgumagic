@@ -929,3 +929,25 @@
 2023-12-02, 00:08:42.759 P 9452  T 58 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
 2023-12-02, 00:08:42.763 P 9452  T 58 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
 2023-12-02, 00:08:42.767 P 9452  T 58 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-02, 22:49:47.973 P 9823  T 63 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-02, 22:49:47.975 P 9823  T 63 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-02, 22:49:48.233 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-02, 22:49:48.238 P 9823  T 41 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-02, 22:49:48.248 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-02, 22:49:48.256 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-02, 22:49:48.262 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-02, 22:49:48.273 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-02, 22:49:48.368 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-02, 22:49:48.373 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-02, 22:49:48.378 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-02, 22:49:48.384 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-02, 22:49:48.390 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-02, 22:49:48.396 P 9823  T 63 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-02, 23:10:38.429 P 9452  T 40 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-02, 23:10:38.432 P 9452  T 62 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-02, 23:10:38.608 P 9452  T 40 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-02, 23:10:38.611 P 9452  T 40 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-02, 23:10:38.616 P 9452  T 40 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-02, 23:10:38.626 P 9452  T 40 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-02, 23:10:38.637 P 9452  T 40 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-02, 23:10:38.647 P 9452  T 40 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >

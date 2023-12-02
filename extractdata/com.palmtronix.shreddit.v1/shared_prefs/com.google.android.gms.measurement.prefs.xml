@@ -4,9 +4,9 @@
     <string name="admob_app_id">ca-app-pub-1742512662925993~6396489065</string>
     <string name="gmp_app_id"></string>
     <string name="app_instance_id">fef916e36d151fb619dc731c00b39255</string>
-    <long name="session_id" value="1701145792" />
+    <long name="session_id" value="1701524859" />
     <boolean name="app_backgrounded" value="true" />
-    <long name="health_monitor:start" value="1701435700585" />
+    <long name="health_monitor:start" value="1701524859312" />
     <boolean name="use_service" value="true" />
     <long name="deferred_attribution_cache_timestamp" value="0" />
     <string name="non_personalized_ads">unset</string>
@@ -16,6 +16,6 @@
     <string name="previous_os_version">12</string>
     <boolean name="has_been_opened" value="true" />
     <boolean name="allow_remote_dynamite" value="true" />
-    <long name="last_pause_time" value="1701145812230" />
-    <boolean name="start_new_session" value="true" />
+    <long name="last_pause_time" value="1701524877154" />
+    <boolean name="start_new_session" value="false" />
 </map>

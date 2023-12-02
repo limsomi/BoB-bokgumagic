@@ -4,6 +4,6 @@
     <long name="app_settings_last_update_ms" value="1701435702258" />
     <int name="request_in_session_count" value="3" />
     <boolean name="gad_idless" value="false" />
-    <long name="first_ad_req_time_ms" value="1701145792718" />
-    <long name="app_last_background_time_ms" value="1701145812671" />
+    <long name="first_ad_req_time_ms" value="1701524860129" />
+    <long name="app_last_background_time_ms" value="1701524877645" />
 </map>
