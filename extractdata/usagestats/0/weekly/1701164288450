@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<usagestats version="1" endTime="173098625">
+    <interactive count="0" time="0" />
+    <non-interactive count="0" time="0" />
+    <keyguard-shown count="0" time="0" />
+    <keyguard-hidden count="0" time="0" />
+    <packages>
+        <package lastTimeActive="-1701164288450" package="com.sec.location.nsflp2" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.app.chromecustomizations" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.app.aodservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.ext.services" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.providers.telephony" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.googlequicksearchbox" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.providers.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.incallui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.daemonapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.ims" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.sve" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.net.wifi.wifiguider" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.nfc" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.stk" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.app.telephonyui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="76605050" package="com.google.android.gm" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.UsimRegistrationKOR" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.providers.context" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.imsservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.se" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.game.gametools" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.inputmethod" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.app.simsettingmgr" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.crane" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.chrome" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.packageinstaller" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.gms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.gsf" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.app.launcher" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="1004382" package="com.topjohnwu.magisk" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.google.android.syncadapters.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.trustonic.teeservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.enterprise.mdm.services.simpin" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.projectstar.ishredder.android.standard" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="recover.deleted.data.mobile.data.recovery.app.diskdigger" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.lool" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.android.sdhms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.app.spage" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.android.providers.contacts" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.phone" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.providers.blockednumber" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.providers.userdictionary" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.skt.skaf.OA00412131" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sec.epdg" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.systemui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="118330407" package="com.skt.skaf.A000Z00040" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.sktelecom.smartcard.SmartcardService" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.android.bluetooth" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1701164288450" package="com.samsung.sec.android.application.csc" timeActive="0" lastEvent="0" />
+    </packages>
+    <configurations />
+    <event-log />
+</usagestats>

@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<map>
-    <int name="sdk_config_key_dimmer" value="100" />
-    <int name="sdk_config_key_word_count" value="0" />
-    <long name="sdk_config_key_last_update_time" value="1700544633880" />
-</map>

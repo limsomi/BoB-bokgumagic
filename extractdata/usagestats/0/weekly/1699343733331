@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<usagestats version="1" endTime="605870514">
+    <interactive count="71" time="1699932452948" />
+    <non-interactive count="57" time="1699949603845" />
+    <keyguard-shown count="47" time="1699949603845" />
+    <keyguard-hidden count="46" time="1699932458063" />
+    <packages>
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.provider.filterprovider" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.ledcoverdream" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.gd.mobicore.pa" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.smartswitchassistant" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.youtube" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.galaxyfinder" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.location.nsflp2" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="104739044" package="stericson.busybox" timeActive="2195" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="579375325" package="com.samsung.android.themestore" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.chromecustomizations" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.aodservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.cocktailbarservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.ext.services" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.providers.telephony" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.parser" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="583665254" package="com.google.android.googlequicksearchbox" timeActive="13733" lastEvent="2" appLaunchCount="2" />
+        <package lastTimeActive="104534955" package="com.samsung.android.calendar" timeActive="3359" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="-1699343733331" package="com.android.providers.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.osp.app.signin" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.clipboardsaveservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.automation" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.service.airviewdictionary" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.providers.media" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="338851750" package="com.campmobile.snow" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.smartmirroring" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.skms.android.agent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.safetyassurance" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.incallui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.knox.containercore" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.kidsinstaller" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.factory.camera" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.vsimservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.usbsettings" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.easysetup" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.documentsui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.easyonehand" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.factory" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.provider.stickerprovider" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.whatsapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.mms.service" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.rubin.app" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.wallpapercropper2" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.providers.downloads" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.cover.ledcover" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.ucs.agent.boot" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.wsomacp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.faceservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="93800759" package="com.zerdava.fileshredder" timeActive="76253" lastEvent="2" appLaunchCount="4" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.widgetapp.easymodecontactswidget" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="258500206" package="com.samsung.android.MtpApplication" timeActive="575357" lastEvent="2" appLaunchCount="2" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.factorykeystring" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="583671880" package="com.sec.android.app.samsungapps" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.emergencymode.service" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.wlantest" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.skt.hps20client" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.game.gamehome" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.desktoplauncher" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.defcontainer" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="263333797" package="com.sec.android.daemonapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.ims" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.sve" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="583667988" package="com.android.vending" timeActive="48471" lastEvent="2" appLaunchCount="6" />
+        <package lastTimeActive="-1699343733331" package="com.joeykrim.rootcheck" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.AutoPreconfig" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.SettingsReceiver" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.soundalive" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.providers.security" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.provider.badge" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.securitylogagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.knox.containeragent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.assistantmenu" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.SMT" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.cmh" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.mlp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.factory.iris.usercamera" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="588088936" package="android" timeActive="15124" lastEvent="2" appLaunchCount="5" />
+        <package lastTimeActive="-1699343733331" package="com.android.hotwordenrollment.xgoogle" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.sm.devicesecurity" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="263444305" package="com.samsung.android.net.wifi.wifiguider" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.bixby.service" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.smartface" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.nfc" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.stk" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="104151654" package="com.vb2labs.android.sdelete" timeActive="32863" lastEvent="2" appLaunchCount="4" />
+        <package lastTimeActive="104522997" package="com.samsung.android.messaging" timeActive="3227" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.klmsagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.smartfitting" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.SecSetupWizard" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.skt.prod.dialer" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.telephonyui" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.preloadapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.samsungpositioning" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="602521146" package="com.google.android.gm" timeActive="16521" lastEvent="2" appLaunchCount="2" />
+        <package lastTimeActive="107653451" package="com.samsung.android.bixby.agent" timeActive="6" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.apps.tachyon" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.UsimRegistrationKOR" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.hwmoduletest" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.settings.intelligence" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.bcservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.modem.settings" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.server.iris" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.hidden.SKT" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.providers.context" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.servicemodeapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.preloadinstaller" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.uibcvirtualsoftkey" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.setupwizard" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="588064090" package="com.sec.android.gallery3d" timeActive="530999" lastEvent="2" appLaunchCount="46" />
+        <package lastTimeActive="-1699343733331" package="com.android.providers.settings" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.accessibility" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.imsservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.mobileservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.printspooler" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.hotwordenrollment.okgoogle" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.hmt.vrsvc" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="263051476" package="com.cbinnovations.androideraser" timeActive="258305" lastEvent="2" appLaunchCount="16" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.storyservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.se" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.inputdevices" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.kgclient" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.knox.securefolder" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.game.gametools" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.simplesharing" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.hiddennetworksetting" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.service.peoplestripe" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.da.daagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.brightnessbackupservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.reminder" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="588011433" package="com.samsung.android.app.smartcapture" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.desktopmode.uiservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.apps.docs" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.apps.maps" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.advp.imssettings" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="106963552" package="com.sec.android.inputmethod" timeActive="1328" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.advsounddetector" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="104544675" package="com.sec.android.app.clockpackage" timeActive="3040" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="94067391" package="me.twrp.twrpapp" timeActive="212" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.RilServiceModeApp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.mdecservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.simsettingmgr" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.server.telecom" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.crane" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.imslogger" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.clipboarduiservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.keychain" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="588068744" package="com.android.chrome" timeActive="72837" lastEvent="2" appLaunchCount="11" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.ipsgeofence" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.themecenter" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="588034665" package="com.google.android.packageinstaller" timeActive="14901" lastEvent="2" appLaunchCount="10" />
+        <package lastTimeActive="545405115" package="com.google.android.gms" timeActive="2823" lastEvent="2" appLaunchCount="1" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.gsf" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.diagmonagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.knox.containerdesktop" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.spp.push" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.dsi.ant.server" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="447127058" package="com.sec.android.app.myfiles" timeActive="283686" lastEvent="2" appLaunchCount="18" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.allshare.service.fileshare" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.skt.t_smart_charge" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="588060532" package="com.sec.android.mimage.photoretouching" timeActive="25949" lastEvent="2" appLaunchCount="2" />
+        <package lastTimeActive="588720049" package="com.sec.android.app.launcher" timeActive="9606415" lastEvent="2" appLaunchCount="182" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.universalswitch" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.apex" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="270580031" package="com.topjohnwu.magisk" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.apps.photos" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.syncadapters.calendar" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.visionprovider" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.authfw" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="105979747" package="com.samsung.android.dialer" timeActive="1015714" lastEvent="2" appLaunchCount="5" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.dqagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.app.highlightplayer" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.ringtoneBR" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.game.gos" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.providers.partnerbookmarks" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="104156419" package="com.vb2labs.android.sdelete.pro" timeActive="10025" lastEvent="2" appLaunchCount="3" />
+        <package lastTimeActive="-1699343733331" package="com.sem.factoryapp" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.trustonic.teeservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.beaconmanager" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.enterprise.mdm.services.simpin" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.skt.prod.phone.phonemodesetupwizard" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.ims.dm" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.tms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.stickercenter" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.soagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.quicktool" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.fmm" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.unifiedwfc" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.phone" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="Com.sktelecom.minit" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.bixby.wakeup" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="588014642" package="com.projectstar.ishredder.android.standard" timeActive="130219" lastEvent="2" appLaunchCount="20" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.samsungpass" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="547774717" package="recover.deleted.data.mobile.data.recovery.app.diskdigger" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.scloud" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.soundpicker" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.app.RilErrorNotifier" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.spayfw" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="327969957" package="com.peace.SilentCamera" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="263238257" package="com.android.settings" timeActive="3017181" lastEvent="2" appLaunchCount="32" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.dsms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.lool" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="166107090" package="com.samsung.android.app.notes" timeActive="253324" lastEvent="2" appLaunchCount="8" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.bluetoothtest" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.sdhms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.spage" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.sm.policy" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.emergencylauncher" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.apps.turbo" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.bluelightfilter" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.bbc.bbcagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="93762014" package="com.palmtronix.shreddit.v1" timeActive="90106" lastEvent="2" appLaunchCount="15" />
+        <package lastTimeActive="-1699343733331" package="com.knox.vpn.proxyhandler" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.splitsound" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.svcagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.mateagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.networkdiagnostic" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.service.aircommand" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.shortcutbackupservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.providers.contacts" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.skt.skaf.OA00018282" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.phone" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.google.vr.vrcore" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.shell" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.wallpaperbackup" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.providers.blockednumber" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.omcagent" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="253761203" package="com.shredder.fileshredder.securewipe" timeActive="215401" lastEvent="2" appLaunchCount="9" />
+        <package lastTimeActive="-1699343733331" package="com.skt.skaf.OA00199800" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.providers.userdictionary" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.dtv.dmb" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.enterprise.knox.cloudmdm.smdms" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.emergency" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.wssyncmldm" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.skt.skaf.OA00412131" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.location.fused" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.app.appsedge" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.samsungpassautofill" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.epdg" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="588092013" package="com.android.systemui" timeActive="1966" lastEvent="2" appLaunchCount="2" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.personalization" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.sdk.handwriting" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.aasaservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.android.traceur" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.allshare.service.mediashare" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="557264042" package="com.skt.skaf.A000Z00040" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.app.applinker" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sktelecom.smartcard.SmartcardService" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="263010418" package="com.sec.android.app.camera" timeActive="38945" lastEvent="2" appLaunchCount="5" />
+        <package lastTimeActive="-1699343733331" package="com.android.bluetooth" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="107103978" package="com.samsung.android.contacts" timeActive="78454" lastEvent="2" appLaunchCount="7" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.ipservice" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.sec.android.QRreader" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.sec.android.application.csc" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.bio.face.service" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.bixby.agent.dummy" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.samsung.android.video" timeActive="0" lastEvent="0" />
+        <package lastTimeActive="-1699343733331" package="com.google.android.apps.restore" timeActive="0" lastEvent="0" />
+    </packages>
+    <configurations>
+        <config lastTimeActive="263235071" timeActive="8" count="1" fs="1065353216" locales="ko-KR" touch="1" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" width="411" height="845" sw="411" density="420" />
+        <config lastTimeActive="263235550" timeActive="450" count="1" fs="1065353216" locales="ko-KR" touch="1" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="261255201" timeActive="2257" count="1" fs="1066192077" locales="ko-KR" touch="3" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="2" scrLay="268435810" clrMod="9" ui="17" width="797" height="387" sw="411" density="420" />
+        <config lastTimeActive="263236758" timeActive="1208" count="1" fs="1065353216" locales="ko-KR" touch="3" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="605870513" timeActive="342633754" count="1" active="true" fs="1066192077" locales="ko-KR" touch="3" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="263235100" timeActive="29" count="1" fs="1065353216" locales="ko-KR" touch="1" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="268435810" clrMod="9" width="411" height="773" sw="411" density="420" />
+        <config lastTimeActive="263236762" timeActive="4" count="1" fs="1066192077" locales="ko-KR" touch="3" key="1" keyHid="1" hardKeyHid="2" nav="1" navHid="2" ori="1" scrLay="354" clrMod="9" ui="17" width="411" height="773" sw="411" density="420" />
+    </configurations>
+    <event-log />
+</usagestats>
