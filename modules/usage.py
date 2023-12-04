@@ -47,12 +47,12 @@ def usagestats(android_version):
         daily_path = os.path.join(destination_path, 'daily')
 
         if os.path.exists(daily_path):
-            dailyfile_list=os.listdir(destination_path)
+            dailyfile_list=os.listdir(daily_path)
             Packages=pd.DataFrame(columns=['package','last_time_active_ms','total_time_active_ms','last_time_visible_ms','total_time_visible_ms','app_launch_count'])
             EventLog=pd.DataFrame(columns=['package','class','time_ms','type'])
         
             for daily in dailyfile_list:
-                mappings_EventLog,mappings_Packages=parsing_usagestats.usagestats_parsing(destination_path,daily,mappings)
+                mappings_EventLog,mappings_Packages=parsing_usagestats.usagestats_parsing(daily_path,daily,mappings)
                 Packages=pd.concat([Packages,mappings_Packages])
                 EventLog=pd.concat([EventLog,mappings_EventLog])
 

@@ -1,5 +1,6 @@
 import subprocess
 import os
+import re
 
 def get_androidVersion():
     try:
@@ -9,32 +10,42 @@ def get_androidVersion():
     except Exception as e:
         return f"Error getting Android version: {e}"
 
-
-def extract_data(file_name,destination_dir):
+def extract_data(file_name, destination_dir):
     copy_command = f'''adb shell "su -c 'cd {destination_dir} && cp -r {file_name} /sdcard'"'''
+    copy_check = True
 
     try:
-        subprocess.run(copy_command, shell=True, check=True)
+        subprocess.run(copy_command, shell=True, check=False)
+        print(f"Successfully copy {file_name} to sdcard")
     except subprocess.CalledProcessError as e:
-        print(f"Error executing ADB command: {e}")
+        print(f"Error: {e}")
+        copy_check = False
 
     if not os.path.exists('extractdata'):
         os.makedirs('extractdata')
-
+    
     try:
-        pull_command=f"adb pull /sdcard/{file_name} ./extractdata"
+        pull_command = f"adb pull /sdcard/{file_name} ./extractdata"
         subprocess.run(pull_command, shell=True, check=True)
-        print(f"ADB extract {file_name} successfully.")
+        print(f"File successfully pulled to {file_name}")
     except subprocess.CalledProcessError as e:
-        print(f"Error executing ADB command: {e}")
-
-def extract_shared_prefs(device, package_name):
-    # ADB shell 명령어를 사용하여 파일 추출
-    if package_name == "com.cbinnovations.androideraser":
-        result = device.shell(f"su -c 'cat /data/data/{package_name}/shared_prefs/{package_name}.xml'")
-    elif package_name == "com.projectstar.ishredder.android.standard":
-        result = device.shell(f"su -c 'cat /data/data/{package_name}/shared_prefs/{package_name}_preferences.xml'")
-    return result
+        error_pattern = re.compile(r"Command 'adb pull (.*?) ./extractdata' returned non-zero exit status 1.")
+        match = error_pattern.search(str(e))
+        if match and copy_check==True:
+            error_file_path = match.group(1)
+            find_unique_command = f"adb shell find {error_file_path} -type f"
+            result = subprocess.check_output(find_unique_command, shell=True, universal_newlines=True)
+            unique_characters = re.compile(r'[@!#$%^&*()<>?|}{~:]')
+            for filename in result.splitlines():
+                if unique_characters.search(filename):
+                    replace_filename = re.sub(r"[@!#$%^&*()<>?|}{~:]","",filename)
+                    rename_command=f"adb shell mv {filename} {replace_filename}"
+                    subprocess.run(rename_command,shell=True,check=True)
+            try:
+                subprocess.run(pull_command,shell=True,check=True)
+                print(f"File successfully pulled to {file_name}")
+            except subprocess.CalledProcessError as e:
+                print(f"Error: {e}")
 
 
 def extract_clipboard_image(path,destination_dir):

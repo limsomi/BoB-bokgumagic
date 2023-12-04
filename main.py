@@ -63,15 +63,12 @@ def main():
 
         #contacts
         contacts.contacts_wiping('extractdata','com.samsung.android.providers.contacts/databases/contacts2.db')
-
-
         # application folder
         for package_name in wiping_application:
             shared_prefs.full_shared_prefs('extractdata',package_name)
-            folder_destination_dir=f'./extractdata/{package_name}/image_manage_disk_cache'
+            folder_destination_dir=f'./extractdata/{package_name}/cache/image_manager_disk_cache'
             folder_renamed_files_dir=f'./result/{package_name}'
             cache.cache_image(folder_destination_dir,folder_renamed_files_dir)
-        
 
 
 if __name__=="__main__":
