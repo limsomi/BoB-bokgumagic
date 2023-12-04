@@ -11,18 +11,17 @@ def main():
         os.makedirs('result')
     #adb extract usage
     phone_type=input("폰 기종을 입력해수세요(1. 갤럭시 2.픽셀) : ")
-    android_version=int(adb_extract.get_androidVersion())
+    device=adb_extract.get_deviceid()
+    android_version=int(adb_extract.get_androidVersion(device))
     # android_version=13
     if android_version<11:
         destination_dir='/data/system/' # usagestats 경로 유의하기 
     else:
         destination_dir='/data/system_ce/0' 
     usage_name='usagestats'
-    adb_extract.extract_data(usage_name,destination_dir)
+    adb_extract.extract_data(device,usage_name,destination_dir)
     wiping_check,wiping_application=usage.usagestats(android_version)#package_name도  추출해야함
 
-    # wiping_application=['com.shredder.fileshredder.securewipe','com.palmtronix.shreddit.v1']
-    # wiping_check=False
     if wiping_check==True:
         print("wiping 흔적 없음")
         exit(0)
@@ -40,14 +39,14 @@ def main():
 
         if phone_type==2:
             clipboard_folder='com.google.android.inputmethod.latin'
-        adb_extract.extract_data(clipboard_folder,destination_dir)
+        adb_extract.extract_data(device,clipboard_folder,destination_dir)
 
         # #adb extract all data except clipboard data
         data_list=['com.sec.android.gallery3d','com.samsung.android.providers.contacts']
         data_list.extend(wiping_application)
         destination_dir='/data/data'
         for file_name in data_list:
-            adb_extract.extract_data(file_name,destination_dir)
+            adb_extract.extract_data(device,file_name,destination_dir)
 
 
         #gallery cache

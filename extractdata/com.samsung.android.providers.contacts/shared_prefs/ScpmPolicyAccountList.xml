@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <set name="ScpmPolicyAccountList">
+        <string>com.google.android.talk</string>
+        <string>com.whatsapp</string>
+        <string>com.google.android.apps.tachyon</string>
+        <string>vnd.sec.example.readonly</string>
+        <string>com.facebook.mlite</string>
+        <string>com.tencent.mm</string>
+        <string>com.skype.raider</string>
+        <string>com.facebook.messenger</string>
+        <string>com.zing.zalo</string>
+        <string>jp.naver.line.android</string>
+        <string>com.imo.android.imoim</string>
+        <string>com.viber.voip</string>
+        <string>org.thoughtcrime.securesms</string>
+        <string>org.telegram.messenger</string>
+        <string>com.facebook.orca</string>
+        <string>com.discord</string>
+    </set>
+</map>

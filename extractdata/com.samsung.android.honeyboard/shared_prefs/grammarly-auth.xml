@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="last-save-time" value="1700540300054" />
+    <string name="dialect">american</string>
+    <string name="grauth">AABM3nG5yGKrqZ4_dRHtfXcjuunqZY3PRWSB_OKM-WcYNFADFCYdVXB6HMK5ANxmVyiIJCENPHG9KXsq</string>
+    <long name="refresh-token-time" value="1700540300054" />
+    <boolean name="KEY_LAST_OP_WAS_LOGOUT" value="false" />
+    <boolean name="skip" value="false" />
+    <string name="type">Free</string>
+    <boolean name="isTest" value="false" />
+    <string name="csrf-token">AABM3vllKW2HBfFSUAyXa8X94QL1vje7NLNzaw</string>
+    <string name="tdi"></string>
+    <string name="name"></string>
+    <boolean name="anonymous" value="true" />
+    <long name="id" value="-305907134648817920" />
+    <string name="email">-305907134648817920@anonymous</string>
+</map>

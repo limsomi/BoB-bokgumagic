@@ -1,0 +1,204 @@
+
+{
+	"tags" : null,
+	"ᆞ" : 
+	{
+		"aspect-ratio" : 1.538461565971375,
+		"characters" : [ "ᆞ" ],
+		"feature-threshold-multiplier" : 1.0,
+		"initial-scale-multiplier" : 156.0,
+		"mean" : 
+		{
+			"dof" : 10,
+			"mode" : [ 409.0, 108.0 ]
+		},
+		"precision" : 
+		{
+			"dof" : 10,
+			"mode" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+		},
+		"prescaled" : true,
+		"prior-mean" : [ 409.0, 108.0 ],
+		"prior-precision" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+	},
+	"ㄱ" : 
+	{
+		"aspect-ratio" : 1.538461565971375,
+		"characters" : [ "ㄱ", "ㅋ", "ㄲ" ],
+		"feature-threshold-multiplier" : 1.0,
+		"initial-scale-multiplier" : 156.0,
+		"mean" : 
+		{
+			"dof" : 10,
+			"mode" : [ 146.0, 285.0 ]
+		},
+		"precision" : 
+		{
+			"dof" : 10,
+			"mode" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+		},
+		"prescaled" : true,
+		"prior-mean" : [ 146.0, 285.0 ],
+		"prior-precision" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+	},
+	"ㄴ" : 
+	{
+		"aspect-ratio" : 1.538461565971375,
+		"characters" : [ "ㄴ", "ㄹ" ],
+		"feature-threshold-multiplier" : 1.0,
+		"initial-scale-multiplier" : 156.0,
+		"mean" : 
+		{
+			"dof" : 10,
+			"mode" : [ 409.0, 285.0 ]
+		},
+		"precision" : 
+		{
+			"dof" : 10,
+			"mode" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+		},
+		"prescaled" : true,
+		"prior-mean" : [ 409.0, 285.0 ],
+		"prior-precision" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+	},
+	"ㄷ" : 
+	{
+		"aspect-ratio" : 1.538461565971375,
+		"characters" : [ "ㄷ", "ㅌ", "ㄸ" ],
+		"feature-threshold-multiplier" : 1.0,
+		"initial-scale-multiplier" : 156.0,
+		"mean" : 
+		{
+			"dof" : 10,
+			"mode" : [ 671.0, 285.0 ]
+		},
+		"precision" : 
+		{
+			"dof" : 10,
+			"mode" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+		},
+		"prescaled" : true,
+		"prior-mean" : [ 671.0, 285.0 ],
+		"prior-precision" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+	},
+	"ㅂ" : 
+	{
+		"aspect-ratio" : 1.538461565971375,
+		"characters" : [ "ㅂ", "ㅍ", "ㅃ" ],
+		"feature-threshold-multiplier" : 1.0,
+		"initial-scale-multiplier" : 156.0,
+		"mean" : 
+		{
+			"dof" : 10,
+			"mode" : [ 146.0, 462.0 ]
+		},
+		"precision" : 
+		{
+			"dof" : 10,
+			"mode" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+		},
+		"prescaled" : true,
+		"prior-mean" : [ 146.0, 462.0 ],
+		"prior-precision" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+	},
+	"ㅅ" : 
+	{
+		"aspect-ratio" : 1.538461565971375,
+		"characters" : [ "ㅅ", "ㅎ", "ㅆ" ],
+		"feature-threshold-multiplier" : 1.0,
+		"initial-scale-multiplier" : 156.0,
+		"mean" : 
+		{
+			"dof" : 10,
+			"mode" : [ 409.0, 462.0 ]
+		},
+		"precision" : 
+		{
+			"dof" : 10,
+			"mode" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+		},
+		"prescaled" : true,
+		"prior-mean" : [ 409.0, 462.0 ],
+		"prior-precision" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+	},
+	"ㅇ" : 
+	{
+		"aspect-ratio" : 1.538461565971375,
+		"characters" : [ "ㅇ", "ㅁ" ],
+		"feature-threshold-multiplier" : 1.0,
+		"initial-scale-multiplier" : 156.0,
+		"mean" : 
+		{
+			"dof" : 10,
+			"mode" : [ 409.0, 639.0 ]
+		},
+		"precision" : 
+		{
+			"dof" : 10,
+			"mode" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+		},
+		"prescaled" : true,
+		"prior-mean" : [ 409.0, 639.0 ],
+		"prior-precision" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+	},
+	"ㅈ" : 
+	{
+		"aspect-ratio" : 1.538461565971375,
+		"characters" : [ "ㅈ", "ㅊ", "ㅉ" ],
+		"feature-threshold-multiplier" : 1.0,
+		"initial-scale-multiplier" : 156.0,
+		"mean" : 
+		{
+			"dof" : 10,
+			"mode" : [ 671.0, 462.0 ]
+		},
+		"precision" : 
+		{
+			"dof" : 10,
+			"mode" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+		},
+		"prescaled" : true,
+		"prior-mean" : [ 671.0, 462.0 ],
+		"prior-precision" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+	},
+	"ㅡ" : 
+	{
+		"aspect-ratio" : 1.538461565971375,
+		"characters" : [ "ㅡ" ],
+		"feature-threshold-multiplier" : 1.0,
+		"initial-scale-multiplier" : 156.0,
+		"mean" : 
+		{
+			"dof" : 10,
+			"mode" : [ 671.0, 108.0 ]
+		},
+		"precision" : 
+		{
+			"dof" : 10,
+			"mode" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+		},
+		"prescaled" : true,
+		"prior-mean" : [ 671.0, 108.0 ],
+		"prior-precision" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+	},
+	"ㅣ" : 
+	{
+		"aspect-ratio" : 1.538461565971375,
+		"characters" : [ "ㅣ" ],
+		"feature-threshold-multiplier" : 1.0,
+		"initial-scale-multiplier" : 156.0,
+		"mean" : 
+		{
+			"dof" : 10,
+			"mode" : [ 146.0, 108.0 ]
+		},
+		"precision" : 
+		{
+			"dof" : 10,
+			"mode" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+		},
+		"prescaled" : true,
+		"prior-mean" : [ 146.0, 108.0 ],
+		"prior-precision" : [ 0.0003287311119493097, 0.0, 0.0, 0.0003287311119493097 ]
+	}
+}
