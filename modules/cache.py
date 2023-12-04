@@ -22,7 +22,6 @@ def move_files_to_directory(file_list, destination_dir):
 def cache_image(destination_dir,renamed_files_dir):
     if not os.path.exists(destination_dir):
         return
-
     renamed_files = rename_files_with_extension(destination_dir, '0', 'jpg')
     
     if not os.path.exists(renamed_files_dir):

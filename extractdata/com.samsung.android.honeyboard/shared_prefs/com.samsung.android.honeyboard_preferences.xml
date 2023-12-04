@@ -82,7 +82,6 @@
     <string name="kpm_match_data_en">model_0_0_-2003645650.im</string>
     <boolean name="EXTRACT_UI" value="true" />
     <boolean name="third_party_access_notice_dialog_executed" value="false" />
-    <string name="big_data_sa_languages_keypad_stats_json_v_1">{}</string>
     <int name="settings_speak_keyboard_input_aloud_mode" value="0" />
     <int name="SETTINGS_KEYBOARD_THEMES_P_OS_INDEX" value="285212672" />
     <boolean name="settings_period_key_popup_multi_tap" value="true" />

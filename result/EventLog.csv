@@ -147,3 +147,15 @@
 8741,com.palmtronix.shreddit.v1,com.palmtronix.shreddit.v1.service.ShredderService,2077-11-02 09:46:34.969000+09:00,20,FORGROUND_SERVICE_STOP
 8742,com.palmtronix.shreddit.v1,com.palmtronix.shreddit.v1.MainActivity,2077-11-02 09:46:39.546000+09:00,2,ACTIVITY_PAUSED
 8745,com.palmtronix.shreddit.v1,com.palmtronix.shreddit.v1.MainActivity,2077-11-02 09:46:40.024000+09:00,23,ACTIVITY_STOPPED
+10233,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.ActivityFirstlaunch,2077-11-05 05:25:55.561000+09:00,1,ACTIVITY_RESUMED
+10234,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.ActivityFirstlaunch,2077-11-05 05:25:55.677000+09:00,2,ACTIVITY_PAUSED
+10235,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.Home,2077-11-05 05:25:55.681000+09:00,1,ACTIVITY_RESUMED
+10236,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.ActivityFirstlaunch,2077-11-05 05:25:56.113000+09:00,23,ACTIVITY_STOPPED
+10238,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.Home,2077-11-05 05:25:58.190000+09:00,2,ACTIVITY_PAUSED
+10239,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.ActivityErasing,2077-11-05 05:25:58.200000+09:00,1,ACTIVITY_RESUMED
+10240,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.Home,2077-11-05 05:25:59.165000+09:00,23,ACTIVITY_STOPPED
+10241,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.ActivityErasing,2077-11-05 05:26:05.897000+09:00,2,ACTIVITY_PAUSED
+10242,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.Home,2077-11-05 05:26:05.907000+09:00,1,ACTIVITY_RESUMED
+10243,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.ActivityErasing,2077-11-05 05:26:06.406000+09:00,23,ACTIVITY_STOPPED
+10245,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.Home,2077-11-05 05:26:08.393000+09:00,2,ACTIVITY_PAUSED
+10246,com.projectstar.ishredder.android.standard,com.protectstar.ishredder.activity.Home,2077-11-05 05:26:08.416000+09:00,23,ACTIVITY_STOPPED

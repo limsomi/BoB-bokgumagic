@@ -43,7 +43,7 @@ def extract_data(device,file_name, destination_dir):
         pull_command = f"adb -s {device.serial} pull /sdcard/{file_name} ./extractdata"
         subprocess.check_output(pull_command, shell=True, universal_newlines=True)
     except subprocess.CalledProcessError as e:
-        error_pattern = re.compile(r"Command 'adb pull (.*?) ./extractdata' returned non-zero exit status 1.")
+        error_pattern = re.compile(fr"Command 'adb -s {device.serial} pull (.*?) ./extractdata' returned non-zero exit status 1.")
         match = error_pattern.search(str(e))
         if match and copy_check==True:
             error_file_path = match.group(1)
@@ -53,10 +53,10 @@ def extract_data(device,file_name, destination_dir):
             for filename in result.splitlines():
                 if unique_characters.search(filename):
                     replace_filename = re.sub(r"[@!#$%^&*()<>?|}{~:]","",filename)
-                    rename_command=f"adb shell mv {filename} {replace_filename}"
+                    rename_command=f"adb -s {device.serial} shell mv {filename} {replace_filename}"
                     subprocess.run(rename_command,shell=True,check=True)
             try:
-                subprocess.check_output(pull_command,shell=True,check=True)
+                subprocess.check_output(pull_command,shell=True,universal_newlines=True)
             except subprocess.CalledProcessError as e:
                 print(f"Error: {e}")
 
