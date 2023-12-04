@@ -10,9 +10,9 @@ def main():
     if not os.path.exists('result'):
         os.makedirs('result')
     #adb extract usage
-    phone_type=input("폰 기종을 입력해수세요(1. 갤럭시 2.픽셀) : ")
-    device=adb_extract.get_deviceid()
+    device=adb_extract.get_device()
     android_version=int(adb_extract.get_androidVersion(device))
+    modelname=adb_extract.get_modelname(device)
     # android_version=13
     if android_version<11:
         destination_dir='/data/system/' # usagestats 경로 유의하기 
@@ -37,7 +37,7 @@ def main():
             clipboard_folder='com.samsung.android.honeyboard'
             clipboard_name='databases/ClipItem.db'
 
-        if phone_type==2:
+        if 'pixel' in modelname:
             clipboard_folder='com.google.android.inputmethod.latin'
         adb_extract.extract_data(device,clipboard_folder,destination_dir)
 

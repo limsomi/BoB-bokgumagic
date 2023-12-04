@@ -11,7 +11,7 @@ def get_androidVersion(device):
     except Exception as e:
         return f"Error getting Android version: {e}"
     
-def get_deviceid():
+def get_device():
     client = AdbClient(host="127.0.0.1", port=5037)
     devices = client.devices()
 
@@ -20,6 +20,10 @@ def get_deviceid():
         return
     device = devices[0]
     return device
+def get_modelname(device):
+    device_properties = device.get_properties()
+    model_name = device_properties["ro.product.model"]
+    return model_name
 
 def extract_data(device,file_name, destination_dir):
     copy_command = f'''adb -s {device.serial} shell "su -c 'cd {destination_dir} && cp -r {file_name} /sdcard'"'''
