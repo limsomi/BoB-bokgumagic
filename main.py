@@ -1,26 +1,26 @@
-from modules import adb_extract
-from modules import cache
-from modules import clipboard
-from modules import shared_prefs
-from modules import contacts
-from modules import usage
+from modules.data_processing import adb_extract
+from modules.data_processing import cache
+from modules.data_processing import clipboard
+from modules.data_processing import shared_prefs
+from modules.data_processing import contacts
+from modules.data_processing import usage
+from modules.data_processing import mkdir
 import os
 
 def main():
-    if not os.path.exists('result'):
-        os.makedirs('result')
+
     #adb extract usage
     device=adb_extract.get_device()
     android_version=int(adb_extract.get_androidVersion(device))
     modelname=adb_extract.get_modelname(device)
-    # android_version=13
+    mkdir.init()
     if android_version<11:
-        destination_dir='/data/system/' # usagestats 경로 유의하기 
+        destination_dir='/data/system/'
     else:
         destination_dir='/data/system_ce/0' 
     usage_name='usagestats'
     adb_extract.extract_data(device,usage_name,destination_dir)
-    wiping_check,wiping_application=usage.usagestats(android_version)#package_name도  추출해야함
+    wiping_check,wiping_application=usage.usagestats(android_version)
 
     if wiping_check==True:
         print("wiping 흔적 없음")
@@ -37,11 +37,12 @@ def main():
             clipboard_folder='com.samsung.android.honeyboard'
             clipboard_name='databases/ClipItem.db'
 
-        if 'pixel' in modelname:
+        if 'Pixel' in modelname:
             clipboard_folder='com.google.android.inputmethod.latin'
+            clipboard_name='databases/gboard_clipboard.db'
         adb_extract.extract_data(device,clipboard_folder,destination_dir)
 
-        # #adb extract all data except clipboard data
+        #adb extract all data except clipboard data
         data_list=['com.sec.android.gallery3d','com.samsung.android.providers.contacts']
         data_list.extend(wiping_application)
         destination_dir='/data/data'
@@ -57,14 +58,16 @@ def main():
 
         #gallery cache
         gallery_destination_dir='./extractdata'
-        gallery_renamed_files_dir='./extractdata/gallery3d_cache'
+        gallery_renamed_files_dir='./result/gallery3d_cache'
+
         cache.cache_image(gallery_destination_dir,gallery_renamed_files_dir)
 
         #clipboard
-        if android_version<11:
-            clipboard.clipboardFile_wiping('경로 지정')
-        else:
-            clipboard.clipboardDB_wiping('extractdata',clipboard_folder,clipboard_name)
+        if 'Pixel'not in modelname:
+            if android_version<11:
+                clipboard.clipboardFile_wiping('extractdata'.clipboard_folder)
+            else:
+                clipboard.clipboardDB_wiping('extractdata',clipboard_folder,clipboard_name)
 
         #contacts
         contacts.contacts_wiping('extractdata','com.samsung.android.providers.contacts/databases/contacts2.db')
