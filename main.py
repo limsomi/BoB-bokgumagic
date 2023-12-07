@@ -5,6 +5,11 @@ from modules.data_processing import shared_prefs
 from modules.data_processing import contacts
 from modules.data_processing import usage
 from modules.data_processing import mkdir
+from modules.ui import view_usage
+import sys
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QStandardItemModel,QStandardItem
+from PyQt5.QtWidgets import *
 import os
 
 def main():
@@ -22,10 +27,19 @@ def main():
     adb_extract.extract_data(device,usage_name,destination_dir)
     wiping_check,wiping_application=usage.usagestats(android_version)
 
+
     if wiping_check==True:
         print("wiping 흔적 없음")
         exit(0)
     else:
+        app = QtWidgets.QApplication(sys.argv)
+        MainWindow = QtWidgets.QMainWindow()
+        ui = view_usage.Usage_Window(android_version,modelname,wiping_application)
+        ui.setupUi(MainWindow)
+        MainWindow.show()
+        app.exec_()
+        # sys.exit(app.exec_())
+
         #adb extract clipboard data
         destination_dir='/data'
         if android_version<11:
@@ -40,6 +54,7 @@ def main():
         if 'Pixel' in modelname:
             clipboard_folder='com.google.android.inputmethod.latin'
             clipboard_name='databases/gboard_clipboard.db'
+            gallery_folder=''
         adb_extract.extract_data(device,clipboard_folder,destination_dir)
 
         #adb extract all data except clipboard data
@@ -65,7 +80,7 @@ def main():
         #clipboard
         if 'Pixel'not in modelname:
             if android_version<11:
-                clipboard.clipboardFile_wiping('extractdata'.clipboard_folder)
+                clipboard.clipboardFile_wiping('extractdata',clipboard_folder)
             else:
                 clipboard.clipboardDB_wiping('extractdata',clipboard_folder,clipboard_name)
 

@@ -1,0 +1,389 @@
+2023-11-21, 13:19:16.966 P 7172  T 34 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:19:16.969 P 7172  T 34 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:19:16.974 P 7172  T 34 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:19:16.978 P 7172  T 34 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:19:16.988 P 7172  T 34 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:19:16.990 P 7172  T 34 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:19:17.041 P 7172  T 34 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 13:19:17.042 P 7172  T 34 ContactsProvider]    Corp user not found.
+2023-11-21, 13:19:17.268 P 7172  T 70 RCS-ImsUiFactory]    create imsServiceCarrier : SKT
+2023-11-21, 13:19:17.270 P 7172  T 70 RCS-ImsUiManager]    created ImsUiVideoCallInterface: com.samsung.android.dialtacts.common.ims.uimanager.videocall.l@556016
+2023-11-21, 13:19:17.273 P 7172  T 70 RCS-ImsUiManagerFactory]    New instance created:com.samsung.android.dialtacts.common.ims.uimanager.a@db90bf0
+2023-11-21, 13:19:17.348 P 7172  T 70 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-11-21, 13:19:19.149 P 7172  T 70 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 13:19:19.150 P 7172  T 70 ContactsProvider]    Corp user not found.
+2023-11-21, 13:19:28.072 P 7172  T 36 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:19:28.084 P 7172  T 36 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:19:28.098 P 7172  T 36 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:19:28.103 P 7172  T 36 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:19:28.109 P 7172  T 36 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:19:28.120 P 7172  T 66 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:24:46.414 P 7172  T 36 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 13:24:46.416 P 7172  T 36 ContactsProvider]    Corp user not found.
+2023-11-21, 13:31:19.714 P 7172  T 61 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 13:31:19.716 P 7172  T 61 ContactsProvider]    Corp user not found.
+2023-11-21, 13:31:34.955 P 7172  T 61 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 13:31:34.957 P 7172  T 61 ContactsProvider]    Corp user not found.
+2023-11-21, 13:31:57.513 P 7172  T 61 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 13:31:57.515 P 7172  T 61 ContactsProvider]    Corp user not found.
+2023-11-21, 13:35:10.751 P 7172  T 34 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 13:35:10.753 P 7172  T 34 ContactsProvider]    Corp user not found.
+2023-11-21, 13:36:03.326 P 7172  T 70 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:36:03.333 P 7172  T 70 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:36:03.347 P 7172  T 71 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:36:03.354 P 7172  T 71 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:36:03.370 P 7172  T 71 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:36:03.383 P 7172  T 71 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:48:36.448 P 7172  T 69 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:48:36.465 P 7172  T 36 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:48:36.485 P 7172  T 69 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:48:36.503 P 7172  T 69 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 13:48:36.518 P 7172  T 69 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-11-21, 13:48:36.526 P 7172  T 36 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-11-21, 14:38:36.123 P 7172  T 34 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-11-21, 14:38:36.127 P 7172  T 34 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-11-21, 14:38:36.291 P 7172  T 34 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-11-21, 15:41:29.307 P 8313  T 50 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 15:41:29.310 P 8313  T 50 ContactsProvider]    Corp user not found.
+2023-11-21, 15:43:59.334 P 8313  T 31 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 15:43:59.336 P 8313  T 31 ContactsProvider]    Corp user not found.
+2023-11-21, 16:05:47.861 P 8483  T 53 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 16:05:47.865 P 8483  T 53 ContactsProvider]    Corp user not found.
+2023-11-21, 16:06:04.784 P 10761  T 51 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 16:06:04.786 P 10761  T 51 ContactsProvider]    Corp user not found.
+2023-11-21, 17:19:11.968 P 15941  T 53 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 17:19:11.969 P 15941  T 53 ContactsProvider]    Corp user not found.
+2023-11-21, 17:35:19.402 P 15941  T 52 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 17:35:19.404 P 15941  T 52 ContactsProvider]    Corp user not found.
+2023-11-21, 17:39:53.991 P 8171  T 52 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 17:39:53.994 P 8171  T 52 ContactsProvider]    Corp user not found.
+2023-11-21, 17:49:58.545 P 7845  T 50 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 17:49:58.548 P 7845  T 50 ContactsProvider]    Corp user not found.
+2023-11-21, 20:58:48.382 P 7845  T 53 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-21, 20:58:48.385 P 7845  T 53 ContactsProvider]    Corp user not found.
+2023-11-22, 00:17:05.799 P 7845  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-22, 00:17:05.800 P 7845  T 58 ContactsProvider]    Corp user not found.
+2023-11-22, 18:34:45.885 P 29281  T 35 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-22, 18:34:45.891 P 29281  T 35 ContactsProvider]    Corp user not found.
+2023-11-22, 18:55:48.174 P 9005  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-22, 18:55:48.176 P 9005  T 58 ContactsProvider]    Corp user not found.
+2023-11-23, 00:46:03.060 P 31665  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-23, 00:46:03.062 P 31665  T 58 ContactsProvider]    Corp user not found.
+2023-11-23, 00:47:28.529 P 31665  T 63 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-23, 00:47:28.530 P 31665  T 63 ContactsProvider]    Corp user not found.
+2023-11-23, 00:49:40.702 P 7568  T 40 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-23, 00:49:40.703 P 7568  T 40 ContactsProvider]    Corp user not found.
+2023-11-23, 00:49:40.863 P 7568  T 60 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-23, 00:49:40.865 P 7568  T 60 ContactsProvider]    Corp user not found.
+2023-11-23, 20:41:58.857 P 10035  T 86 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-23, 20:41:58.863 P 10035  T 86 ContactsProvider]    Corp user not found.
+2023-11-23, 20:41:59.056 P 10035  T 86 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-23, 20:41:59.057 P 10035  T 86 ContactsProvider]    Corp user not found.
+2023-11-23, 20:47:56.933 P 5075  T 38 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-23, 20:47:56.991 P 5075  T 38 ContactsProvider]    Corp user not found.
+2023-11-23, 20:48:01.543 P 5075  T 41 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-23, 20:48:01.548 P 5075  T 41 ContactsProvider]    Corp user not found.
+2023-11-24, 15:05:02.340 P 6819  T 95 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-24, 15:05:02.343 P 6819  T 95 ContactsProvider]    Corp user not found.
+2023-11-24, 15:05:02.552 P 6819  T 96 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-24, 15:05:02.553 P 6819  T 96 ContactsProvider]    Corp user not found.
+2023-11-24, 15:23:31.752 P 9241  T 59 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-24, 15:23:31.754 P 9241  T 59 ContactsProvider]    Corp user not found.
+2023-11-24, 15:23:31.996 P 9241  T 59 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-24, 15:23:31.997 P 9241  T 59 ContactsProvider]    Corp user not found.
+2023-11-24, 21:37:16.102 P 22923  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-24, 21:37:16.105 P 22923  T 58 ContactsProvider]    Corp user not found.
+2023-11-24, 21:37:16.181 P 22923  T 72 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-24, 21:37:16.182 P 22923  T 72 ContactsProvider]    Corp user not found.
+2023-11-24, 21:41:51.690 P 9188  T 59 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-24, 21:41:51.692 P 9188  T 59 ContactsProvider]    Corp user not found.
+2023-11-24, 21:41:51.848 P 9188  T 59 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-24, 21:41:51.849 P 9188  T 59 ContactsProvider]    Corp user not found.
+2023-11-25, 15:35:09.829 P 25003  T 131 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-25, 15:35:09.832 P 25003  T 131 ContactsProvider]    Corp user not found.
+2023-11-25, 15:35:09.832 P 25003  T 126 ContactsProvider]    Corp user not found.
+2023-11-25, 15:36:52.027 P 25003  T 104 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-25, 15:36:52.027 P 25003  T 104 ContactsProvider]    Corp user not found.
+2023-11-25, 15:36:52.053 P 25003  T 105 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-25, 15:36:52.053 P 25003  T 105 ContactsProvider]    Corp user not found.
+2023-11-25, 15:37:00.319 P 25003  T 133 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-25, 15:37:00.320 P 25003  T 133 ContactsProvider]    Corp user not found.
+2023-11-25, 15:37:00.369 P 25003  T 135 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-25, 15:37:00.370 P 25003  T 135 ContactsProvider]    Corp user not found.
+2023-11-26, 00:50:03.489 P 25003  T 139 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-26, 00:50:03.491 P 25003  T 139 ContactsProvider]    Corp user not found.
+2023-11-26, 00:50:03.567 P 25003  T 139 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-26, 00:50:03.568 P 25003  T 139 ContactsProvider]    Corp user not found.
+2023-11-27, 02:56:15.631 P 25003  T 126 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-27, 02:56:15.645 P 25003  T 126 ContactsProvider]    Corp user not found.
+2023-11-27, 02:56:16.066 P 25003  T 126 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-27, 02:56:16.067 P 25003  T 126 ContactsProvider]    Corp user not found.
+2023-11-27, 16:17:41.403 P 25003  T 139 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-27, 16:17:41.404 P 25003  T 139 ContactsProvider]    Corp user not found.
+2023-11-27, 16:17:41.437 P 25003  T 139 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-27, 16:17:41.438 P 25003  T 139 ContactsProvider]    Corp user not found.
+2023-11-27, 16:18:48.760 P 25003  T 105 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-27, 16:18:48.761 P 25003  T 105 ContactsProvider]    Corp user not found.
+2023-11-27, 16:18:48.789 P 25003  T 105 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-27, 16:18:48.790 P 25003  T 105 ContactsProvider]    Corp user not found.
+2023-11-27, 16:20:32.779 P 8644  T 41 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-27, 16:20:32.781 P 8644  T 41 ContactsProvider]    Corp user not found.
+2023-11-27, 16:20:32.938 P 8644  T 41 ContactsProvider]    Corp user not found.
+2023-11-28, 00:44:09.262 P 30178  T 41 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 00:44:09.264 P 30178  T 41 ContactsProvider]    Corp user not found.
+2023-11-28, 00:44:09.300 P 30178  T 41 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 00:44:09.302 P 30178  T 41 ContactsProvider]    Corp user not found.
+2023-11-28, 13:32:03.282 P 8822  T 41 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:32:03.504 P 8822  T 41 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:32:03.505 P 8822  T 41 ContactsProvider]    Corp user not found.
+2023-11-28, 13:32:29.654 P 12384  T 60 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:32:29.656 P 12384  T 60 ContactsProvider]    Corp user not found.
+2023-11-28, 13:32:29.723 P 12384  T 64 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:32:29.725 P 12384  T 64 ContactsProvider]    Corp user not found.
+2023-11-28, 13:36:57.901 P 10884  T 40 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:36:57.905 P 10884  T 40 ContactsProvider]    Corp user not found.
+2023-11-28, 13:36:58.080 P 10884  T 40 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:36:58.081 P 10884  T 40 ContactsProvider]    Corp user not found.
+2023-11-28, 13:39:03.010 P 9067  T 39 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:39:03.039 P 9067  T 39 ContactsProvider]    Corp user not found.
+2023-11-28, 13:39:03.607 P 9067  T 39 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:39:03.609 P 9067  T 39 ContactsProvider]    Corp user not found.
+2023-11-28, 13:39:25.107 P 12160  T 64 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:39:25.111 P 12160  T 64 ContactsProvider]    Corp user not found.
+2023-11-28, 13:39:25.203 P 12160  T 39 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:39:25.205 P 12160  T 39 ContactsProvider]    Corp user not found.
+2023-11-28, 13:41:18.113 P 8633  T 63 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:41:18.116 P 8633  T 63 ContactsProvider]    Corp user not found.
+2023-11-28, 13:41:18.285 P 8633  T 63 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:41:18.286 P 8633  T 63 ContactsProvider]    Corp user not found.
+2023-11-28, 13:41:38.577 P 11110  T 40 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:41:38.578 P 11110  T 40 ContactsProvider]    Corp user not found.
+2023-11-28, 13:41:38.703 P 11110  T 40 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:41:38.704 P 11110  T 40 ContactsProvider]    Corp user not found.
+2023-11-28, 13:45:01.402 P 8828  T 57 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:45:01.404 P 8828  T 57 ContactsProvider]    Corp user not found.
+2023-11-28, 13:45:01.551 P 8828  T 57 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:45:01.553 P 8828  T 57 ContactsProvider]    Corp user not found.
+2023-11-28, 13:45:22.101 P 11348  T 39 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:45:22.103 P 11348  T 39 ContactsProvider]    Corp user not found.
+2023-11-28, 13:45:22.210 P 11348  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:45:22.212 P 11348  T 58 ContactsProvider]    Corp user not found.
+2023-11-28, 13:54:31.515 P 9157  T 40 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:54:31.519 P 9157  T 40 ContactsProvider]    Corp user not found.
+2023-11-28, 13:54:31.769 P 9157  T 40 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:54:31.770 P 9157  T 40 ContactsProvider]    Corp user not found.
+2023-11-28, 13:54:52.286 P 11722  T 39 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:54:52.290 P 11722  T 39 ContactsProvider]    Corp user not found.
+2023-11-28, 13:54:52.346 P 11722  T 64 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 13:54:52.347 P 11722  T 64 ContactsProvider]    Corp user not found.
+2023-11-28, 17:22:04.936 P 26864  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 17:22:04.937 P 26864  T 58 ContactsProvider]    Corp user not found.
+2023-11-28, 17:22:04.996 P 26864  T 57 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-28, 17:22:04.998 P 26864  T 57 ContactsProvider]    Corp user not found.
+2023-11-30, 02:06:40.141 P 15463  T 138 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-30, 02:06:40.144 P 15463  T 138 ContactsProvider]    Corp user not found.
+2023-11-30, 02:06:40.223 P 15463  T 115 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-30, 02:06:40.224 P 15463  T 115 ContactsProvider]    Corp user not found.
+2023-11-30, 15:46:43.718 P 9801  T 62 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-30, 15:46:43.720 P 9801  T 62 ContactsProvider]    Corp user not found.
+2023-11-30, 15:46:43.893 P 9801  T 61 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-30, 15:46:43.894 P 9801  T 61 ContactsProvider]    Corp user not found.
+2023-11-30, 15:47:01.481 P 12361  T 61 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-30, 15:47:01.482 P 12361  T 61 ContactsProvider]    Corp user not found.
+2023-11-30, 15:47:01.543 P 12361  T 61 ContactsProvider]    getCorpUserId: myUser=0
+2023-11-30, 15:47:01.545 P 12361  T 61 ContactsProvider]    Corp user not found.
+2023-12-01, 22:01:32.048 P 9532  T 63 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-01, 22:01:32.055 P 9532  T 63 ContactsProvider]    Corp user not found.
+2023-12-01, 22:01:32.359 P 9532  T 63 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-01, 22:01:32.361 P 9532  T 63 ContactsProvider]    Corp user not found.
+2023-12-01, 22:01:48.970 P 12262  T 57 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-01, 22:01:48.972 P 12262  T 57 ContactsProvider]    Corp user not found.
+2023-12-01, 22:01:49.030 P 12262  T 57 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-01, 22:01:49.032 P 12262  T 57 ContactsProvider]    Corp user not found.
+2023-12-01, 23:58:33.586 P 9479  T 65 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-01, 23:58:33.589 P 9479  T 65 ContactsProvider]    Corp user not found.
+2023-12-01, 23:58:33.796 P 9479  T 65 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-01, 23:58:33.797 P 9479  T 65 ContactsProvider]    Corp user not found.
+2023-12-01, 23:58:54.022 P 12105  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-01, 23:58:54.023 P 12105  T 58 ContactsProvider]    Corp user not found.
+2023-12-01, 23:58:54.070 P 12105  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-01, 23:58:54.072 P 12105  T 58 ContactsProvider]    Corp user not found.
+2023-12-02, 00:08:44.181 P 9134  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 00:08:44.184 P 9134  T 58 ContactsProvider]    Corp user not found.
+2023-12-02, 00:08:44.366 P 9134  T 63 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 00:08:44.367 P 9134  T 63 ContactsProvider]    Corp user not found.
+2023-12-02, 00:09:04.742 P 11785  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 00:09:04.743 P 11785  T 58 ContactsProvider]    Corp user not found.
+2023-12-02, 00:09:04.805 P 11785  T 63 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 00:09:04.806 P 11785  T 63 ContactsProvider]    Corp user not found.
+2023-12-02, 22:47:16.507 P 7865  T 110 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 22:47:16.512 P 7865  T 110 ContactsProvider]    Corp user not found.
+2023-12-02, 22:47:16.691 P 7865  T 110 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 22:47:16.692 P 7865  T 110 ContactsProvider]    Corp user not found.
+2023-12-02, 22:49:49.529 P 9473  T 63 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 22:49:49.532 P 9473  T 63 ContactsProvider]    Corp user not found.
+2023-12-02, 22:49:49.773 P 9473  T 41 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 22:49:49.775 P 9473  T 41 ContactsProvider]    Corp user not found.
+2023-12-02, 22:50:10.939 P 12303  T 41 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 22:50:10.940 P 12303  T 41 ContactsProvider]    Corp user not found.
+2023-12-02, 22:50:10.998 P 12303  T 58 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 22:50:11.001 P 12303  T 58 ContactsProvider]    Corp user not found.
+2023-12-02, 23:10:39.621 P 9076  T 62 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 23:10:39.628 P 9076  T 62 ContactsProvider]    Corp user not found.
+2023-12-02, 23:10:39.868 P 9076  T 40 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 23:10:39.869 P 9076  T 40 ContactsProvider]    Corp user not found.
+2023-12-02, 23:11:00.412 P 11783  T 39 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 23:11:00.414 P 11783  T 39 ContactsProvider]    Corp user not found.
+2023-12-02, 23:11:00.482 P 11783  T 64 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-02, 23:11:00.483 P 11783  T 64 ContactsProvider]    Corp user not found.
+2023-12-04, 23:29:24.063 P 17073  T 125 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-04, 23:29:24.065 P 17073  T 125 ContactsProvider]    Corp user not found.
+2023-12-04, 23:29:24.065 P 17073  T 105 ContactsProvider]    Corp user not found.
+2023-12-04, 23:32:14.791 P 9844  T 42 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-04, 23:32:14.795 P 9844  T 42 ContactsProvider]    Corp user not found.
+2023-12-04, 23:43:30.249 P 9505  T 40 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-04, 23:43:30.251 P 9505  T 40 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-04, 23:43:30.255 P 9505  T 40 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-04, 23:43:30.258 P 9505  T 40 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-04, 23:43:30.263 P 9505  T 65 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-04, 23:43:30.266 P 9505  T 40 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-04, 23:43:30.274 P 9505  T 40 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-04, 23:43:30.276 P 9505  T 40 ContactsProvider]    Corp user not found.
+2023-12-04, 23:43:30.616 P 9505  T 64 RCS-ImsUiFactory]    create imsServiceCarrier : SKT
+2023-12-04, 23:43:30.621 P 9505  T 64 RCS-ImsUiManager]    created ImsUiVideoCallInterface: com.samsung.android.dialtacts.common.ims.uimanager.videocall.l@ad9da68
+2023-12-04, 23:43:30.628 P 9505  T 64 RCS-ImsUiManagerFactory]    New instance created:com.samsung.android.dialtacts.common.ims.uimanager.a@1c6dcb9
+2023-12-04, 23:43:30.630 P 9505  T 64 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-04, 23:43:30.638 P 9505  T 64 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-04, 23:43:30.649 P 9505  T 64 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-04, 23:43:30.656 P 9505  T 64 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-04, 23:43:30.665 P 9505  T 64 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-04, 23:43:30.672 P 9505  T 64 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-04, 23:43:30.934 P 9505  T 40 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-04, 23:43:32.014 P 9505  T 65 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-04, 23:43:32.015 P 9505  T 65 ContactsProvider]    Corp user not found.
+2023-12-06, 03:44:51.779 P 9065  T 145 ContactsProvider]    Corp user not found.
+2023-12-06, 03:44:51.809 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 03:44:51.811 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 03:44:51.819 P 9065  T 145 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 03:44:51.825 P 9065  T 145 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 03:44:51.834 P 9065  T 145 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 03:44:51.839 P 9065  T 145 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 03:44:52.191 P 9065  T 165 RCS-ImsUiFactory]    create imsServiceCarrier : SKT
+2023-12-06, 03:44:52.200 P 9065  T 165 RCS-ImsUiManager]    created ImsUiVideoCallInterface: com.samsung.android.dialtacts.common.ims.uimanager.videocall.l@8c276c2
+2023-12-06, 03:44:52.205 P 9065  T 165 RCS-ImsUiManagerFactory]    New instance created:com.samsung.android.dialtacts.common.ims.uimanager.a@b69732f
+2023-12-06, 03:44:52.461 P 9065  T 165 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 03:44:53.524 P 9065  T 144 ContactsProvider]    getCorpUserId: myUser=0
+2023-12-06, 03:44:53.525 P 9065  T 144 ContactsProvider]    Corp user not found.
+2023-12-06, 04:05:43.928 P 9065  T 165 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 04:05:43.982 P 9065  T 165 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 04:35:43.971 P 9065  T 165 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 04:35:43.985 P 9065  T 165 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-06, 04:35:44.009 P 9065  T 165 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 05:05:44.051 P 9065  T 165 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 05:05:44.079 P 9065  T 165 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 05:35:44.107 P 9065  T 165 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 05:35:44.143 P 9065  T 165 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 06:05:44.170 P 9065  T 165 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 06:05:44.182 P 9065  T 165 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-06, 06:05:44.212 P 9065  T 165 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 06:14:06.332 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 06:14:06.347 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 06:14:06.350 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 06:14:06.361 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 06:14:06.383 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 06:14:06.390 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 06:14:12.882 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 06:14:12.890 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 06:14:12.900 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 06:14:12.916 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 06:14:12.932 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 06:14:12.938 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 06:35:44.234 P 9065  T 144 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 06:35:44.237 P 9065  T 144 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-06, 06:35:44.253 P 9065  T 144 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 07:05:44.290 P 9065  T 144 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 07:05:44.295 P 9065  T 144 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-06, 07:05:44.328 P 9065  T 144 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 07:35:44.334 P 9065  T 144 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 07:35:44.338 P 9065  T 144 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-06, 07:35:44.372 P 9065  T 144 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 08:05:44.399 P 9065  T 144 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 08:05:44.428 P 9065  T 144 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 08:14:36.833 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 08:14:36.839 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 08:14:36.854 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 08:14:36.868 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 08:14:36.897 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 08:14:36.905 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 08:14:38.164 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 08:14:38.172 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 08:14:38.182 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 08:14:38.188 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 08:14:38.201 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 08:14:38.207 P 9065  T 144 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 08:14:46.981 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 08:14:46.989 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 08:14:46.995 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 08:14:47.009 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 08:14:47.016 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 08:35:44.453 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 08:35:44.487 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 09:05:44.503 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 09:05:44.512 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-06, 09:05:44.543 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 09:35:44.572 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 09:35:44.610 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 10:05:44.617 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 10:05:44.651 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 10:35:44.677 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 10:35:44.711 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 11:05:44.726 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 11:05:44.732 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-06, 11:05:44.760 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 11:35:44.764 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 11:35:44.817 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 12:05:44.828 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 12:05:44.834 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-06, 12:05:44.862 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 12:15:07.066 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 12:15:07.073 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:07.089 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 12:15:07.108 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:07.123 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 12:15:07.132 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:07.797 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 12:15:07.858 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:07.890 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 12:15:07.899 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:07.913 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 12:15:07.923 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:19.204 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:19.216 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 12:15:19.218 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:19.230 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 12:15:19.239 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:22.876 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:22.884 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 12:15:22.891 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:15:22.896 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 12:15:22.899 P 9065  T 164 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 12:35:44.888 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 12:35:44.958 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 13:05:44.955 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 13:05:44.960 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-06, 13:05:44.998 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 13:35:44.998 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 13:35:45.039 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 14:05:45.061 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 14:05:45.093 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 14:35:45.112 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 14:35:45.126 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :1
+2023-12-06, 14:35:45.161 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 15:05:45.176 P 9065  T 164 TelephonyDataSource]    subscriptionInfos is null. There's no SIM : slot id :0
+2023-12-06, 15:05:45.216 P 9065  T 164 RCS-ImsUiManager]    onImsNetworkValueChanged
+2023-12-06, 15:16:43.365 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 15:16:43.376 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 15:16:43.393 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 15:16:43.408 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >
+2023-12-06, 15:16:43.431 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(0) return false < 1 >
+2023-12-06, 15:16:43.445 P 9065  T 165 SimContactModel]    isSimActivatedEnabled(1) return false < 0 >

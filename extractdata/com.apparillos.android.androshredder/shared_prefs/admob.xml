@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="app_settings_json">{&quot;status&quot;:1,&quot;app_id&quot;:&quot;ca-app-pub-6366584220661369~4268471130&quot;,&quot;auto_collect_location&quot;:true,&quot;cache_ttl_sec&quot;:259200,&quot;common_settings&quot;:{&quot;loeid&quot;:[44766145],&quot;app_id&quot;:&quot;ca-app-pub-6366584220661369~4268471130&quot;},&quot;ad_unit_id_settings&quot;:[{&quot;ad_unit_id&quot;:&quot;ca-app-pub-6366584220661369/8698670734&quot;,&quot;format&quot;:&quot;banner&quot;,&quot;mediation_config&quot;:{&quot;ad_networks&quot;:[{&quot;adapters&quot;:[&quot;com.google.ads.mediation.admob.AdMobAdapter&quot;]}]}},{&quot;ad_unit_id&quot;:&quot;ca-app-pub-6366584220661369/2652137133&quot;,&quot;format&quot;:&quot;banner&quot;,&quot;mediation_config&quot;:{&quot;ad_networks&quot;:[{&quot;adapters&quot;:[&quot;com.google.ads.mediation.admob.AdMobAdapter&quot;]}]}},{&quot;ad_unit_id&quot;:&quot;ca-app-pub-6366584220661369/7669262736&quot;,&quot;format&quot;:&quot;banner&quot;,&quot;mediation_config&quot;:{&quot;ad_networks&quot;:[{&quot;adapters&quot;:[&quot;com.google.ads.mediation.admob.AdMobAdapter&quot;]}]}}],&quot;persistable_banner_ad_unit_ids&quot;:[&quot;ca-app-pub-6366584220661369/8698670734&quot;,&quot;ca-app-pub-6366584220661369/2652137133&quot;,&quot;ca-app-pub-6366584220661369/7669262736&quot;],&quot;initializer_settings&quot;:{&quot;config&quot;:{}}}</string>
+    <long name="app_settings_last_update_ms" value="1701852665409" />
+    <int name="request_in_session_count" value="1" />
+    <boolean name="gad_idless" value="false" />
+    <long name="first_ad_req_time_ms" value="1701854866929" />
+    <long name="app_last_background_time_ms" value="1701856161177" />
+</map>

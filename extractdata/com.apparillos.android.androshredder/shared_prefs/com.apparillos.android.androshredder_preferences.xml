@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <float name="shredFinishedMBS" value="6.0" />
+    <long name="wipeFinishedDuration" value="2291" />
+    <float name="wipeFinishedMBS" value="220.0" />
+    <boolean name="shredInfoRead" value="true" />
+    <int name="shredFinishedNumFiles" value="1" />
+    <string name="shredFinishedFiles">[&quot;content:\/\/com.android.providers.media.documents\/document\/image%3A1000005002&quot;]</string>
+    <long name="wipeFinishedTotal" value="43258044416" />
+    <long name="wipeFinishedWiped" value="461373440" />
+    <boolean name="bg_startup_tracing" value="false" />
+    <long name="shredFinishedDuration" value="3218" />
+    <string name="wipeFinishedName">Internal storage</string>
+    <long name="shredFinishedShredded" value="7099152" />
+    <boolean name="wipeFinishedFlag" value="true" />
+    <string name="SearchPattern"></string>
+    <long name="shredFinishedTotal" value="7099152" />
+    <int name="SearchAge" value="1" />
+    <string name="SearchType">SearchTypeAll</string>
+    <boolean name="shredFinishedFlag" value="false" />
+    <boolean name="wipeInfoRead" value="true" />
+    <string name="shredFinishedErrors">[]</string>
+</map>

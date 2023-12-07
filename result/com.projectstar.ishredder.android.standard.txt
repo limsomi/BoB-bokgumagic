@@ -1,0 +1,60 @@
+
+List 1 Elements:
+startDate: 20231206151641
+endDate: 20231206151642
+mCycles: 1
+mValue: N0x00
+mPattern: [[0]]
+name: Clipboard
+type: Clipboard
+appCode: 7014
+
+List 2 Elements:
+startDate: 20231201215856
+endDate: 20231201215856
+mCycles: 1
+mValue: N0x00
+mPattern: [[0]]
+name: /storage/emulated/0/DCIM/Camera/20231128_133649.jpg
+type: Selected Files \u0026 Folders
+appCode: 7014
+
+List 3 Elements:
+startDate: 20231127161807
+endDate: 20231127161807
+mCycles: 1
+mValue: Zufall
+mPattern: [[-1]]
+name: Delete_random0 (010-8888-8888)
+type: Contacts
+appCode: 7014
+
+List 4 Elements:
+startDate: 20231121174815
+endDate: 20231121174816
+mCycles: 1
+mValue: N0x00
+mPattern: [[0]]
+name: Clipboard
+type: Clipboard
+appCode: 7014
+
+List 5 Elements:
+startDate: 20231121172923
+endDate: 20231121172924
+mCycles: 8
+mValue: BSI_TL_03423
+mPattern: [[255]
+name: Clipboard
+type: Clipboard
+appCode: 7014
+
+List 6 Elements:
+startDate: 20231121133506
+endDate: 20231121133510
+mCycles: 8
+mValue: BSI_TL_03423
+mPattern: [[255]
+name: /storage/emulated/0/DCIM/Camera/20231121_132637.jpg
+type: Photos
+appCode: 7014
