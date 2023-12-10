@@ -1,5 +1,0 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<map>
-    <string name="locale">[ko_KR]</string>
-    <string name="LetterCountCache">content://com.android.contacts/contacts?android.provider.extra.ADDRESS_BOOK_INDEX=true&amp;directory=0&amp;UnionStarred=true&amp;dummyGroup=true&#1;(has_email&gt;0 OR has_phone_number=1)&#1;sort_key_alt COLLATE UNICODE_NATURAL&#1;DISTINCT _id2&#2;GROUPS&#1;1&#1;N&#1;1&#2;content://com.android.contacts/contacts?android.provider.extra.ADDRESS_BOOK_INDEX=true&amp;directory=0&amp;UnionStarred=true&amp;dummyGroup=true&amp;limit=100&#1;(has_email&gt;0 OR has_phone_number=1)&#1;sort_key_alt COLLATE UNICODE_NATURAL&#1;DISTINCT _id2&#2;GROUPS&#1;1&#1;N&#1;1</string>
-</map>

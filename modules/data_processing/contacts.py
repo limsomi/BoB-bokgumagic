@@ -25,5 +25,5 @@ def contacts_wiping(destination_dir,db_name):
     cols=[column[0] for column in cur.description]
     contacts_df=pd.DataFrame.from_records(data=rows,columns=cols)
     conn.close()
-    contacts_df.to_csv('./result/contacts.csv')
+    contacts_df.to_csv('./result/contacts.csv',index=False)
 

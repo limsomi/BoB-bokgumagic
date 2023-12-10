@@ -79,7 +79,7 @@ def clipboardDB_wiping(destination_dir,folder_name,clipboard_name):
     wiping_data.loc[wiping_data['html'], 'text'] = ''
     wiping_data.drop(columns=['id','time_stamp','type','uri_list','wiping_check','group'],inplace=True)
     wiping_data.rename(columns={'formatted_time_stamp':'time_stamp'},inplace=True)
-    wiping_data.to_csv('./result/clipboard/clipboard.csv')
+    wiping_data.to_csv('./result/clipboard/clipboard.csv',index=False)
     return check_wiping
 
 def clipboardFile_wiping(destination_dir,folder_name):

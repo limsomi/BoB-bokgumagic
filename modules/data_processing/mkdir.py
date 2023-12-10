@@ -11,3 +11,5 @@ def init():
     os.makedirs('result/clipboard')
     os.makedirs('result/clipboard/image')
     os.makedirs('result/clipboard/html')
+    os.makedirs('result/cache')
+    os.makedirs('result/shared_prefs')

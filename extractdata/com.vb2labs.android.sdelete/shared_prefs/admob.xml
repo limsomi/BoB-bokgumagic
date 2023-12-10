@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<map>
-    <int name="request_in_session_count" value="1" />
-    <boolean name="gad_idless" value="false" />
-    <long name="first_ad_req_time_ms" value="1701435544974" />
-    <string name="app_settings_json">{&quot;status&quot;:1,&quot;app_id&quot;:&quot;ca-app-pub-2337338667127999~4898094665&quot;,&quot;auto_collect_location&quot;:true,&quot;cache_ttl_sec&quot;:259200,&quot;common_settings&quot;:{&quot;loeid&quot;:[44766145],&quot;app_id&quot;:&quot;ca-app-pub-2337338667127999~4898094665&quot;},&quot;initializer_settings&quot;:{&quot;config&quot;:{}}}</string>
-    <long name="app_settings_last_update_ms" value="1701435547479" />
-    <long name="app_last_background_time_ms" value="1701435568101" />
-</map>
