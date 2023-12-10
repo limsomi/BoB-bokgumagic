@@ -2,9 +2,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QStandardItemModel,QStandardItem
 
 import os
-# from TabCache import TabCacheView
 from modules.ui.view_cache import CacheView
-def PackageCacheView(widget):
+
+def PackageCacheView(widget):#package file(cache)
     cacheFolder_list=os.listdir('./result/cache')
     for cacheFolder in cacheFolder_list:
         file_path=os.path.join('cache',cacheFolder)
@@ -13,7 +13,7 @@ def PackageCacheView(widget):
         widget.viewWidget.addTab(tab, cacheFolder)
 
 
-def SharedPrefsView(widget):
+def SharedPrefsView(widget):#package file(shared_prefs)
     sharedPrefs_list=os.listdir('./result/shared_prefs')
     for sharedPrefs in sharedPrefs_list:
         tab=QtWidgets.QWidget()
@@ -23,7 +23,7 @@ def SharedPrefsView(widget):
         tabLayout=QtWidgets.QVBoxLayout(tab)
 
         DataCountLabel=QtWidgets.QLabel(tab)
-        scrollArea=QtWidgets.QScrollArea(tab)
+        scrollArea=QtWidgets.QScrollArea(tab)#내용이 화면 밖을 넘어가면 자동으로 scroll 생김
 
 
         scrollArea.setWidgetResizable(True)

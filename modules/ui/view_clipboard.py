@@ -8,13 +8,13 @@ from modules.ui.TableView import TableView
 from modules.ui.view_cache import CacheView
 def ClipboardView(widget):
 
-    tab_1 = QtWidgets.QWidget()
+    tab_1 = QtWidgets.QWidget()#clipboard
     tab_1.setStyleSheet('''background-color:rgb(255,255,255);''')
     tab_1.setObjectName("tab_1")
     TableView(tab_1,'./result/clipboard/clipboard.csv')
     widget.viewWidget.addTab(tab_1, "Clipboard")
 
-    tab_2 = QtWidgets.QWidget()
+    tab_2 = QtWidgets.QWidget()#image
     tab_2.setStyleSheet('''background-color:rgb(255,255,255);
                         margin:10px;
                         margin-top:0px;''')
@@ -23,7 +23,7 @@ def ClipboardView(widget):
     widget.viewWidget.addTab(tab_2, "Image")
 
 
-    tab_3 = QtWidgets.QWidget()
+    tab_3 = QtWidgets.QWidget()#html
     tab_3.setStyleSheet('''background-color:rgb(255,255,255);''')
     tab_3.setObjectName("tab_3")
     htmlLayout = QtWidgets.QVBoxLayout(tab_3)
@@ -43,7 +43,7 @@ def ClipboardView(widget):
     htmlCountLabel.setFont(font)
 
     htmlLayout.addWidget(htmlCountLabel)
-    htmlScrollArea = QtWidgets.QScrollArea(tab_3)
+    htmlScrollArea = QtWidgets.QScrollArea(tab_3)#스크롤 위젯 생성(내용이 넘어가면 자동으로 스크롤 생성해줌)
     htmlScrollArea.setWidgetResizable(True)
     htmlScrollArea.setObjectName("htmlScrollArea")
     htmlScrollArea.setStyleSheet('border:none;')

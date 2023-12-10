@@ -15,6 +15,7 @@ class Usage_Window(QMainWindow):
                 self.android_version=None
                 self.modelname=None
                 self.wiping_aplication=None
+                self.duplicated_application=None
                 self.setupUi()
         def setupUi(self):
                 self.setObjectName("self")
@@ -29,24 +30,31 @@ class Usage_Window(QMainWindow):
                 self.centralwidget = QtWidgets.QWidget(self)
                 self.centralwidget.setStyleSheet("background-color:rgb(235, 235, 235);")
                 self.centralwidget.setObjectName("centralwidget")
-                self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
-                self.horizontalLayout.setObjectName("horizontalLayout")
-                self.SiderLayout = QtWidgets.QVBoxLayout()
+                
+                self.centralLayout = QtWidgets.QHBoxLayout(self.centralwidget)#usage 전체 페이지 layout
+                self.centralLayout.setObjectName("centralLayout")
+
+                self.SiderLayout = QtWidgets.QVBoxLayout()#side bar layout
                 self.SiderLayout.setSpacing(0)
                 self.SiderLayout.setObjectName("siderlayout")
-                osWidget = QtWidgets.QWidget(self.centralwidget)
+
+                osWidget = QtWidgets.QWidget(self.centralwidget)#os 정보 header + os 정보 data
                 osWidget.setObjectName("widget")
-                self.osWidgetLayout = QtWidgets.QVBoxLayout(osWidget)
+
+                self.osWidgetLayout = QtWidgets.QVBoxLayout(osWidget)#os 정보 layout
                 self.osWidgetLayout.setContentsMargins(0, 0, 0, 0)
                 self.osWidgetLayout.setSpacing(0)
-                self.osWidgetLayout.setObjectName("verticalLayout_2")
+                self.osWidgetLayout.setObjectName("extractButtonLayout_2")
+
                 self.os_information_header = QtWidgets.QLabel(osWidget)
-                self.os_information_header.setStyleSheet("background-color:rgb(242, 242, 242);\n"
+                self.os_information_header.setStyleSheet("background-color:rgb(242, 242, 242);\n"#os 정보 header style
                 "border:1px solid rgb(217,217,217);\n"
                 "padding:10px;")
                 self.os_information_header.setObjectName("os_information_header")
+
                 self.osWidgetLayout.addWidget(self.os_information_header)
-                self.OSinformation_listView = QtWidgets.QListView(osWidget)
+
+                self.OSinformation_listView = QtWidgets.QListView(osWidget)#os 정보 데이터 widget
                 self.OSinformation_listView.setObjectName("OSinformation_listView")
                 font = QtGui.QFont()
                 font.setFamily("맑은 고딕 Semilight")
@@ -54,24 +62,36 @@ class Usage_Window(QMainWindow):
                 font.setBold(True)
                 font.setWeight(75)
                 self.OSinformation_listView.setFont(font)
+                
+                #OSinformation_listView의 style은 AnalyzeUsagesStats 함수에도 있음
+                self.OSinformation_listView.setStyleSheet('''
+                                QListView{
+                                background-color:rgb(255,255,255);
+                                border:1px solid rgb(217,217,217);
+                                                          
+                                }             ''')
                 self.osWidgetLayout.addWidget(self.OSinformation_listView)
                 self.osWidgetLayout.setStretch(0, 1)
                 self.osWidgetLayout.setStretch(1, 13)
+
                 self.SiderLayout.addWidget(osWidget)
-                self.extract_button = QtWidgets.QWidget(self.centralwidget)
-                self.extract_button.setStyleSheet("background-color:rgb(242, 242, 242);\n"
+                self.extractButton = QtWidgets.QWidget(self.centralwidget)#usagestats 분석, 잔여 데이터 분석 버튼 모음
+                self.extractButton.setStyleSheet("background-color:rgb(242, 242, 242);\n"
                 "border-style: solid;\n"
                 "border-width: 1px;\n"
                 "border-color:rgb(217,217,217);")
-                self.extract_button.setObjectName("extract_button")
-                self.verticalLayout = QtWidgets.QVBoxLayout(self.extract_button)
-                self.verticalLayout.setSpacing(9)
-                self.verticalLayout.setObjectName("verticalLayout")
-                self.ViewDataButton = QtWidgets.QHBoxLayout()
+                self.extractButton.setObjectName("extractButton")
+
+                self.extractButtonLayout = QtWidgets.QVBoxLayout(self.extractButton)#usagestats 분석, 잔여 데이터 분석 버튼 모음 layout
+                self.extractButtonLayout.setSpacing(9)
+                self.extractButtonLayout.setObjectName("extractButtonLayout")
+
+                self.ViewDataButton = QtWidgets.QHBoxLayout()#잔여 데이터 분석 버튼 layout(이건 extract button 안에서 간격두기 위해 만들어둠)
                 self.ViewDataButton.setObjectName("ViewDataButton")
                 spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
                 self.ViewDataButton.addItem(spacerItem)
-                self.V_Button = QtWidgets.QPushButton(self.extract_button)
+
+                self.V_Button = QtWidgets.QPushButton(self.extractButton)#잔여 데이터 분석 버튼
                 font = QtGui.QFont()
                 font.setFamily("맑은 고딕 Semilight")
                 font.setPointSize(15)
@@ -81,6 +101,7 @@ class Usage_Window(QMainWindow):
                 self.V_Button.setStyleSheet("background-color:rgb(217,217,217);\n"
                 "padding:15px;")
                 self.V_Button.setObjectName("V_Button")
+                #잔여 데이터 분석 버튼 누르면 progressbar로 thread를 생성해 viewData_Thread(viewData.py) 실행 : progresssbar 디자인은 Progressbar 참고
                 self.V_Button.clicked.connect(lambda:self.Progressbar_exec(viewData_Thread(self.android_version,self.modelname,self.wiping_aplication),self.viewData_exec,'잔여 데이터 분석 중....'))
                 self.ViewDataButton.addWidget(self.V_Button)
                 spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -88,11 +109,13 @@ class Usage_Window(QMainWindow):
                 self.ViewDataButton.setStretch(0, 2)
                 self.ViewDataButton.setStretch(1, 1)
                 self.ViewDataButton.setStretch(2, 2)
-                self.UsageButton = QtWidgets.QHBoxLayout()
+
+                self.UsageButton = QtWidgets.QHBoxLayout()#usagestats 버튼 layout(이건 extract button 안에서 간격두기 위해 만들어둠)
                 self.UsageButton.setObjectName("UsageButton")
                 spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
                 self.UsageButton.addItem(spacerItem2)
-                self.U_Button = QtWidgets.QPushButton(self.extract_button)
+
+                self.U_Button = QtWidgets.QPushButton(self.extractButton)#usagestats 버튼
                 font = QtGui.QFont()
                 font.setFamily("맑은 고딕 Semilight")
                 font.setPointSize(15)
@@ -102,6 +125,7 @@ class Usage_Window(QMainWindow):
                 self.U_Button.setStyleSheet("background-color:rgb(217,217,217);\n"
                 "padding:15px;")
                 self.U_Button.setObjectName("U_Button")
+                #usagestats 버튼 누르면 progressbar가 뜨면서 Usage_Thread(usage.py) 실행
                 self.U_Button.clicked.connect(lambda:self.Progressbar_exec(Usage_Thread(),self.AnalyzeUsagesStats,'UsageStats 분석 중....'))
                 self.UsageButton.addWidget(self.U_Button)
                 spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -109,42 +133,49 @@ class Usage_Window(QMainWindow):
                 self.UsageButton.setStretch(0, 2)
                 self.UsageButton.setStretch(1, 1)
                 self.UsageButton.setStretch(2, 2)
-                self.verticalLayout.addLayout(self.UsageButton)
-                self.verticalLayout.addLayout(self.ViewDataButton)
-                self.SiderLayout.addWidget(self.extract_button)
+
+                self.extractButtonLayout.addLayout(self.UsageButton)
+                self.extractButtonLayout.addLayout(self.ViewDataButton)
+
+                self.SiderLayout.addWidget(self.extractButton)
                 self.SiderLayout.setStretch(0, 4)
                 self.SiderLayout.setStretch(1, 2)
                 self.SiderLayout.setContentsMargins(3, 3, 3, 3)
-                self.horizontalLayout.addLayout(self.SiderLayout)
+
+                self.centralLayout.addLayout(self.SiderLayout)
+
+                #usagestats 정보 보여주는 오른쪽 widget layout
                 self.rightLayout = QtWidgets.QVBoxLayout()
                 self.rightLayout.setContentsMargins(0, 0, 0, 0)
                 self.rightLayout.setObjectName("rightLayout")
+
+                #발견된 File Wiping App widget
                 self.applicationWidget = QtWidgets.QWidget(self.centralwidget)
                 self.applicationWidget.setObjectName("applicationWidget")
+
+                #발견된 File Wiping App layout
                 self.applicationLayout = QtWidgets.QVBoxLayout(self.applicationWidget)
-                self.applicationLayout.setSpacing(0)
+                self.applicationLayout.setSpacing(0)#이건 layout 안에 component 간격 조절
                 self.applicationLayout.setObjectName("applicationLayout")
-                self.application_header = QtWidgets.QLabel(self.applicationWidget)
-                self.application_header.setStyleSheet("background-color:rgb(242, 242, 242);\n"
+                self.application_header = QtWidgets.QLabel(self.applicationWidget)#file wiping app header
+                self.application_header.setStyleSheet("background-color:rgb(242, 242, 242);\n"# 발견된 File Wiping app 정보 header style
                 "border:1px solid rgb(217,217,217);\n"
                 "padding:10px;")
                 self.application_header.setObjectName("application_header")
                 self.applicationLayout.addWidget(self.application_header)
+
+                #applicationWidget의 file wipnig app 나열
                 self.application_listView = QtWidgets.QListView(self.applicationWidget)
-                self.OSinformation_listView.setStyleSheet('''
-                                QListView{
-                                background-color:rgb(255,255,255);
-                                border:1px solid rgb(217,217,217);
-                                                          
-                                }             ''')
+                #setTableApplicationData 에도 style 있음
                 self.application_listView.setStyleSheet('''background-color:rgb(255, 255, 255);
-                                                        border:1px solid rgb(217,217,217);''')
+                                                        border:1px solid rgb(217,217,217);''')#발견된 file wipng app 정보 데이터 부분 style
                 self.application_listView.setObjectName("application_listView")
-                self.application_listView.clicked.connect(self.setTableUsageData)
+                self.application_listView.clicked.connect(self.setTableUsageData)# 클릭 시 package, eventlog 보여주기
                 self.applicationLayout.addWidget(self.application_listView)
                 self.applicationLayout.setStretch(0, 1)
                 self.applicationLayout.setStretch(1, 15)
                 self.rightLayout.addWidget(self.applicationWidget)
+                #package, eventlog tabWidget
                 self.UsageTab = QtWidgets.QTabWidget(self.centralwidget)
                 font = QtGui.QFont()
                 font.setFamily("맑은 고딕 Semilight")
@@ -154,21 +185,23 @@ class Usage_Window(QMainWindow):
                 self.UsageTab.setFont(font)
                 self.UsageTab.setObjectName("UsageTab")
 
-                self.Packages = QtWidgets.QWidget()
+                self.Packages = QtWidgets.QWidget()#package tab
                 self.Packages.setObjectName("Packages")
                 self.Packages.setStyleSheet('''background-color:rgb(255,255,255);
-                                            border:none;''')
-                self.gridLayout = QtWidgets.QGridLayout(self.Packages)
-                self.gridLayout.setObjectName("gridLayout")
+                                            border:none;''')#package tab style
+                #Package tab layout
+                self.PackageLayout = QtWidgets.QGridLayout(self.Packages)
+                self.PackageLayout.setObjectName("gridLayout")
                 self.PackageList = QtWidgets.QListView(self.Packages)
                 self.PackageList.setObjectName("PackageList")
-                self.gridLayout.addWidget(self.PackageList, 0, 0, 1, 1)
+                self.PackageLayout.addWidget(self.PackageList, 0, 0, 1, 1)
                 self.UsageTab.addTab(self.Packages, "Packages")
 
-                self.EventLog = QtWidgets.QWidget()
+                self.EventLog = QtWidgets.QWidget()#event log tab
                 self.EventLog.setStyleSheet('''background-color:rgb(255,255,255);
-                                            border:none;''')
+                                            border:none;''')#eventlog tab style
                 self.EventLog.setObjectName("EventLog")
+                #eventlog tab layout
                 self.EventLogTabLayout=QtWidgets.QGridLayout(self.EventLog)
                 self.EventLogTable=QtWidgets.QTableView(self.EventLog)
                 self.EventLogTabLayout.addWidget(self.EventLogTable, 0, 0, 1, 1)
@@ -176,9 +209,9 @@ class Usage_Window(QMainWindow):
 
 
                 self.rightLayout.addWidget(self.UsageTab)
-                self.horizontalLayout.addLayout(self.rightLayout)
-                self.horizontalLayout.setStretch(0, 5)
-                self.horizontalLayout.setStretch(1, 17)
+                self.centralLayout.addLayout(self.rightLayout)
+                self.centralLayout.setStretch(0, 5)
+                self.centralLayout.setStretch(1, 17)
                 self.setCentralWidget(self.centralwidget)
                 self.statusbar = QtWidgets.QStatusBar(self)
                 self.statusbar.setObjectName("statusbar")
@@ -194,12 +227,15 @@ class Usage_Window(QMainWindow):
                 self.V_Button.setText(_translate("self", "잔여데이터 분석"))
                 self.U_Button.setText(_translate("self", "UsageStats 분석"))
                 self.application_header.setText(_translate("self", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">발견된 File Wiping App</span></p></body></html>"))
-        def Progressbar_exec(self,thread,exec_function,widgetTitle):
-                self.ProgressWindow=ProcessBar.Process(self,thread,exec_function,widgetTitle)
-        def AnalyzeUsagesStats(self,android_version, modelname, wiping_check, wiping_application):
+        
+        def Progressbar_exec(self,thread,exec_function,widgetTitle):#progress bar 실행
+                self.ProgressWindow=ProcessBar.Process(self,thread,exec_function,widgetTitle)#progressWindow 객체 생성
+
+        def AnalyzeUsagesStats(self,android_version, modelname, wiping_check, wiping_application,duplicated_application):#usagestats listview,os 정보 띄우기
                 self.android_version=android_version
                 self.modelname=modelname
                 self.wiping_aplication=wiping_application
+                self.duplicated_application=duplicated_application
 
                 list=[f"안드로이드 버전: {self.android_version}",f"모델명: {self.modelname}"]
                 if wiping_check==False:
@@ -215,8 +251,8 @@ class Usage_Window(QMainWindow):
                                                 QListView::item{
                                                 background-color:white;
                                                 padding:20px;
-                                                }                 ''')
-                        self.setTableApplicationData()
+                                                }                 ''')#os 정보 style
+                        self.setTableApplicationData()# application 정보 출력 함수
                 else:
                         print("경고문")
                         exit(0)
@@ -224,10 +260,11 @@ class Usage_Window(QMainWindow):
                 
         def setTableApplicationData(self):
                 application_model=QStandardItemModel()
-                for application_name in self.wiping_aplication:
+                for application_name in self.duplicated_application:
                         application_model.appendRow(QStandardItem(application_name))
                 self.application_listView.setModel(application_model)
                 self.application_listView.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+                #application_listView style
                 self.application_listView.setStyleSheet('''
                                         QListView::item{
                                         padding:15px;
@@ -265,13 +302,16 @@ class Usage_Window(QMainWindow):
                 self.PackageList.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
                 event_log=pd.read_csv('./result/EventLog.csv')
 
-
                 event_log['group'] = (event_log['package'] != event_log['package'].shift(1)).cumsum()
+                none=event_log['package'].isna()
+                event_log=event_log[~none]
+                event_log['new_group'] = (event_log['group'] != event_log['group'].shift(1)).cumsum()
+                event_log.to_csv('./result/EventLog.csv')
+                eventlog_grouped = event_log.groupby('new_group')
 
-                eventlog_grouped = event_log.groupby('group')
                 group = eventlog_grouped.get_group(ind+1)
                 group = group.copy()
-                group.drop(columns = ['package','type','group'],inplace=True)
+                group.drop(columns = ['package','type','group','new_group'],inplace=True)
                 header=group.columns.tolist()
                 event_log_model = QStandardItemModel()
                 event_log_model.setHorizontalHeaderLabels(header)
@@ -279,12 +319,13 @@ class Usage_Window(QMainWindow):
                 for row_num, row_data in enumerate(group.itertuples(index=False, name=None)):
                         event_log_model.appendRow([QStandardItem(str(item)) for item in row_data])
 
-                self.EventLogTable.setModel(event_log_model)
+                self.EventLogTable.setModel(event_log_model)#eventlog table
+                #eventlog table column 길이 조절
                 self.EventLogTable.resizeColumnsToContents()
                 self.EventLogTable.horizontalHeader().setCascadingSectionResizes(False)
                 self.EventLogTable.horizontalHeader().setStretchLastSection(True)
                 self.EventLogTable.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        def viewData_exec(self):
+        def viewData_exec(self):#viewData 화면 띄우기
                 self.SecondWindow = view_data.ViewData(self)
                 self.SecondWindow.show()
-                self.hide()
+                self.hide()#지금 페이지 숨기기

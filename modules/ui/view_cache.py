@@ -4,7 +4,7 @@ from modules.ui.Image import LoadImage
 from PyQt5.QtCore import Qt
 import os
 
-def CacheView(widget,file_path):
+def CacheView(widget,file_path):#gallery cache, clipboard image,package file(cache)
         DataCountLabel = QtWidgets.QLabel(widget)
         font = QtGui.QFont()
         font.setFamily("맑은 고딕 Semilight")

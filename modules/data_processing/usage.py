@@ -8,10 +8,17 @@ import os
 import json
 import datetime
 
-class Usage_Thread(QThread):
+class Usage_Thread(QThread):#usagestats 처리
     progress_signal=pyqtSignal(int)
-    result_signal = pyqtSignal(int, str, bool, list)
+    result_signal = pyqtSignal(int, str, bool, list,list)
     finished_signal=pyqtSignal()
+
+    def convert_to_hms(self,milliseconds):
+        seconds = milliseconds / 1000
+        time_delta = datetime.timedelta(seconds=seconds)
+        hours, remainder = divmod(time_delta.total_seconds(), 3600)
+        minutes, seconds = divmod(remainder, 60)
+        return f"{int(hours)}h {int(minutes)}m {seconds}s"
 
     def run(self):
         device = adb_extract.get_device()
@@ -26,17 +33,11 @@ class Usage_Thread(QThread):
         
         usage_name = 'usagestats'
         adb_extract.extract_data(device, usage_name, destination_dir)
-        wiping_check, wiping_application = self.usagestats(android_version)
+        wiping_check, wiping_application,duplicated_application = self.usagestats(android_version)
         
-        self.result_signal.emit(android_version, modelname, wiping_check, wiping_application)
+        self.result_signal.emit(android_version, modelname, wiping_check, wiping_application,duplicated_application)
         self.finished_signal.emit()
 
-    def convert_to_hms(self,milliseconds):
-        seconds = milliseconds / 1000
-        time_delta = datetime.timedelta(seconds=seconds)
-        hours, remainder = divmod(time_delta.total_seconds(), 3600)
-        minutes, seconds = divmod(remainder, 60)
-        return f"{int(hours)}h {int(minutes)}m {seconds}s"
 
     def usagestats(self,android_version,):
 
@@ -86,25 +87,29 @@ class Usage_Thread(QThread):
                     signal+=50
                     Packages=pd.concat([Packages,mappings_Packages])
                     EventLog=pd.concat([EventLog,mappings_EventLog])
-
+                    new_row_index = len(EventLog) 
+                    EventLog.loc[new_row_index, :] = None
         EventLog.reset_index(drop=True,inplace=True)
         Packages.reset_index(drop=True,inplace=True)
+        Packages.sort_values(by='last_time_active_ms',ascending=True,inplace=True)
+        # EventLog.sort_values(by='time_ms',ascending=True,inplace=True)
         with open('./modules/userBehaviour_type.json','r',encoding='utf-8') as file:
             userBehaviour_type=json.load(file)
 
             
         EventLog['type_string']=[userBehaviour_type.get(str(type),'None') for type in EventLog['type']]
-
+        EventLog.loc[EventLog['package'].isna(),'type_string']=' '
         EventLog.drop(EventLog[(EventLog['type_string'] == 'None') | (EventLog['type'] == 11)].index, inplace=True)
 
 
         filtered_Packages = Packages[Packages['package'].str.contains('|'.join(keywords), case=False)]
-        filtered_EventLog = EventLog[EventLog['package'].str.contains('|'.join(keywords), case=False)]
+        filtered_EventLog = EventLog[(EventLog['package'].isna()) | EventLog['package'].str.contains('|'.join(keywords), case=False)]
         filtered_Packages=filtered_Packages.copy().drop_duplicates()
-
+        filtered_EventLog.to_csv('result/test2.csv')
         last_list=[['last_time_active_ms','last_time_visible_ms'],['time_ms']]
         total_list=['total_time_active_ms','total_time_visible_ms']
         df_list=[filtered_Packages,filtered_EventLog]
+
         if android_version==9:
             last_list=[['lastTimeActive'],['time']]
             total_list=['timeActive']
@@ -116,15 +121,17 @@ class Usage_Thread(QThread):
         for column_name in total_list:
             filtered_Packages[column_name]=filtered_Packages[column_name].apply(self.convert_to_hms)
 
+        mask = (filtered_EventLog['package'].shift(1) == filtered_EventLog['package'].shift(-1)) & (filtered_EventLog['package'].isna())
+        non=filtered_EventLog['package'].isna() & ~mask
+        filtered_EventLog = filtered_EventLog[~non]
 
         filtered_Packages.to_csv('./result/Package.csv',index=False)
         filtered_EventLog.to_csv('./result/EventLog.csv',index=False)
 
 
-        # wiping_application=list(set([package_name for package_name in filtered_Packages['package']]))
         wiping_application = []
         [wiping_application.append(package_name ) for package_name in filtered_Packages['package']  if package_name not in wiping_application]
-
+        duplicated_application=[package_name for package_name in filtered_Packages['package']]
 
             
-        return filtered_Packages.empty,wiping_application
+        return filtered_Packages.empty,wiping_application,duplicated_application

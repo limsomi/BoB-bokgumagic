@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QProgressBar,QDesktopWidget
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class FinishWidget(QWidget):
+class FinishWidget(QWidget):#보고서 작성 완료 창
     def __init__(self,parent):
         super().__init__()
         self.parent=parent
@@ -51,6 +51,7 @@ class FinishWidget(QWidget):
         self.retranslateUi()
         QtCore.QMetaObject.connectSlotsByName(self)
         self.show()
+        
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(_translate("Form", "Form"))

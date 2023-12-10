@@ -22,13 +22,16 @@ class ViewData(QMainWindow):
                 self.centralwidget = QtWidgets.QWidget(self)
                 self.centralwidget.setStyleSheet("background-color:rgb(235,235,235);")
                 self.centralwidget.setObjectName("centralwidget")
-                self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.centralwidget)
-                self.horizontalLayout_3.setContentsMargins(5, 5, 5, 5)
-                self.horizontalLayout_3.setSpacing(5)
-                self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+                #전체화면 layout
+                self.centralLayout = QtWidgets.QHBoxLayout(self.centralwidget)
+                self.centralLayout.setContentsMargins(5, 5, 5, 5)
+                self.centralLayout.setSpacing(5)
+                self.centralLayout.setObjectName("centralLayout")
+                #sidebar layout
                 self.SideLayout = QtWidgets.QVBoxLayout()
                 self.SideLayout.setSpacing(0)
                 self.SideLayout.setObjectName("SideLayout")
+                #sidebar header
                 self.SideLabel = QtWidgets.QLabel(self.centralwidget)
                 font = QtGui.QFont()
                 font.setFamily("맑은 고딕 Semilight")
@@ -38,9 +41,10 @@ class ViewData(QMainWindow):
                 self.SideLabel.setFont(font)
                 self.SideLabel.setStyleSheet("background-color:rgb(242,242,242);\n"
         "border:1px solid rgb(217,217,217);\n"
-        "padding:2px 2px 2px 5px;")
+        "padding:2px 2px 2px 5px;")#sidebar header style
                 self.SideLabel.setObjectName("SideLabel")
                 self.SideLayout.addWidget(self.SideLabel)
+                #sidebar buttons
                 self.SideButton = QtWidgets.QListWidget(self.centralwidget)
                 font = QtGui.QFont()
                 font.setFamily("Segoe UI Semibold")
@@ -48,6 +52,7 @@ class ViewData(QMainWindow):
                 font.setBold(True)
                 font.setWeight(75)
                 self.SideButton.setFont(font)
+                #sidebar style
                 self.SideButton.setStyleSheet("QListWidget {\n"
         "        background-color: rgb(255,255,255);\n"
         "           border:1px solid rgb(217,217,217);\n"
@@ -80,22 +85,25 @@ class ViewData(QMainWindow):
 
                 self.SideButton.clicked.connect(self.selected_Sidebar)
 
-                self.report = QtWidgets.QWidget(self.centralwidget)
+                self.report = QtWidgets.QWidget(self.centralwidget)#sidebar report 부분
                 self.report.setStyleSheet("background-color:rgb(242,242,242);\n"
         "border:1px solid rgb(217,217,217);")
                 self.report.setObjectName("report")
-                self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.report)
-                self.horizontalLayout_2.setSpacing(3)
-                self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+                #sidber report 부분 layout(space 부분 포함)
+                self.reportLayout = QtWidgets.QHBoxLayout(self.report)
+                self.reportLayout.setSpacing(3)
+                self.reportLayout.setObjectName("horizontalLayout_2")
                 spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-                self.horizontalLayout_2.addItem(spacerItem)
-                self.reportButton = QtWidgets.QPushButton(self.report)
+                self.reportLayout.addItem(spacerItem)
+
+                self.reportButton = QtWidgets.QPushButton(self.report)#reportButton
                 font = QtGui.QFont()
                 font.setFamily("맑은 고딕 Semilight")
                 font.setPointSize(18)
                 font.setBold(True)
                 font.setWeight(75)
                 self.reportButton.setFont(font)
+                #reportButton style
                 self.reportButton.setStyleSheet("QPushButton{background-color:rgb(217,217,217);\n"
         "padding:15px 15px 15px 15px;}\n"
         "\n"
@@ -103,24 +111,26 @@ class ViewData(QMainWindow):
         "")
                 self.reportButton.setObjectName("reportButton")
                 self.reportButton.clicked.connect(lambda:self.dialog_exec())
-                self.horizontalLayout_2.addWidget(self.reportButton)
+                self.reportLayout.addWidget(self.reportButton)
                 spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-                self.horizontalLayout_2.addItem(spacerItem1)
-                self.horizontalLayout_2.setStretch(0, 2)
-                self.horizontalLayout_2.setStretch(1, 1)
-                self.horizontalLayout_2.setStretch(2, 2)
+                self.reportLayout.addItem(spacerItem1)
+                self.reportLayout.setStretch(0, 2)
+                self.reportLayout.setStretch(1, 1)
+                self.reportLayout.setStretch(2, 2)
                 self.SideLayout.addWidget(self.report)
                 self.SideLayout.setStretch(0, 1)
                 self.SideLayout.setStretch(1, 10)
                 self.SideLayout.setStretch(2, 5)
                 self.SideLayout.setContentsMargins(10,10,10,10)
-                self.horizontalLayout_3.addLayout(self.SideLayout)
-                self.viewData = QtWidgets.QWidget(self.centralwidget)
+                self.centralLayout.addLayout(self.SideLayout)
+
+                self.viewData = QtWidgets.QWidget(self.centralwidget)#오른쪽 data 출력 부분
                 self.viewData.setStyleSheet("border:1px solid rgb(217,217,217);")
                 self.viewData.setObjectName("viewData")
                 self.viewDataLayout = QtWidgets.QVBoxLayout(self.viewData)
                 self.viewDataLayout.setObjectName("viewDataLayout")
-                self.viewDataLabel = QtWidgets.QLabel(self.viewData)
+
+                self.viewDataLabel = QtWidgets.QLabel(self.viewData)#viewData header
                 font = QtGui.QFont()
                 font.setFamily("맑은 고딕 Semilight")
                 font.setPointSize(13)
@@ -134,9 +144,9 @@ class ViewData(QMainWindow):
                 self.viewDataLayout.addWidget(self.viewDataLabel)
 
 
-                self.horizontalLayout_3.addWidget(self.viewData)
-                self.horizontalLayout_3.setStretch(0, 5)
-                self.horizontalLayout_3.setStretch(1, 17)
+                self.centralLayout.addWidget(self.viewData)
+                self.centralLayout.setStretch(0, 5)
+                self.centralLayout.setStretch(1, 17)
                 self.setCentralWidget(self.centralwidget)
                 self.statusbar = QtWidgets.QStatusBar(self)
                 self.statusbar.setObjectName("statusbar")
@@ -167,7 +177,7 @@ class ViewData(QMainWindow):
                 self.viewDataLabel.setText(_translate("self", "View Details"))
                 self.SideButton.clicked.connect(self.selected_Sidebar)
 
-        def dialog_exec(self): #1207 joys
+        def dialog_exec(self): #report progressbar 출력
                 self.dialog=InputDialog(self)
                 if self.dialog.exec_() == QtWidgets.QDialog.Accepted:
                         date = self.dialog.getDate()
@@ -179,6 +189,8 @@ class ViewData(QMainWindow):
                 
 
         def selected_Sidebar(self):
+                #각 버튼에 따라 데이터 보여줌
+                #viewData는 viewWidget, viewLabel으로 이루어져 있음(viewWidget이 데이터 보여주는 부분)
                 selected_item=self.SideButton.currentItem()
                 if self.viewDataCheck==True and self.viewDataLayout.indexOf(self.viewWidget)!=-1:
                         self.viewDataLayout.removeWidget(self.viewWidget)

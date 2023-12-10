@@ -4,7 +4,9 @@ from frameworks.base.core.proto.android.server.usagestatsservice_pb2 import Inte
 
 import xml.etree.ElementTree as ET
 import pandas as pd
-
+import datetime
+import json
+#usage parsing
 def mappings_parsing():
     mappings_path='./extractdata/usagestats/mappings'
     with open(mappings_path,"rb") as file:
@@ -19,6 +21,7 @@ def mappings_parsing():
 
     mappings = pd.DataFrame(data)
     return mappings
+
 
 def usagestats_parsing9(destination_path,file):
     package_data = []
@@ -114,7 +117,7 @@ def usagestats_parsing(destination_path,file,mappings):
             'app_launch_count':[item.app_launch_count if hasattr(item, 'app_launch_count') else None for item in field_value]
             }
     packages=pd.DataFrame(data)
-    packages.sort_values(by='last_time_active_ms',ascending=True)
+    packages.sort_values(by='last_time_active_ms',ascending=True,inplace=True)
 
     #event_log parsing
     field_value = parsed_message.event_log 
@@ -125,7 +128,7 @@ def usagestats_parsing(destination_path,file,mappings):
         'type': [item.type for item in field_value]
     }
     event_log = pd.DataFrame(data)
-    event_log.sort_values(by='time_ms',ascending=True)
+    event_log.sort_values(by='time_ms',ascending=True,inplace=True)
 
     merged_df = pd.merge(mappings, event_log, on='package_token', how='inner')
     # merged_df.drop(merged_df[merged_df['time_ms'] == 0].index,inplace=True)
@@ -152,6 +155,43 @@ def usagestats_parsing(destination_path,file,mappings):
     # mappings_Packages.to_csv("./mappings_Packages.csv",index=False)
 
     return mappings_EventLog,mappings_Packages
+
+def usageToCSV(android_version,EventLog,Packages):
+    keywords = ["wipe", "wiping", "shredde", "shredder", "delete", "shred", "eraser", "securewipe", "eng.bite", "wiper", "remover", "ccleaner","zerdava"]
+
+    EventLog.reset_index(drop=True,inplace=True)
+    Packages.reset_index(drop=True,inplace=True)
+    with open('./modules/userBehaviour_type.json','r',encoding='utf-8') as file:
+        userBehaviour_type=json.load(file)
+
+        
+    EventLog['type_string']=[userBehaviour_type.get(str(type),'None') for type in EventLog['type']]
+
+    EventLog.drop(EventLog[(EventLog['type_string'] == 'None') | (EventLog['type'] == 11)].index, inplace=True)
+
+
+    filtered_Packages = Packages[Packages['package'].str.contains('|'.join(keywords), case=False)]
+    filtered_EventLog = EventLog[EventLog['package'].str.contains('|'.join(keywords), case=False)]
+    filtered_Packages=filtered_Packages.copy().drop_duplicates()
+
+    last_list=[['last_time_active_ms','last_time_visible_ms'],['time_ms']]
+    total_list=['total_time_active_ms','total_time_visible_ms']
+    df_list=[filtered_Packages,filtered_EventLog]
+    if android_version==9:
+        last_list=[['lastTimeActive'],['time']]
+        total_list=['timeActive']
+
+    for last,df in zip(last_list,df_list):
+        for column_name in last:
+            df.loc[:, column_name] = pd.to_datetime(df[column_name], unit='ms', utc=True).dt.tz_convert('Asia/Seoul')
+
+    for column_name in total_list:
+        filtered_Packages[column_name]=filtered_Packages[column_name].apply(convert_to_hms)
+
+
+    filtered_Packages.to_csv('./result/Package.csv',index=False)
+    filtered_EventLog.to_csv('./result/EventLog.csv',index=False)
+
 
 if __name__=="__main__":
     mappings=mappings_parsing()

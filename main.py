@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import *
 def main():
     app = QtWidgets.QApplication(sys.argv)
     ui = view_usage.Usage_Window()
-    ui.show()
+    ui.show()#open usage page
     app.exec_()
 
 

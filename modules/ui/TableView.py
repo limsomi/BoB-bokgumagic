@@ -2,7 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QTableWidget, QTableWidgetItem, QHeaderView, QVBoxLayout, QWidget
 from PyQt5.QtGui import QStandardItemModel,QStandardItem
 import pandas as pd
-def TableView(widget,csv_path):
+def TableView(widget,csv_path):#DataView에서 table module
     widgetLayout = QtWidgets.QVBoxLayout(widget)
     widgetLayout.setContentsMargins(3, 3, 3, 3)
     widgetLayout.setSpacing(1)
