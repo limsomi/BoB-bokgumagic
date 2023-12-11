@@ -52,6 +52,7 @@ class Usage_Thread(QThread):#usagestats 처리
             Packages=pd.DataFrame(columns=['package','timeActive','lastTimeActive'])
             EventLog=pd.DataFrame(columns=['package','class','time','type'])
             daily_path = os.path.join(destination_path,'0', 'daily')
+            timeColumnn='lastTimeActive'
             if os.path.exists(daily_path):
                 dailyfile_list=os.listdir(daily_path)
                 for file_path in dailyfile_list:
@@ -75,7 +76,7 @@ class Usage_Thread(QThread):#usagestats 처리
         else:
             mappings=parsing_usagestats.mappings_parsing()
             daily_path = os.path.join(destination_path, 'daily')
-
+            timeColumnn='last_time_active_ms'
             if os.path.exists(daily_path):
                 dailyfile_list=os.listdir(daily_path)
                 Packages=pd.DataFrame(columns=['package','last_time_active_ms','total_time_active_ms','last_time_visible_ms','total_time_visible_ms','app_launch_count'])
@@ -91,7 +92,7 @@ class Usage_Thread(QThread):#usagestats 처리
                     EventLog.loc[new_row_index, :] = None
         EventLog.reset_index(drop=True,inplace=True)
         Packages.reset_index(drop=True,inplace=True)
-        Packages.sort_values(by='last_time_active_ms',ascending=True,inplace=True)
+        Packages.sort_values(by=timeColumnn,ascending=True,inplace=True)
         # EventLog.sort_values(by='time_ms',ascending=True,inplace=True)
         with open('./modules/userBehaviour_type.json','r',encoding='utf-8') as file:
             userBehaviour_type=json.load(file)

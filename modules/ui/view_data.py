@@ -12,6 +12,7 @@ class ViewData(QMainWindow):
         def __init__(self,parent):
                 super().__init__()
                 self.parent=parent
+                self.wiping_aplication=parent.duplicated_application
                 self.setupUi()
         def setupUi(self):
                 parent_geometry = self.parent.geometry()
@@ -182,7 +183,7 @@ class ViewData(QMainWindow):
                 if self.dialog.exec_() == QtWidgets.QDialog.Accepted:
                         date = self.dialog.getDate()
                         name = self.dialog.getName()
-                thread=WriteReport(date,name)
+                thread=WriteReport(date,name,self.wiping_aplication)
                 widgetTitle='보고서 작성 중 ....'
 
                 self.ProgressWindow=ProcessBar.Process(self,thread,self.Window_finished,widgetTitle)

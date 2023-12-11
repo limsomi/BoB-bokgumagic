@@ -14,10 +14,11 @@ class WriteReport(QThread):
     progress_signal=pyqtSignal(int)
     result_signal = pyqtSignal()
     finished_signal=pyqtSignal()
-    def __init__(self,date,name):
+    def __init__(self,date,name,duplicated_application):
         super().__init__()
         self.date=date
         self.name=name
+        self.wiping_application=duplicated_application
     def set_background(self,slide, background_path, prs):
         """ 슬라이드의 배경으로 이미지를 설정하는 함수 """
         left = top = Inches(0)
@@ -207,6 +208,7 @@ class WriteReport(QThread):
     #     pdf_reader = PdfFileReader("temp.pdf")
     #     return pdf_reader.getPage(0)
     
+
     
     def run(self):
         signal=0
