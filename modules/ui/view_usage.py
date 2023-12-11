@@ -302,11 +302,11 @@ class Usage_Window(QMainWindow):
                 self.PackageList.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
                 event_log=pd.read_csv('./result/EventLog.csv')
 
-                event_log['group'] = (event_log['package'] != event_log['package'].shift(1)).cumsum()
-                none=event_log['package'].isna()
-                event_log=event_log[~none]
-                event_log['new_group'] = (event_log['group'] != event_log['group'].shift(1)).cumsum()
-                event_log.to_csv('./result/EventLog.csv')
+                # event_log['group'] = (event_log['package'] != event_log['package'].shift(1)).cumsum()
+                # none=event_log['package'].isna()
+                # event_log=event_log[~none]
+                # event_log['new_group'] = (event_log['group'] != event_log['group'].shift(1)).cumsum()
+                # event_log.to_csv('./result/EventLog.csv')
                 eventlog_grouped = event_log.groupby('new_group')
 
                 group = eventlog_grouped.get_group(ind+1)

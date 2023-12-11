@@ -65,7 +65,7 @@ class viewData_Thread(QThread):
         signal+=10
         #clipboard
         if 'Pixel'not in self.modelname:
-            if self.android_version<11:
+            if self.android_version<12:
                 clipboard.clipboardFile_wiping('extractdata',clipboard_folder)
             else:
                 clipboard.clipboardDB_wiping('extractdata',clipboard_folder,clipboard_name)

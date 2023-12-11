@@ -19,36 +19,32 @@ class WriteReport(QThread):
         self.date=date
         self.name=name
         self.wiping_application=duplicated_application
-    def set_background(self,slide, background_path, prs):
+        self.background_path='report_background.png'
+    def set_background(self,slide, prs):
         """ 슬라이드의 배경으로 이미지를 설정하는 함수 """
         left = top = Inches(0)
-        pic = slide.shapes.add_picture(background_path, left, top, width=prs.slide_width, height=prs.slide_height)
+        pic = slide.shapes.add_picture(self.background_path, left, top, width=prs.slide_width, height=prs.slide_height)
         # 이미지를 슬라이드의 가장 뒤로 이동
         slide.shapes._spTree.remove(pic._element)
         slide.shapes._spTree.insert(2, pic._element)
 
-    def add_table_from_csv(self,prs, file_name, background_path):
-        data = pd.read_csv(file_name)
-        rows, cols = data.shape
-        slides = []
+    def add_table_from_csv(self,prs,slide,csvData, y_position,dataTitle):
+        rows, cols = csvData.shape
 
-        for start_row in range(0, rows, 14):
-            end_row = min(start_row + 14, rows)
-            slide_layout = prs.slide_layouts[5]
-            slide = prs.slides.add_slide(slide_layout)
-            self.set_background(slide, background_path, prs)
-            slides.append(slide)
+        for start_row in range(0, rows, 10):
+            end_row = min(start_row + 10, rows)
+            
             title = slide.shapes.title
-            title.text = os.path.basename(file_name)
-
-            table_width = cols * Inches(1)
-            table_height = min(end_row - start_row, 14) * Inches(0.5)
+            title.text = os.path.basename(dataTitle)
+            title.text_frame.paragraphs[0].font.size = Pt(28)
+            table_width=6400800
+            table_height = min(end_row - start_row, 10) * Inches(0.5)
             x_position = (prs.slide_width - table_width) / 2
-            y_position = (prs.slide_height - table_height) / 2 - Cm(2)
 
-            table = slide.shapes.add_table(min(end_row - start_row, 14) + 1, cols, x_position, y_position, table_width, table_height).table
 
-            for col_index, col_name in enumerate(data.columns):
+            table = slide.shapes.add_table(min(end_row-start_row, 10) + 1, cols, x_position, y_position, table_width, table_height).table
+
+            for col_index, col_name in enumerate(csvData.columns):
                 cell = table.cell(0, col_index)
                 cell.text = col_name
                 for paragraph in cell.text_frame.paragraphs:
@@ -56,16 +52,19 @@ class WriteReport(QThread):
                         run.font.size = Pt(8)
 
             for row_index in range(start_row, end_row):
-                for col_index, item in enumerate(data.iloc[row_index]):
+                for col_index, item in enumerate(csvData.iloc[row_index]):
                     cell = table.cell(row_index - start_row + 1, col_index)
                     cell.text = str(item)
                     for paragraph in cell.text_frame.paragraphs:
                         for run in paragraph.runs:
                             run.font.size = Pt(8)
+            if end_row!=rows:
+                slide_layout = prs.slide_layouts[5]
+                slide = prs.slides.add_slide(slide_layout)
+                self.set_background(slide, prs)
+                y_position=Cm(5)
 
-        return slides
-
-    def add_text_from_file(self,prs, file_path, slide_title, background_path):
+    def add_text_from_file(self,prs, file_path, slide_title):
         with open(file_path, 'r', encoding='utf-8') as file:
             text = file.read()
             start = 0
@@ -74,7 +73,7 @@ class WriteReport(QThread):
             while start < len(text):
                 slide_layout = prs.slide_layouts[5]
                 slide = prs.slides.add_slide(slide_layout)
-                self.set_background(slide, background_path, prs)
+                self.set_background(slide, prs)
                 title = slide.shapes.title
                 title.text = slide_title
 
@@ -93,7 +92,7 @@ class WriteReport(QThread):
                     else:
                         break
 
-    def add_text_from_files(self,prs, folder_path, slide_title, background_path):
+    def add_text_from_files(self,prs, folder_path, slide_title):
         for file_name in os.listdir(folder_path):
             if file_name.endswith('.txt'):
                 file_path = os.path.join(folder_path, file_name)
@@ -105,7 +104,7 @@ class WriteReport(QThread):
                     while start < len(text):
                         slide_layout = prs.slide_layouts[5]
                         slide = prs.slides.add_slide(slide_layout)
-                        self.set_background(slide, background_path, prs)
+                        self.set_background(slide, prs)
                         title = slide.shapes.title
                         title.text = slide_title
 
@@ -124,12 +123,12 @@ class WriteReport(QThread):
                             else:
                                 break
 
-    def add_images_with_names(self,prs, folder_path, title_text, background_path):
+    def add_images_with_names(self,prs, folder_path, title_text):
         image_files = [f for f in os.listdir(folder_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
         for i in range(0, len(image_files), 9):
             slide_layout = prs.slide_layouts[5]
             slide = prs.slides.add_slide(slide_layout)
-            self.set_background(slide, background_path, prs)
+            self.set_background(slide, prs)
             title = slide.shapes.title
             title.text = title_text
 
@@ -173,58 +172,41 @@ class WriteReport(QThread):
                     tf.paragraphs[0].font.size = Pt(10)
                     tf.word_wrap = True
     
-    # def save_as_pdf(self, pptx_path, pdf_path):
-    #     prs = Presentation(pptx_path)
+    def UsageSlide(self,prs):
+        packages=pd.read_csv('./result/Package.csv')
+        eventLog=pd.read_csv('./result/EventLog.csv')
 
-    #     pdf_writer = PdfWriter()
+        for i in range(len(packages)):
+            row = packages.iloc[i]
+            all_data_text = ''
+            all_data_text += "\n".join([f"{column_name}: {value}" for column_name, value in row.items()])
+            all_data_text += "\n\n"
 
-    #     for i, slide in enumerate(prs.slides):
-    #         # Slide를 이미지로 저장
-    #         slide_image_path = f"temp_slide_{i}.png"
-    #         self.save_slide_as_image(slide, slide_image_path)
 
-    #         # 이미지를 PDF에 추가
-    #         pdf_writer.add_page(self.image_to_pdf_page(slide_image_path))
+            slide_layout = prs.slide_layouts[5]  # 5 is the layout with title and content
+            slide = prs.slides.add_slide(slide_layout)
+            self.set_background(slide, prs)
 
-    #         # 이미지 파일 삭제
-    #         os.remove(slide_image_path)
 
-    #     # PDF 파일 저장
-    #     with open(pdf_path, "wb") as pdf_file:
-    #         pdf_writer.write(pdf_file)
+            title_shape = slide.shapes.add_textbox(Cm(1), Cm(5), Cm(19), Cm(len(packages.columns)*0.8))
+            title_frame = title_shape.text_frame
 
-    # def save_slide_as_image(self, slide, image_path):
-    #     image = slide.shapes._spTree[2].get_or_add_image_part().blob
-    #     with open(image_path, 'wb') as img_file:
-    #         img_file.write(image)
+            # 텍스트 추가
+            title_frame.text = all_data_text
 
-    # def image_to_pdf_page(self, image_path):
-    #     pdf_page = canvas.Canvas("temp.pdf", pagesize=letter)
-    #     pdf_page.drawImage(image_path, 0, 0, width=letter[0], height=letter[1])
-    #     pdf_page.showPage()
-    #     pdf_page.save()
 
-    #     # 생성된 PDF 파일을 읽어온 후 반환
-    #     pdf_reader = PdfFileReader("temp.pdf")
-    #     return pdf_reader.getPage(0)
+            eventlog_grouped = eventLog.groupby('new_group')
+            eventlog_grouped=eventlog_grouped.get_group(i+1)
+
+
+            y_position=title_shape.top+title_shape.height+Cm(1)
+            self.add_table_from_csv(prs,slide,eventlog_grouped,y_position,'UsageStats')
+                
     
-
-    
-    def run(self):
-        signal=0
-
-        prs = Presentation()
-        prs.slide_width = Cm(21)
-        prs.slide_height = Cm(29.7)
-        signal+=10
-        self.progress_signal.emit(signal)
-        # 표지 슬라이드 추가
+    def coverSlide(self,prs):
         slide_layout = prs.slide_layouts[5]
         cover_slide = prs.slides.add_slide(slide_layout)
         cover_slide.shapes.add_picture('./report_cover.png', 0, 0, prs.slide_width, prs.slide_height)
-        signal+=10
-        self.progress_signal.emit(signal)
-        # 제목 추가 (원래 위치에서 3인치 아래로 이동)
         original_title_y = Inches(2)
         title_shape = cover_slide.shapes.add_textbox(Inches(1), original_title_y + Inches(3), prs.slide_width - Inches(2), Inches(1))
         title_text_frame = title_shape.text_frame
@@ -234,52 +216,83 @@ class WriteReport(QThread):
         title_paragraph.font.size = Pt(44)
         title_paragraph.font.bold = True
         title_paragraph.font.color.rgb = RGBColor(0, 0, 100)
-        signal+=10
-        self.progress_signal.emit(signal)
-        # 부제목 추가 (원래 위치에서 3인치 아래로 이동)
         original_subtitle_y = Inches(3)
         subtitle_shape = cover_slide.shapes.add_textbox(Inches(1), original_subtitle_y + Inches(3), prs.slide_width - Inches(2), Inches(1))
         subtitle_text_frame = subtitle_shape.text_frame
         subtitle_text_frame.text = f"Date: {self.date}   Name: {self.name}"
         subtitle_text_frame.paragraphs[0].alignment = PP_ALIGN.RIGHT
-        signal+=10
+        return prs
+    
+    def run(self):
+        signal=0
+
+        prs = Presentation()
+        prs.slide_width = Cm(21)
+        prs.slide_height = Cm(29.7)
+
+        self.coverSlide(prs)
+
+        signal+=80
         self.progress_signal.emit(signal)
+        self.UsageSlide(prs)
+
+        slide_layout = prs.slide_layouts[5]  # 5 is the layout with title and content
+        slide = prs.slides.add_slide(slide_layout)
+        self.set_background(slide, prs)
+        data=pd.read_csv("./result/contacts.csv")
+        y_position=Cm(5)
+        self.add_table_from_csv(prs,slide,data,y_position,'Contacts')
+        
+        slide_layout = prs.slide_layouts[5]  # 5 is the layout with title and content
+        slide = prs.slides.add_slide(slide_layout)
+        self.set_background(slide, prs)
+        data=pd.read_csv("./result/clipboard/clipboard.csv")
+        y_position=Cm(5)
+
+        self.add_table_from_csv(prs,slide,data,y_position,'Clipboard')
+
+
+
         # 데이터 테이블 슬라이드 추가
-        files = ["./result/Package.csv", "./result/EventLog.csv", "./result/contacts.csv", "./result/clipboard/clipboard.csv"]
-        for file_name in files:
-            table_slides = self.add_table_from_csv(prs, file_name, './report_background.png')
+        # files = ["./result/contacts.csv", "./result/clipboard/clipboard.csv"]
+        # for file_name in files:
+        #     slide_layout = prs.slide_layouts[5]  # 5 is the layout with title and content
+        #     slide = prs.slides.add_slide(slide_layout)
+        #     data=pd.read_csv(file_name)
+        #     y_position=Cm(5)
+        #     background_path='report_background.png'
+        #     table_slides = self.add_table_from_csv(prs,slide,data,y_position,background_path)
+        # self.add_table_from_csv(prs,slide,data,y_position,background_path,'UsageStats')
         
-        self.add_text_from_files(prs, './result/clipboard/html', 'clipboard/html', './report_background.png')
-        self.add_text_from_file(prs, './result/shared_prefs/com.projectstar.ishredder.android.standard.txt', 'ishredder.txt', './report_background.png')
-        signal+=10
-        self.progress_signal.emit(signal)
-        # ... 기타 콘텐츠 추가 코드 ...
+        # self.add_text_from_files(prs, './result/clipboard/html', 'clipboard/html', './report_background.png')
+        self.add_text_from_file(prs, './result/shared_prefs/com.projectstar.ishredder.android.standard.txt', 'ishredder.txt')
+        # signal+=10
+        # self.progress_signal.emit(signal)
+        # # ... 기타 콘텐츠 추가 코드 ...
         
-        #add_images_from_folder(prs, './result/clipboard/image')
+        # #add_images_from_folder(prs, './result/clipboard/image')
 
-        #add_shreddit_images(prs, './result/com.palmtronix.shreddit.v1/')
+        # #add_shreddit_images(prs, './result/com.palmtronix.shreddit.v1/')
 
-        # 'result/clipboard/image' 폴더의 이미지 처리
-        self.add_images_with_names(prs, "./result/clipboard/image", "clipboard image", './report_background.png')
-        signal+=10
-        self.progress_signal.emit(signal)
-        # 'result/com.palmtronix.shreddit.v1' 폴더의 이미지 처리
-        self.add_images_with_names(prs, "./result/cache/com.palmtronix.shreddit.v1", "shreddit cache image", './report_background.png')
-        signal+=10
-        self.progress_signal.emit(signal)
-        # 'result/com.shredder.fileshredder.securewipe' 폴더의 이미지 처리
-        self.add_images_with_names(prs, "./result/cache/com.shredder.fileshredder.securewipe", "secure wipe out \n  cache image", './report_background.png')
-        signal+=10
-        self.progress_signal.emit(signal)
-        # 'result/com.shredder.fileshredder.securewipe' 폴더의 이미지 처리
-        self.add_images_with_names(prs, "./result/gallery3d_cache", "gallery cache image", './report_background.png')
-        signal+=10
-        self.progress_signal.emit(signal)
+        # # 'result/clipboard/image' 폴더의 이미지 처리
+        # self.add_images_with_names(prs, "./result/clipboard/image", "clipboard image", './report_background.png')
+        # signal+=10
+        # self.progress_signal.emit(signal)
+        # # 'result/com.palmtronix.shreddit.v1' 폴더의 이미지 처리
+        # self.add_images_with_names(prs, "./result/cache/com.palmtronix.shreddit.v1", "shreddit cache image", './report_background.png')
+        # signal+=10
+        # self.progress_signal.emit(signal)
+        # # 'result/com.shredder.fileshredder.securewipe' 폴더의 이미지 처리
+        # self.add_images_with_names(prs, "./result/cache/com.shredder.fileshredder.securewipe", "secure wipe out \n  cache image", './report_background.png')
+        # signal+=10
+        # self.progress_signal.emit(signal)
+        # # 'result/com.shredder.fileshredder.securewipe' 폴더의 이미지 처리
+        # self.add_images_with_names(prs, "./result/gallery3d_cache", "gallery cache image", './report_background.png')
+        # signal+=10
+        # self.progress_signal.emit(signal)
         pptx_path=os.path.join(os.getcwd(), 'Analysis_Report.pptx')
         prs.save(pptx_path)
 
-        # pdf_path = os.path.join(os.getcwd(), 'Analysis_Report.pdf')
-        # self.save_as_pdf(pptx_path, pdf_path)
         signal+=10
         self.progress_signal.emit(signal)
         self.result_signal.emit()

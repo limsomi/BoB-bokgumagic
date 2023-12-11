@@ -61,6 +61,8 @@ class Usage_Thread(QThread):#usagestats 처리
                     signal+=50
                     Packages=pd.concat([Packages,mappings_Packages])
                     EventLog=pd.concat([EventLog,mappings_EventLog])
+                    new_row_index = len(EventLog) 
+                    EventLog.loc[new_row_index, :] = None
         elif android_version==10:
             daily_path = os.path.join(destination_path,'0', 'daily')
             if os.path.exists(daily_path):
@@ -73,6 +75,8 @@ class Usage_Thread(QThread):#usagestats 처리
                     signal+=50
                     Packages=pd.concat([Packages,mappings_Packages])
                     EventLog=pd.concat([EventLog,mappings_EventLog])
+                    new_row_index = len(EventLog) 
+                    EventLog.loc[new_row_index, :] = None
         else:
             mappings=parsing_usagestats.mappings_parsing()
             daily_path = os.path.join(destination_path, 'daily')
@@ -100,13 +104,15 @@ class Usage_Thread(QThread):#usagestats 처리
             
         EventLog['type_string']=[userBehaviour_type.get(str(type),'None') for type in EventLog['type']]
         EventLog.loc[EventLog['package'].isna(),'type_string']=' '
+    
         EventLog.drop(EventLog[(EventLog['type_string'] == 'None') | (EventLog['type'] == 11)].index, inplace=True)
 
 
         filtered_Packages = Packages[Packages['package'].str.contains('|'.join(keywords), case=False)]
         filtered_EventLog = EventLog[(EventLog['package'].isna()) | EventLog['package'].str.contains('|'.join(keywords), case=False)]
+        EventLog.to_csv('result/test2.csv')
+
         filtered_Packages=filtered_Packages.copy().drop_duplicates()
-        filtered_EventLog.to_csv('result/test2.csv')
         last_list=[['last_time_active_ms','last_time_visible_ms'],['time_ms']]
         total_list=['total_time_active_ms','total_time_visible_ms']
         df_list=[filtered_Packages,filtered_EventLog]
@@ -126,13 +132,18 @@ class Usage_Thread(QThread):#usagestats 처리
         non=filtered_EventLog['package'].isna() & ~mask
         filtered_EventLog = filtered_EventLog[~non]
 
+        filtered_EventLog['group'] = (filtered_EventLog['package'] != filtered_EventLog['package'].shift(1)).cumsum()
+        none=filtered_EventLog['package'].isna()
+        newEventLog=filtered_EventLog[~none]
+        newEventLog['new_group'] = (newEventLog['group'] != newEventLog['group'].shift(1)).cumsum()
+
         filtered_Packages.to_csv('./result/Package.csv',index=False)
-        filtered_EventLog.to_csv('./result/EventLog.csv',index=False)
+        newEventLog.to_csv('./result/EventLog.csv',index=False)
 
 
         wiping_application = []
         [wiping_application.append(package_name ) for package_name in filtered_Packages['package']  if package_name not in wiping_application]
         duplicated_application=[package_name for package_name in filtered_Packages['package']]
-
+        
             
         return filtered_Packages.empty,wiping_application,duplicated_application
