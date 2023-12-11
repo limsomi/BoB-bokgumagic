@@ -1,4 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+import os
 from PyQt5.QtWidgets import*
 from modules.ui.view_clipboard import ClipboardView
 from modules.ui.TableView import TableView
@@ -23,6 +24,10 @@ class ViewData(QMainWindow):
                 self.centralwidget = QtWidgets.QWidget(self)
                 self.centralwidget.setStyleSheet("background-color:rgb(235,235,235);")
                 self.centralwidget.setObjectName("centralwidget")
+                #Bokgumagik_logo
+                icon = QtGui.QIcon()
+                icon.addPixmap(QtGui.QPixmap("./logo_Bokgumagic.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+                self.setWindowIcon(icon)
                 #전체화면 layout
                 self.centralLayout = QtWidgets.QHBoxLayout(self.centralwidget)
                 self.centralLayout.setContentsMargins(5, 5, 5, 5)
@@ -158,7 +163,7 @@ class ViewData(QMainWindow):
 
         def retranslateUi(self):
                 _translate = QtCore.QCoreApplication.translate
-                self.setWindowTitle(_translate("self", "self"))
+                self.setWindowTitle(_translate("self", "BokguMagic_v2.0"))
                 self.SideLabel.setText(_translate("self", "잔여 데이터"))
                 self.SideButton.setWhatsThis(_translate("self", "<html><head/><body><p><br/></p></body></html>"))
                 __sortingEnabled = self.SideButton.isSortingEnabled()

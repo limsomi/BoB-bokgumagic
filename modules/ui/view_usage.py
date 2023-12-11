@@ -1,4 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtGui import QStandardItemModel,QStandardItem
 from PyQt5.QtWidgets import*
 from PyQt5 import uic
@@ -20,11 +21,10 @@ class Usage_Window(QMainWindow):
         def setupUi(self):
                 self.setObjectName("self")
                 self.resize(1400, 800)
+                #Bokgumagik_logo
                 icon = QtGui.QIcon()
-                icon.addPixmap(QtGui.QPixmap(":/icon/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+                icon.addPixmap(QtGui.QPixmap("./logo_Bokgumagic.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
                 self.setWindowIcon(icon)
-                self.setStyleSheet("background-color:rgb(235, 235, 235);\n"
-                "")
 
 
                 self.centralwidget = QtWidgets.QWidget(self)
@@ -222,7 +222,7 @@ class Usage_Window(QMainWindow):
 
         def retranslateUi(self):
                 _translate = QtCore.QCoreApplication.translate
-                self.setWindowTitle(_translate("self", "Second_page"))
+                self.setWindowTitle(_translate("self", "Bokgumagic_v2.0"))
                 self.os_information_header.setText(_translate("self", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">OS 정보</span></p></body></html>"))
                 self.V_Button.setText(_translate("self", "잔여데이터 분석"))
                 self.U_Button.setText(_translate("self", "UsageStats 분석"))
@@ -240,18 +240,34 @@ class Usage_Window(QMainWindow):
                 list=[f"안드로이드 버전: {self.android_version}",f"모델명: {self.modelname}"]
                 if wiping_check==False:
                         model=QStandardItemModel()
+
+                        # 아이콘 크기 조절
+                        icon_size = 64  # 아이콘의 크기 설정
+                        # QPixmap을 사용하여 아이콘의 크기 조절
+                        icon_pixmap = QtGui.QPixmap("./logo_galaxy.png").scaled(icon_size, icon_size, QtCore.Qt.KeepAspectRatio)
+                        icon_item = QStandardItem()
+                        icon_item.setIcon(QtGui.QIcon(icon_pixmap))
+        
+                        # 아이콘이 포함된 행의 크기를 조절 (아이콘 크기 + 패딩)
+                        icon_item.setSizeHint(QtCore.QSize(icon_size, icon_size + 20))  # 패딩을 추가하여 행의 높이 설정
+
+                        model.appendRow(icon_item)
+
+                        # QListView에 아이콘 크기 설정
+                        self.OSinformation_listView.setIconSize(QtCore.QSize(icon_size, icon_size))
+
                         for x in list:
-                                model.appendRow(QStandardItem(x))
+                            model.appendRow(QStandardItem(x))
                         self.OSinformation_listView.setModel(model)
                         self.OSinformation_listView.setStyleSheet('''
-                                                QListView{
-                                                background-color:rgb(255,255,255);
-                                                border:1px solid rgb(217,217,217);
-                                                }
-                                                QListView::item{
-                                                background-color:white;
-                                                padding:20px;
-                                                }                 ''')#os 정보 style
+                                        QListView{
+                                        background-color:rgb(255,255,255);
+                                        border:1px solid rgb(217,217,217);
+                                        }
+                                        QListView::item{
+                                        background-color:white;
+                                        padding:20px;
+                                        }''') #os 정보 style
                         self.setTableApplicationData()# application 정보 출력 함수
                 else:
                         print("경고문")
