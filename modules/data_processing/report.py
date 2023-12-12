@@ -10,8 +10,16 @@ from modules.ui.view_dialog import InputDialog
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
 from reportlab.pdfgen import canvas
 from PyPDF2 import PdfWriter, PdfFileReader
+import copy
+from pptx.util import Inches, Pt
+from pptx.dml.color import RGBColor
+from pptx.enum.shapes import MSO_CONNECTOR
+import hashlib
+from pathlib import Path
+import pythoncom
+import win32com.client
 class WriteReport(QThread):
-    progress_signal=pyqtSignal(int)
+    progress_signal=pyqtSignal(int,str)
     result_signal = pyqtSignal()
     finished_signal=pyqtSignal()
     def __init__(self,date,name,duplicated_application):
@@ -20,29 +28,83 @@ class WriteReport(QThread):
         self.name=name
         self.wiping_application=duplicated_application
         self.background_path='report_background.png'
+
+    def ppt2pdf(self,ppt_target_file):
+        pythoncom.CoInitialize()  # CoInitialize 호출 추가
+        file_path = Path(ppt_target_file).resolve()
+        out_file = file_path.parent / file_path.stem
+        powerpoint = win32com.client.Dispatch("Powerpoint.Application")
+        pdf = powerpoint.Presentations.Open(file_path, WithWindow=False)
+        pdf.SaveAs(out_file, 32)
+        pdf.Close()
+        powerpoint.Quit()
+        
+    def copy_slide(self,sample,prs, index):
+        template = sample.slides[index]
+        blank_slide_layout = prs.slide_layouts[0]
+        copied_slide = prs.slides.add_slide(blank_slide_layout)
+
+        
+        for shape in template.shapes:
+            elem = shape.element
+            new_elem = copy.deepcopy(elem)
+            copied_slide.shapes._spTree.insert_element_before(new_elem, 'p:extLst')
+
+        
+        return copied_slide
+    
+    def select_shape_by_text(self,slide,text):
+        for x in slide.shapes:
+            if x.has_text_frame and x.text == text:
+                return x
+        print('요청한 Shape를 찾을 수 없습니다.')
+
     def set_background(self,slide, prs):
         """ 슬라이드의 배경으로 이미지를 설정하는 함수 """
         left = top = Inches(0)
         pic = slide.shapes.add_picture(self.background_path, left, top, width=prs.slide_width, height=prs.slide_height)
-        # 이미지를 슬라이드의 가장 뒤로 이동
         slide.shapes._spTree.remove(pic._element)
         slide.shapes._spTree.insert(2, pic._element)
 
-    def add_table_from_csv(self,prs,slide,csvData, y_position,dataTitle):
+    def calculate_file_hash(self,file_path, hash_algorithm='md5'):
+        file_size = os.path.getsize(file_path)
+
+
+        if hash_algorithm == 'md5':
+            hasher = hashlib.md5()
+        elif hash_algorithm == 'sha1':
+            hasher = hashlib.sha1()
+        elif hash_algorithm == 'sha256':
+            hasher = hashlib.sha256()
+        else:
+            raise ValueError("지원되지 않는 해시 알고리즘입니다.")
+
+        with open(file_path, 'rb') as file:
+            while chunk := file.read(8192):
+                hasher.update(chunk)
+
+        hash_value = hasher.hexdigest()
+
+        return file_size, hash_value
+
+
+
+    def add_table_from_csv(self,sample,prs,slide,csvData, y_position,dataTitle):
         rows, cols = csvData.shape
 
         for start_row in range(0, rows, 10):
             end_row = min(start_row + 10, rows)
             
-            title = slide.shapes.title
-            title.text = os.path.basename(dataTitle)
-            title.text_frame.paragraphs[0].font.size = Pt(28)
             table_width=6400800
             table_height = min(end_row - start_row, 10) * Inches(0.5)
             x_position = (prs.slide_width - table_width) / 2
 
 
-            table = slide.shapes.add_table(min(end_row-start_row, 10) + 1, cols, x_position, y_position, table_width, table_height).table
+            shape = slide.shapes.add_table(min(end_row-start_row, 10) + 1, cols, x_position, y_position, table_width, table_height)
+            table=shape.table
+            label=self.select_shape_by_text(slide,'title')
+            label.text=dataTitle
+            label.text_frame.paragraphs[0].alignment = PP_ALIGN.LEFT
 
             for col_index, col_name in enumerate(csvData.columns):
                 cell = table.cell(0, col_index)
@@ -58,149 +120,151 @@ class WriteReport(QThread):
                     for paragraph in cell.text_frame.paragraphs:
                         for run in paragraph.runs:
                             run.font.size = Pt(8)
+
+            tbl =  shape._element.graphic.graphicData.tbl
+            style_id = '{616DA210-FB5B-4158-B5E0-FEB733F419BA}'
+
+            tbl[0][-1].text = style_id
             if end_row!=rows:
-                slide_layout = prs.slide_layouts[5]
-                slide = prs.slides.add_slide(slide_layout)
+                slide=self.copy_slide(sample,prs,2)
                 self.set_background(slide, prs)
                 y_position=Cm(5)
 
-    def add_text_from_file(self,prs, file_path, slide_title):
-        with open(file_path, 'r', encoding='utf-8') as file:
-            text = file.read()
-            start = 0
-            max_lines = 30
+    def csvSlide(self,sample,prs,path,title):
+        data=pd.read_csv(path)
+        slide=self.copy_slide(sample,prs,2)
+        self.set_background(slide, prs)
+        y_position=Cm(5)
+        self.add_table_from_csv(sample,prs,slide,data,y_position,title)
 
-            while start < len(text):
-                slide_layout = prs.slide_layouts[5]
-                slide = prs.slides.add_slide(slide_layout)
-                self.set_background(slide, prs)
-                title = slide.shapes.title
-                title.text = slide_title
-
-                textbox = slide.shapes.add_textbox(Cm(1), Cm(4), Inches(7), Inches(5))
-                text_frame = textbox.text_frame
-                text_frame.word_wrap = True
-
-                paragraph = text_frame.add_paragraph()
-                paragraph.font.size = Pt(15)
-
-                for _ in range(max_lines):
-                    if start < len(text):
-                        end = text.find('\n', start) + 1 if text.find('\n', start) != -1 else len(text)
-                        paragraph.text += text[start:end]
-                        start = end
-                    else:
-                        break
-
-    def add_text_from_files(self,prs, folder_path, slide_title):
-        for file_name in os.listdir(folder_path):
-            if file_name.endswith('.txt'):
-                file_path = os.path.join(folder_path, file_name)
-                with open(file_path, 'r', encoding='utf-8') as file:
+    def htmlSlide(self,sample,pre,path,dataTitle):
+        fileList=os.listdir(path)
+        for fileName in fileList:
+            if '.txt' in fileName:
+                filePath=os.path.join(path,fileName)
+                with open(filePath, 'r', encoding='utf-8') as file:
                     text = file.read()
                     start = 0
-                    max_lines = 30
+                    max_lines = 35
 
                     while start < len(text):
-                        slide_layout = prs.slide_layouts[5]
-                        slide = prs.slides.add_slide(slide_layout)
-                        self.set_background(slide, prs)
-                        title = slide.shapes.title
-                        title.text = slide_title
+                        slide=self.copy_slide(sample,pre,9)
+                        self.set_background(slide, pre)
+                        shape=self.select_shape_by_text(slide,'content')
+                        title=self.select_shape_by_text(slide,'title')
+                        title.text=dataTitle
+                        label=self.select_shape_by_text(slide,'FileName')
+                        label.text=fileName
+                        label.text_frame.paragraphs[0].alignment = PP_ALIGN.LEFT
 
-                        textbox = slide.shapes.add_textbox(Cm(1), Cm(4), Inches(7), Inches(5))
-                        text_frame = textbox.text_frame
-                        text_frame.word_wrap = True
-
-                        paragraph = text_frame.add_paragraph()
-                        paragraph.font.size = Pt(15)
-
+                        content=''
                         for _ in range(max_lines):
                             if start < len(text):
                                 end = text.find('\n', start) + 1 if text.find('\n', start) != -1 else len(text)
-                                paragraph.text += text[start:end]
+                                content += text[start:end]
                                 start = end
                             else:
                                 break
+        
+                        shape.text=content
+                        for paragraph in shape.text_frame.paragraphs:
+                            for run in paragraph.runs:
+                                run.font.color.rgb = RGBColor(0, 0, 0)  # 검은색
+                                run.font.size = Pt(11)
 
-    def add_images_with_names(self,prs, folder_path, title_text):
-        image_files = [f for f in os.listdir(folder_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
-        for i in range(0, len(image_files), 9):
-            slide_layout = prs.slide_layouts[5]
-            slide = prs.slides.add_slide(slide_layout)
-            self.set_background(slide, prs)
-            title = slide.shapes.title
-            title.text = title_text
+    def ListSlide(self,sample,prs,path,dataTitle):
+       
+        readData=open(path,'r').read()
+        dataList=readData.split('\n\n')
+        for i in range(0,len(dataList),4):
+            end_num=min(len(dataList)-i,4)
+            slide=self.copy_slide(sample,prs,end_num+4)
+            self.set_background(slide,prs)
+            title=self.select_shape_by_text(slide,'title')
+            title.text=dataTitle
+            for image_num in range(end_num):
+                shape=self.select_shape_by_text(slide,f'content{image_num+1}')
+                label=self.select_shape_by_text(slide,f'ListName{image_num+1}')
+                data_lines = dataList[i + image_num].split('\n')
+                label.text=data_lines[0]
+                shape.text='\n'.join(data_lines[1:])
 
-            image_size = Inches(2)
-            gap = Inches(0.7)  # 이미지 간 간격
+                
+                for paragraph in shape.text_frame.paragraphs:
+                    for run in paragraph.runs:
+                        run.font.color.rgb = RGBColor(0, 0, 0)  # 검은색
+                        run.font.size = Pt(11)
 
-            for j in range(9):
-                if i + j < len(image_files):
-                    file_path = os.path.join(folder_path, image_files[i + j])
-                    try:
-                        img = Image.open(file_path)
-                    except UnidentifiedImageError:
-                        continue
 
-                    width, height = img.size
-                    aspect_ratio = width / height
-                    resized_height = image_size
-                    resized_width = resized_height * aspect_ratio
+                label.text_frame.paragraphs[0].runs[0].font.size=Pt(15)
+                label.text_frame.paragraphs[0].alignment = PP_ALIGN.LEFT
 
-                    col = j % 3
-                    row = j // 3
-
-                    total_width = 3 * resized_width + 2 * gap
-                    total_height = 3 * resized_height + 2 * gap
-                    start_x = (prs.slide_width - total_width) / 2
-                    start_y = (prs.slide_height - total_height) / 2
-
-                    x_position = start_x + (resized_width + gap) * col
-                    y_position = start_y + (resized_height + gap) * row
-
-                    if x_position < 0:
-                        x_position += Cm(2)
-                    elif x_position + resized_width > prs.slide_width:
-                        x_position -= Cm(2)
-
-                    slide.shapes.add_picture(file_path, x_position, y_position, width=resized_width, height=resized_height)
-
-                    text_box = slide.shapes.add_textbox(x_position, y_position + resized_height, resized_width, Inches(0.5))
-                    tf = text_box.text_frame
-                    tf.text = image_files[i + j]
-                    tf.paragraphs[0].font.size = Pt(10)
-                    tf.word_wrap = True
     
-    def UsageSlide(self,prs):
+    def ImageSlide(self,sample,prs,path,dataTitle):
+        fileList=os.listdir(path)
+        del fileList[-1]
+        for i in range(0,len(fileList),2):
+            end_num=min(len(fileList)-i,2)
+            slide=self.copy_slide(sample,prs,end_num+2)
+            self.set_background(slide,prs)
+            title=self.select_shape_by_text(slide,'title')
+            title.text=dataTitle
+            title.text_frame.paragraphs[0].alignment = PP_ALIGN.LEFT
+            for image_num in range(end_num):
+                shape=self.select_shape_by_text(slide,f'image{image_num+1}')
+                label=self.select_shape_by_text(slide,f'data{image_num+1}')
+
+
+                file_path=os.path.join(path,fileList[i+image_num])
+                
+                data=''
+                data+=f"FILENAME: {os.path.basename(file_path)}\n"
+                file_size, md5_hash = self.calculate_file_hash(file_path, 'md5')
+                _, sha1_hash = self.calculate_file_hash(file_path, 'sha1')
+                _, sha256_hash = self.calculate_file_hash(file_path, 'sha256')
+
+                data+=f"FILESIZE: {file_size:,} bytes\n"
+                data+=f"MD5: {md5_hash}\n"
+                data+=f"SHA1: {sha1_hash}\n"
+                data+=f"SHA256: {sha256_hash}\n"
+                slide.shapes.add_picture(file_path,shape.left+Cm(0.5),shape.top+Cm(0.5),shape.width-Cm(1),shape.height-Cm(1))
+
+
+                label.text=data
+                for paragraph in label.text_frame.paragraphs:
+                    paragraph.line_spacing = 1.5
+                    for run in paragraph.runs:
+                        run.font.color.rgb = RGBColor(0, 0, 0)  # 검은색
+                        run.font.size = Pt(11)
+
+
+
+    
+    def UsageSlide(self,sample,prs):
         packages=pd.read_csv('./result/Package.csv')
         eventLog=pd.read_csv('./result/EventLog.csv')
-
         for i in range(len(packages)):
             row = packages.iloc[i]
+            slide=self.copy_slide(sample,prs,1)
+            packageShape=self.select_shape_by_text(slide,'Package')
             all_data_text = ''
             all_data_text += "\n".join([f"{column_name}: {value}" for column_name, value in row.items()])
-            all_data_text += "\n\n"
-
-
-            slide_layout = prs.slide_layouts[5]  # 5 is the layout with title and content
-            slide = prs.slides.add_slide(slide_layout)
             self.set_background(slide, prs)
 
 
-            title_shape = slide.shapes.add_textbox(Cm(1), Cm(5), Cm(19), Cm(len(packages.columns)*0.8))
-            title_frame = title_shape.text_frame
-
-            # 텍스트 추가
-            title_frame.text = all_data_text
-
+            packageShape.text = all_data_text
+            for paragraph in packageShape.text_frame.paragraphs:
+                paragraph.line_spacing = 1.5
+                for run in paragraph.runs:
+                    run.font.color.rgb = RGBColor(0, 0, 0)  # 검은색
+                    run.font.size = Pt(11)
 
             eventlog_grouped = eventLog.groupby('new_group')
             eventlog_grouped=eventlog_grouped.get_group(i+1)
 
 
-            y_position=title_shape.top+title_shape.height+Cm(1)
-            self.add_table_from_csv(prs,slide,eventlog_grouped,y_position,'UsageStats')
+            y_position=packageShape.top+packageShape.height+Cm(1)
+            self.add_table_from_csv(sample,prs,slide,eventlog_grouped,y_position,'UsageStats')
                 
     
     def coverSlide(self,prs):
@@ -226,75 +290,55 @@ class WriteReport(QThread):
     def run(self):
         signal=0
 
-        prs = Presentation()
+        sample = Presentation('sample.pptx')
+        prs=Presentation()
         prs.slide_width = Cm(21)
         prs.slide_height = Cm(29.7)
 
         self.coverSlide(prs)
 
-        signal+=80
-        self.progress_signal.emit(signal)
-        self.UsageSlide(prs)
-
-        slide_layout = prs.slide_layouts[5]  # 5 is the layout with title and content
-        slide = prs.slides.add_slide(slide_layout)
-        self.set_background(slide, prs)
-        data=pd.read_csv("./result/contacts.csv")
-        y_position=Cm(5)
-        self.add_table_from_csv(prs,slide,data,y_position,'Contacts')
-        
-        slide_layout = prs.slide_layouts[5]  # 5 is the layout with title and content
-        slide = prs.slides.add_slide(slide_layout)
-        self.set_background(slide, prs)
-        data=pd.read_csv("./result/clipboard/clipboard.csv")
-        y_position=Cm(5)
-
-        self.add_table_from_csv(prs,slide,data,y_position,'Clipboard')
-
-
-
-        # 데이터 테이블 슬라이드 추가
-        # files = ["./result/contacts.csv", "./result/clipboard/clipboard.csv"]
-        # for file_name in files:
-        #     slide_layout = prs.slide_layouts[5]  # 5 is the layout with title and content
-        #     slide = prs.slides.add_slide(slide_layout)
-        #     data=pd.read_csv(file_name)
-        #     y_position=Cm(5)
-        #     background_path='report_background.png'
-        #     table_slides = self.add_table_from_csv(prs,slide,data,y_position,background_path)
-        # self.add_table_from_csv(prs,slide,data,y_position,background_path,'UsageStats')
-        
-        # self.add_text_from_files(prs, './result/clipboard/html', 'clipboard/html', './report_background.png')
-        self.add_text_from_file(prs, './result/shared_prefs/com.projectstar.ishredder.android.standard.txt', 'ishredder.txt')
-        # signal+=10
-        # self.progress_signal.emit(signal)
-        # # ... 기타 콘텐츠 추가 코드 ...
-        
-        # #add_images_from_folder(prs, './result/clipboard/image')
-
-        # #add_shreddit_images(prs, './result/com.palmtronix.shreddit.v1/')
-
-        # # 'result/clipboard/image' 폴더의 이미지 처리
-        # self.add_images_with_names(prs, "./result/clipboard/image", "clipboard image", './report_background.png')
-        # signal+=10
-        # self.progress_signal.emit(signal)
-        # # 'result/com.palmtronix.shreddit.v1' 폴더의 이미지 처리
-        # self.add_images_with_names(prs, "./result/cache/com.palmtronix.shreddit.v1", "shreddit cache image", './report_background.png')
-        # signal+=10
-        # self.progress_signal.emit(signal)
-        # # 'result/com.shredder.fileshredder.securewipe' 폴더의 이미지 처리
-        # self.add_images_with_names(prs, "./result/cache/com.shredder.fileshredder.securewipe", "secure wipe out \n  cache image", './report_background.png')
-        # signal+=10
-        # self.progress_signal.emit(signal)
-        # # 'result/com.shredder.fileshredder.securewipe' 폴더의 이미지 처리
-        # self.add_images_with_names(prs, "./result/gallery3d_cache", "gallery cache image", './report_background.png')
-        # signal+=10
-        # self.progress_signal.emit(signal)
-        pptx_path=os.path.join(os.getcwd(), 'Analysis_Report.pptx')
-        prs.save(pptx_path)
-
         signal+=10
-        self.progress_signal.emit(signal)
+        self.progress_signal.emit(signal,'UsageStats 보고서 작성 중')
+        self.UsageSlide(sample,prs)
+        signal+=10
+        self.progress_signal.emit(signal,'Gallery Cache 보고서 작성 중')
+        self.ImageSlide(sample,prs,'result/gallery3d_cache','Gallery Cache')
+        signal+=10
+        self.progress_signal.emit(signal,'Clipboard 보고서 작성 중')
+        if os.path.exists('result/clipboard/clipboard.csv'):
+            self.csvSlide(sample,prs,'result/clipboard/clipboard.csv','Clipboard')
+            self.ImageSlide(sample,prs,'result/clipboard/image','Clipboard Image')
+            self.htmlSlide(sample,prs,'result/clipboard/html','Clipboard HTML')
+        elif os.path.exists('result/clipboard/clipboard.txt'):
+            self.htmlSlide(sample,prs,'result/clipboard','Clipboard')
+
+        if os.path.exists('result/contacts.csv'):
+            signal+=10
+            self.progress_signal.emit(signal,'Contacts 보고서 작성 중')
+            self.csvSlide(sample,prs,'result/contacts.csv','Contacts')
+
+        cacheList=os.listdir('result/cache')
+        for cacheFolder in cacheList:
+            signal+=10
+            self.progress_signal.emit(signal,'Package Cache 보고서 작성 중')
+            path=os.path.join('result/cache',cacheFolder)
+            self.ImageSlide(sample,prs,path,cacheFolder)
+
+        sharedPrefsList=os.listdir('result/shared_prefs')
+        for fileName in sharedPrefsList:
+            signal+=10
+            self.progress_signal.emit(signal,'Shared Pref 보고서 작성 중')
+            filePath=os.path.join('result/shared_prefs',fileName)
+            self.ListSlide(sample,prs,filePath,fileName)
+        
+        prs.save('Analysis_Report.pptx')
+        signal+=20
+        self.progress_signal.emit(signal,'보고서 저장 중')
+        # time.sleep(5)
+        self.ppt2pdf('Analysis_Report.pptx')
+
+
         self.result_signal.emit()
         self.finished_signal.emit()
+
 

@@ -78,8 +78,9 @@ def full_shared_prefs(destination_dir,package_name):
     with open(f'./result/shared_prefs/{package_name}.txt','w',encoding='utf-8') as output_file:
         for i, lst in enumerate(lists, 1):
             extracted_elements = extract_elements(lst)
-            output_file.write(f"\nList {i} Elements:\n")
+            output_file.write(f"List {i} Elements:\n")
             for key, value in extracted_elements.items():
                 if value is not None:
                     output_file.write(f"{key}: {value}\n")
-
+            if len(lists)!=i:
+                output_file.write('\n')

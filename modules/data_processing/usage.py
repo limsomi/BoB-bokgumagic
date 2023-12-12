@@ -9,10 +9,10 @@ import json
 import datetime
 
 class Usage_Thread(QThread):#usagestats 처리
-    progress_signal=pyqtSignal(int)
+    progress_signal=pyqtSignal(int,str)
     result_signal = pyqtSignal(int, str, bool, list,list)
     finished_signal=pyqtSignal()
-
+    signal=0
     def convert_to_hms(self,milliseconds):
         seconds = milliseconds / 1000
         time_delta = datetime.timedelta(seconds=seconds)
@@ -21,6 +21,8 @@ class Usage_Thread(QThread):#usagestats 처리
         return f"{int(hours)}h {int(minutes)}m {seconds}s"
 
     def run(self):
+        self.signal+=30
+        self.progress_signal.emit(self.signal,'device 정보 추출 중')
         device = adb_extract.get_device()
         android_version = int(adb_extract.get_androidVersion(device))
         modelname = adb_extract.get_modelname(device)
@@ -30,9 +32,12 @@ class Usage_Thread(QThread):#usagestats 처리
             destination_dir = '/data/system/'
         else:
             destination_dir = '/data/system_ce/0' 
-        
+        self.signal+=20
+        self.progress_signal.emit(self.signal,'UsageStats 추출 중')
         usage_name = 'usagestats'
         adb_extract.extract_data(device, usage_name, destination_dir)
+        self.signal+=20
+        self.progress_signal.emit(self.signal,'UsageStats 추출 중')
         wiping_check, wiping_application,duplicated_application = self.usagestats(android_version)
         
         self.result_signal.emit(android_version, modelname, wiping_check, wiping_application,duplicated_application)
@@ -47,7 +52,6 @@ class Usage_Thread(QThread):#usagestats 처리
         
         destination_path = "./extractdata/usagestats"
 
-        signal=0
         if android_version < 10: 
             Packages=pd.DataFrame(columns=['package','timeActive','lastTimeActive'])
             EventLog=pd.DataFrame(columns=['package','class','time','type'])
@@ -57,8 +61,7 @@ class Usage_Thread(QThread):#usagestats 처리
                 dailyfile_list=os.listdir(daily_path)
                 for file_path in dailyfile_list:
                     mappings_Packages,mappings_EventLog=parsing_usagestats.usagestats_parsing9(daily_path,file_path)
-                    self.progress_signal.emit(signal)
-                    signal+=50
+                    
                     Packages=pd.concat([Packages,mappings_Packages])
                     EventLog=pd.concat([EventLog,mappings_EventLog])
                     new_row_index = len(EventLog) 
@@ -71,8 +74,7 @@ class Usage_Thread(QThread):#usagestats 처리
                 dailyfile_list=os.listdir(daily_path)
                 for file_path in dailyfile_list:
                     mappings_Packages,mappings_EventLog=parsing_usagestats.usagestats_parsing10(daily_path,file_path)
-                    self.progress_signal.emit(signal)
-                    signal+=50
+                    
                     Packages=pd.concat([Packages,mappings_Packages])
                     EventLog=pd.concat([EventLog,mappings_EventLog])
                     new_row_index = len(EventLog) 
@@ -88,8 +90,7 @@ class Usage_Thread(QThread):#usagestats 처리
             
                 for daily in dailyfile_list:
                     mappings_EventLog,mappings_Packages=parsing_usagestats.usagestats_parsing(daily_path,daily,mappings)
-                    self.progress_signal.emit(signal)
-                    signal+=50
+                    
                     Packages=pd.concat([Packages,mappings_Packages])
                     EventLog=pd.concat([EventLog,mappings_EventLog])
                     new_row_index = len(EventLog) 
@@ -110,7 +111,7 @@ class Usage_Thread(QThread):#usagestats 처리
 
         filtered_Packages = Packages[Packages['package'].str.contains('|'.join(keywords), case=False)]
         filtered_EventLog = EventLog[(EventLog['package'].isna()) | EventLog['package'].str.contains('|'.join(keywords), case=False)]
-        EventLog.to_csv('result/test2.csv')
+        # EventLog.to_csv('result/test2.csv')
 
         filtered_Packages=filtered_Packages.copy().drop_duplicates()
         last_list=[['last_time_active_ms','last_time_visible_ms'],['time_ms']]

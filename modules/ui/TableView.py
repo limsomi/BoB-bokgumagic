@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QTableWidget, QTableWidgetItem, QHeaderView, QVBoxLayout, QWidget
 from PyQt5.QtGui import QStandardItemModel,QStandardItem
+import os
 import pandas as pd
 def TableView(widget,csv_path):#DataView에서 table module
     widgetLayout = QtWidgets.QVBoxLayout(widget)
@@ -32,24 +33,28 @@ def TableView(widget,csv_path):#DataView에서 table module
     TextTable = QtWidgets.QTableView(scrollAreaWidgetContents)
     TextTable.setObjectName("TextTable")
     TextTable.setObjectName("TextTable")
-    df=pd.read_csv(csv_path)
-    DataCountLabel.setText(f'발견된 흔적 개수: {len(df)}')
     widgetLayout.addWidget(DataCountLabel)
+    if os.path.exists(csv_path):
+        df=pd.read_csv(csv_path)
+        length=len(df)
 
-    header=df.columns.tolist()
-    df_model = QStandardItemModel()
-    df_model.setHorizontalHeaderLabels(header)
+        header=df.columns.tolist()
+        df_model = QStandardItemModel()
+        df_model.setHorizontalHeaderLabels(header)
 
-    for index,row in df.iterrows():
-        df_model.appendRow([QStandardItem(str(item)) for item in row])
-        TextTable.setModel(df_model)
+        for index,row in df.iterrows():
+            df_model.appendRow([QStandardItem(str(item)) for item in row])
+            TextTable.setModel(df_model)
 
-    TextTable.resizeColumnsToContents()
-    TextTable.horizontalHeader().setCascadingSectionResizes(False)
-    TextTable.horizontalHeader().setStretchLastSection(True)
-    TextTable.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        TextTable.resizeColumnsToContents()
+        TextTable.horizontalHeader().setCascadingSectionResizes(False)
+        TextTable.horizontalHeader().setStretchLastSection(True)
+        TextTable.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
 
 
+    else:
+        length=0
+    DataCountLabel.setText(f'발견된 흔적 개수: {length}')
     TextGridLayout.addWidget(TextTable, 0, 0, 1, 1)
     scrollArea.setWidget(scrollAreaWidgetContents)
     widgetLayout.addWidget(scrollArea)

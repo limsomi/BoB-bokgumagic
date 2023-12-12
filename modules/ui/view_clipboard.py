@@ -13,13 +13,11 @@ def ClipboardView(widget):
     tab_1.setObjectName("tab_1")
     if os.path.exists('./result/clipboard/clipboard.csv'):
         TableView(tab_1,'./result/clipboard/clipboard.csv')
-    else:
+    else :
         clipboardLayout = QtWidgets.QVBoxLayout(tab_1)
-        clipboardLayout.setObjectName("htmlLayout")
-        clipboardData=open('./result/clipboard/clipboard.txt','r')
+        clipboardLayout.setObjectName("clipboardLayout")
         clipboardCountLabel = QtWidgets.QLabel(tab_1)
         clipboardCountLabel.setObjectName("htmlCountLabel")
-        clipboardCountLabel.setText(f"발견된 clipboard 흔적 개수: {len(clipboardData.readlines())}")
         clipboardCountLabel.setStyleSheet("background-color:rgb(255,255,255);\n"
     "border:none;\n"
     "border-bottom:1px solid rgb(177,177,177);"
@@ -42,16 +40,23 @@ def ClipboardView(widget):
 
         clipboardBoxLayout = QtWidgets.QVBoxLayout(clipboardScrollContents)
         clipboardBoxLayout.setObjectName("clipboardBoxLayout")
-        with open('./result/clipboard/clipboard.txt','r',encoding='utf-8') as file:
-            clipboardWidget=HTMLwidget(' ',file.read())
-        clipboardBoxLayout.addWidget(clipboardWidget)
+        if os.path.exists('./result/clipboard/clipboard.txt'):
+            with open('result\clipboard\clipboard.txt','r',encoding='utf-8') as file:
+                data=file.read()
+                clipboardWidget=HTMLwidget(' ',data)
+                clipboardCountLabel.setText(f"발견된 clipboard 흔적 개수: {len(data.splitlines())}")
+                clipboardBoxLayout.addWidget(clipboardWidget)
+        else:
+             clipboardCountLabel.setText(f"발견된 clipboard 흔적 개수: {0}")
 
 
         clipboardScrollArea.setWidget(clipboardScrollContents)
         clipboardLayout.addWidget(clipboardScrollArea)
         clipboardLayout.setStretch(0, 1)
         clipboardLayout.setStretch(1, 15)
-
+        widget.viewWidget.addTab(tab_1, "Clipboard")
+        return
+         
     widget.viewWidget.addTab(tab_1, "Clipboard")
 
     tab_2 = QtWidgets.QWidget()#image

@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QProgressBar,QDesktopWidget
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import os
 class FinishWidget(QWidget):#보고서 작성 완료 창
     def __init__(self,parent):
         super().__init__()
@@ -60,6 +60,7 @@ class FinishWidget(QWidget):#보고서 작성 완료 창
         self.centerOnParent()
 
     def finish(self):
+        os.system('start Analysis_Report.pdf')
         exit(0)
     def centerOnParent(self):
         parent_screen = QApplication.desktop().screenGeometry(self.parent)
