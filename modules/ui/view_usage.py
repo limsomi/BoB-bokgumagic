@@ -10,72 +10,9 @@ from modules.ui import view_data
 from modules.ui import ProcessBar
 from modules.data_processing.viewData import viewData_Thread
 from modules.data_processing.usage import Usage_Thread
+from modules.ui.Image import deviceImage
+import os
 
-class CustomTitleBar(QtWidgets.QWidget):
-    def __init__(self, parent=None):
-        super(CustomTitleBar, self).__init__(parent)
-        self.setFixedHeight(38)  # Title bar height
-        self.layout = QtWidgets.QHBoxLayout(self)
-        self.layout.setContentsMargins(10, 0, 10, 0)  # Margin: top, left, bottom, right
-        self.layout.setSpacing(0)
-        self.layout.setAlignment(QtCore.Qt.AlignCenter)  # Center items in the title bar
-
-        # App Icon
-        self.iconLabel = QtWidgets.QLabel(self)
-        icon = QtGui.QPixmap('./logo_Bokgumagic.png').scaled(24, 24, QtCore.Qt.KeepAspectRatio)
-        self.iconLabel.setPixmap(icon)
-        self.layout.addWidget(self.iconLabel, alignment=QtCore.Qt.AlignLeft)
-
-        # Title Label
-        self.titleLabel = QtWidgets.QLabel(" Bokgumagic_v2.0                                                                                                                                                                                                                                              ", self)
-        self.titleLabel.setFont(QtGui.QFont("맑은 고딕", 12))
-        self.layout.addWidget(self.titleLabel, alignment=QtCore.Qt.AlignLeft)
-        
-        # Spacing between title and buttons
-        self.layout.addStretch()
-
-        # Minimize Button
-        self.minimizeButton = QtWidgets.QPushButton("__", self)
-        self.minimizeButton.setFixedSize(45, 30)
-        self.layout.addWidget(self.minimizeButton, alignment=QtCore.Qt.AlignRight)
-
-        # Maximize/Restore Button
-        self.maximizeButton = QtWidgets.QPushButton("□", self)
-        self.maximizeButton.setFixedSize(45, 30)
-        self.layout.addWidget(self.maximizeButton, alignment=QtCore.Qt.AlignRight)
-
-        # Close Button
-        self.closeButton = QtWidgets.QPushButton("X", self)
-        self.closeButton.setFixedSize(45, 30)
-        self.layout.addWidget(self.closeButton, alignment=QtCore.Qt.AlignRight)
-
-        # Set the background color for the title bar and buttons
-        self.setStyleSheet("""
-            CustomTitleBar, QLabel, QPushButton {
-                background-color: rgb(224, 255, 255);
-                border: none;
-            }
-            QPushButton:hover {
-                background-color: rgb(200, 240, 240);
-            }
-            QPushButton:pressed {
-                background-color: rgb(180, 230, 230);
-            }
-        """)
-
-        # Connect button signals to their respective slots
-        self.minimizeButton.clicked.connect(parent.showMinimized)
-        self.maximizeButton.clicked.connect(self.toggleMaximizeRestore)
-        self.closeButton.clicked.connect(parent.close)
-
-    def toggleMaximizeRestore(self):
-        # Toggle maximize/restore on button click
-        if self.parent().isMaximized():
-            self.parent().showNormal()
-            self.maximizeButton.setText("□")
-        else:
-            self.parent().showMaximized()
-            self.maximizeButton.setText("❐")
 
 class Usage_Window(QMainWindow):
         def __init__(self):
@@ -90,16 +27,16 @@ class Usage_Window(QMainWindow):
                 self.resize(1400, 800)
                 #Bokgumagik_logo
                 icon = QtGui.QIcon()
-                icon.addPixmap(QtGui.QPixmap("./logo_Bokgumagic.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+                icon.addPixmap(QtGui.QPixmap("./resource/logo_Bokgumagic.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
                 self.setWindowIcon(icon)
 
 
-                # 기본 제목 표시줄 숨기기
-                self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+                # # 기본 제목 표시줄 숨기기
+                # self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         
-                # 사용자 지정 제목 표시줄 추가
-                self.customTitleBar = CustomTitleBar(self)
-                self.setMenuWidget(self.customTitleBar)
+                # # 사용자 지정 제목 표시줄 추가
+                # self.customTitleBar = CustomTitleBar(self)
+                # self.setMenuWidget(self.customTitleBar)
 
                 self.centralwidget = QtWidgets.QWidget(self)
                 self.centralwidget.setStyleSheet("background-color:rgb(235, 235, 235);")
@@ -113,8 +50,9 @@ class Usage_Window(QMainWindow):
                 self.SiderLayout.setObjectName("siderlayout")
 
                 osWidget = QtWidgets.QWidget(self.centralwidget)#os 정보 header + os 정보 data
+                osWidget.setStyleSheet('background-color:white;')
                 osWidget.setObjectName("widget")
-
+                
                 self.osWidgetLayout = QtWidgets.QVBoxLayout(osWidget)#os 정보 layout
                 self.osWidgetLayout.setContentsMargins(0, 0, 0, 0)
                 self.osWidgetLayout.setSpacing(0)
@@ -127,6 +65,9 @@ class Usage_Window(QMainWindow):
                 self.os_information_header.setObjectName("os_information_header")
 
                 self.osWidgetLayout.addWidget(self.os_information_header)
+
+                self.deviceImageWidget=deviceImage()
+                self.osWidgetLayout.addWidget(self.deviceImageWidget)
 
                 self.OSinformation_listView = QtWidgets.QListView(osWidget)#os 정보 데이터 widget
                 self.OSinformation_listView.setObjectName("OSinformation_listView")
@@ -146,7 +87,8 @@ class Usage_Window(QMainWindow):
                                 }             ''')
                 self.osWidgetLayout.addWidget(self.OSinformation_listView)
                 self.osWidgetLayout.setStretch(0, 1)
-                self.osWidgetLayout.setStretch(1, 13)
+                self.osWidgetLayout.setStretch(1, 5)
+                self.osWidgetLayout.setStretch(2,10)
 
                 self.SiderLayout.addWidget(osWidget)
                 self.extractButton = QtWidgets.QWidget(self.centralwidget)#usagestats 분석, 잔여 데이터 분석 버튼 모음
@@ -314,37 +256,48 @@ class Usage_Window(QMainWindow):
                 list=[f"안드로이드 버전: {self.android_version}",f"모델명: {self.modelname}"]
                 if wiping_check == False:
                         model = QStandardItemModel()
+                        deviceImageList=os.listdir('resource')
+                        if any(self.modelname in filename for filename in deviceImageList):
+                                self.deviceImageWidget.update_modelname(self.modelname)
+                                self.deviceImageWidget.update_pixmap()
+                                # self.deviceImage = QPixmap(f'resource/{self.modelname}.jpg')
+                                # # self.deviceImageLabel.setPixmap(self.deviceImage.scaled(self.deviceImageLabel.width(), self.deviceImageLabel.height(), QtCore.Qt.KeepAspectRatio))
+                                # self.deviceImageLabel.setPixmap(self.deviceImage.scaled(self.deviceImageLabel.width(), self.deviceImageLabel.height()))
+                                
+                                # self.deviceImageLabel.setAlignment(QtCore.Qt.AlignCenter)
+                                # self.deviceImageLabel.setStyleSheet('''QLabel{border:none;}
+                                #                                 ''')
+                                # self.deviceImageLabel.setFocusPolicy(QtCore.Qt.StrongFocus)
+                        # # 아이콘 크기 및 패딩 설정
+                        # icon_size = 256  # 아이콘의 크기를 256x256으로 설정
+                        # padding = 20  # 여백 크기를 20으로 설정
 
-                        # 아이콘 크기 및 패딩 설정
-                        icon_size = 256  # 아이콘의 크기를 256x256으로 설정
-                        padding = 20  # 여백 크기를 20으로 설정
+                        # # QPixmap을 사용하여 아이콘의 크기 조절
+                        # icon_pixmap = QtGui.QPixmap("./logo_galaxy.png").scaled(icon_size, icon_size, QtCore.Qt.KeepAspectRatio)
+                        # icon_item = QStandardItem()
+                        # icon_item.setIcon(QtGui.QIcon(icon_pixmap))
 
-                        # QPixmap을 사용하여 아이콘의 크기 조절
-                        icon_pixmap = QtGui.QPixmap("./logo_galaxy.png").scaled(icon_size, icon_size, QtCore.Qt.KeepAspectRatio)
-                        icon_item = QStandardItem()
-                        icon_item.setIcon(QtGui.QIcon(icon_pixmap))
+                        # # 아이콘이 포함된 행의 크기를 조절 (아이콘 크기 + 패딩)
+                        # icon_item.setSizeHint(QtCore.QSize(icon_size + padding * 2, icon_size + padding * 2))  # 여백을 추가하여 행의 높이와 너비 설정
 
-                        # 아이콘이 포함된 행의 크기를 조절 (아이콘 크기 + 패딩)
-                        icon_item.setSizeHint(QtCore.QSize(icon_size + padding * 2, icon_size + padding * 2))  # 여백을 추가하여 행의 높이와 너비 설정
-
-                        model.appendRow(icon_item)
+                        # model.appendRow(icon_item)
 
                         # QListView에 모델 설정
                         self.OSinformation_listView.setModel(model)
-                        self.OSinformation_listView.setIconSize(QtCore.QSize(icon_size, icon_size))  # 아이콘 크기 설정
+                        # self.OSinformation_listView.setIconSize(QtCore.QSize(icon_size, icon_size))  # 아이콘 크기 설정
 
-                         # QListView의 아이템 간격 설정
-                        self.OSinformation_listView.setSpacing(padding)
+                        #  # QListView의 아이템 간격 설정
+                        self.OSinformation_listView.setSpacing(10)
 
-                        # QListView의 여백 설정
-                        self.OSinformation_listView.setContentsMargins(padding, padding, padding, padding)
+                        # # QListView의 여백 설정
+                        self.OSinformation_listView.setContentsMargins(10,10,10,10)
 
                         # 여기에 추가적인 텍스트 아이템 설정
                         for text in list:
                                 model.appendRow(QStandardItem(text))
         
                         self.OSinformation_listView.setModel(model)
-                        self.OSinformation_listView.setIconSize(QtCore.QSize(icon_size, icon_size))  # 아이콘 크기 설정
+                        # self.OSinformation_listView.setIconSize(QtCore.QSize(icon_size, icon_size))  # 아이콘 크기 설정
                         self.setTableApplicationData()# application 정보 출력 함수
                 else:
                         print("경고문")

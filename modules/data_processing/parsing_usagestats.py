@@ -161,7 +161,7 @@ def usageToCSV(android_version,EventLog,Packages):
 
     EventLog.reset_index(drop=True,inplace=True)
     Packages.reset_index(drop=True,inplace=True)
-    with open('./modules/userBehaviour_type.json','r',encoding='utf-8') as file:
+    with open('./resource/userBehaviour_type.json','r',encoding='utf-8') as file:
         userBehaviour_type=json.load(file)
 
         
