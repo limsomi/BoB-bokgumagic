@@ -27,7 +27,7 @@ class WriteReport(QThread):
         self.date=date
         self.name=name
         self.wiping_application=duplicated_application
-        self.background_path='report_background.png'
+        self.background_path='./resource/report_background.png'
 
     def ppt2pdf(self,ppt_target_file):
         pythoncom.CoInitialize()  # CoInitialize 호출 추가
@@ -270,7 +270,7 @@ class WriteReport(QThread):
     def coverSlide(self,prs):
         slide_layout = prs.slide_layouts[5]
         cover_slide = prs.slides.add_slide(slide_layout)
-        cover_slide.shapes.add_picture('./report_cover.png', 0, 0, prs.slide_width, prs.slide_height)
+        cover_slide.shapes.add_picture('./resource/report_cover.png', 0, 0, prs.slide_width, prs.slide_height)
         original_title_y = Inches(2)
         title_shape = cover_slide.shapes.add_textbox(Inches(1), original_title_y + Inches(3), prs.slide_width - Inches(2), Inches(1))
         title_text_frame = title_shape.text_frame
@@ -290,7 +290,7 @@ class WriteReport(QThread):
     def run(self):
         signal=0
 
-        sample = Presentation('sample.pptx')
+        sample = Presentation('./resource/sample.pptx')
         prs=Presentation()
         prs.slide_width = Cm(21)
         prs.slide_height = Cm(29.7)

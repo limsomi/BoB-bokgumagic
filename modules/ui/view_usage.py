@@ -1,4 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtGui import QStandardItemModel,QStandardItem
 from PyQt5.QtWidgets import*
 from PyQt5 import uic
@@ -9,6 +10,10 @@ from modules.ui import view_data
 from modules.ui import ProcessBar
 from modules.data_processing.viewData import viewData_Thread
 from modules.data_processing.usage import Usage_Thread
+from modules.ui.Image import deviceImage
+import os
+
+
 class Usage_Window(QMainWindow):
         def __init__(self):
                 super().__init__()
@@ -20,12 +25,18 @@ class Usage_Window(QMainWindow):
         def setupUi(self):
                 self.setObjectName("self")
                 self.resize(1400, 800)
+                #Bokgumagik_logo
                 icon = QtGui.QIcon()
-                icon.addPixmap(QtGui.QPixmap(":/icon/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+                icon.addPixmap(QtGui.QPixmap("./resource/logo_Bokgumagic.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
                 self.setWindowIcon(icon)
-                self.setStyleSheet("background-color:rgb(235, 235, 235);\n"
-                "")
 
+
+                # # 기본 제목 표시줄 숨기기
+                # self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        
+                # # 사용자 지정 제목 표시줄 추가
+                # self.customTitleBar = CustomTitleBar(self)
+                # self.setMenuWidget(self.customTitleBar)
 
                 self.centralwidget = QtWidgets.QWidget(self)
                 self.centralwidget.setStyleSheet("background-color:rgb(235, 235, 235);")
@@ -39,8 +50,9 @@ class Usage_Window(QMainWindow):
                 self.SiderLayout.setObjectName("siderlayout")
 
                 osWidget = QtWidgets.QWidget(self.centralwidget)#os 정보 header + os 정보 data
+                osWidget.setStyleSheet('background-color:white;')
                 osWidget.setObjectName("widget")
-
+                
                 self.osWidgetLayout = QtWidgets.QVBoxLayout(osWidget)#os 정보 layout
                 self.osWidgetLayout.setContentsMargins(0, 0, 0, 0)
                 self.osWidgetLayout.setSpacing(0)
@@ -53,6 +65,9 @@ class Usage_Window(QMainWindow):
                 self.os_information_header.setObjectName("os_information_header")
 
                 self.osWidgetLayout.addWidget(self.os_information_header)
+
+                self.deviceImageWidget=deviceImage()
+                self.osWidgetLayout.addWidget(self.deviceImageWidget)
 
                 self.OSinformation_listView = QtWidgets.QListView(osWidget)#os 정보 데이터 widget
                 self.OSinformation_listView.setObjectName("OSinformation_listView")
@@ -72,7 +87,8 @@ class Usage_Window(QMainWindow):
                                 }             ''')
                 self.osWidgetLayout.addWidget(self.OSinformation_listView)
                 self.osWidgetLayout.setStretch(0, 1)
-                self.osWidgetLayout.setStretch(1, 13)
+                self.osWidgetLayout.setStretch(1, 5)
+                self.osWidgetLayout.setStretch(2,10)
 
                 self.SiderLayout.addWidget(osWidget)
                 self.extractButton = QtWidgets.QWidget(self.centralwidget)#usagestats 분석, 잔여 데이터 분석 버튼 모음
@@ -222,7 +238,7 @@ class Usage_Window(QMainWindow):
 
         def retranslateUi(self):
                 _translate = QtCore.QCoreApplication.translate
-                self.setWindowTitle(_translate("self", "Second_page"))
+                self.setWindowTitle(_translate("self", "Bokgumagic_v2.0"))
                 self.os_information_header.setText(_translate("self", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">OS 정보</span></p></body></html>"))
                 self.V_Button.setText(_translate("self", "잔여데이터 분석"))
                 self.U_Button.setText(_translate("self", "UsageStats 분석"))
@@ -238,20 +254,50 @@ class Usage_Window(QMainWindow):
                 self.duplicated_application=duplicated_application
 
                 list=[f"안드로이드 버전: {self.android_version}",f"모델명: {self.modelname}"]
-                if wiping_check==False:
-                        model=QStandardItemModel()
-                        for x in list:
-                                model.appendRow(QStandardItem(x))
+                if wiping_check == False:
+                        model = QStandardItemModel()
+                        deviceImageList=os.listdir('resource')
+                        if any(self.modelname in filename for filename in deviceImageList):
+                                self.deviceImageWidget.update_modelname(self.modelname)
+                                self.deviceImageWidget.update_pixmap()
+                                # self.deviceImage = QPixmap(f'resource/{self.modelname}.jpg')
+                                # # self.deviceImageLabel.setPixmap(self.deviceImage.scaled(self.deviceImageLabel.width(), self.deviceImageLabel.height(), QtCore.Qt.KeepAspectRatio))
+                                # self.deviceImageLabel.setPixmap(self.deviceImage.scaled(self.deviceImageLabel.width(), self.deviceImageLabel.height()))
+                                
+                                # self.deviceImageLabel.setAlignment(QtCore.Qt.AlignCenter)
+                                # self.deviceImageLabel.setStyleSheet('''QLabel{border:none;}
+                                #                                 ''')
+                                # self.deviceImageLabel.setFocusPolicy(QtCore.Qt.StrongFocus)
+                        # # 아이콘 크기 및 패딩 설정
+                        # icon_size = 256  # 아이콘의 크기를 256x256으로 설정
+                        # padding = 20  # 여백 크기를 20으로 설정
+
+                        # # QPixmap을 사용하여 아이콘의 크기 조절
+                        # icon_pixmap = QtGui.QPixmap("./logo_galaxy.png").scaled(icon_size, icon_size, QtCore.Qt.KeepAspectRatio)
+                        # icon_item = QStandardItem()
+                        # icon_item.setIcon(QtGui.QIcon(icon_pixmap))
+
+                        # # 아이콘이 포함된 행의 크기를 조절 (아이콘 크기 + 패딩)
+                        # icon_item.setSizeHint(QtCore.QSize(icon_size + padding * 2, icon_size + padding * 2))  # 여백을 추가하여 행의 높이와 너비 설정
+
+                        # model.appendRow(icon_item)
+
+                        # QListView에 모델 설정
                         self.OSinformation_listView.setModel(model)
-                        self.OSinformation_listView.setStyleSheet('''
-                                                QListView{
-                                                background-color:rgb(255,255,255);
-                                                border:1px solid rgb(217,217,217);
-                                                }
-                                                QListView::item{
-                                                background-color:white;
-                                                padding:20px;
-                                                }                 ''')#os 정보 style
+                        # self.OSinformation_listView.setIconSize(QtCore.QSize(icon_size, icon_size))  # 아이콘 크기 설정
+
+                        #  # QListView의 아이템 간격 설정
+                        self.OSinformation_listView.setSpacing(10)
+
+                        # # QListView의 여백 설정
+                        self.OSinformation_listView.setContentsMargins(10,10,10,10)
+
+                        # 여기에 추가적인 텍스트 아이템 설정
+                        for text in list:
+                                model.appendRow(QStandardItem(text))
+        
+                        self.OSinformation_listView.setModel(model)
+                        # self.OSinformation_listView.setIconSize(QtCore.QSize(icon_size, icon_size))  # 아이콘 크기 설정
                         self.setTableApplicationData()# application 정보 출력 함수
                 else:
                         print("경고문")

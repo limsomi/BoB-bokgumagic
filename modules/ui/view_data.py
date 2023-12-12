@@ -1,4 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+import os
 from PyQt5.QtWidgets import*
 from modules.ui.view_clipboard import ClipboardView
 from modules.ui.TableView import TableView
@@ -8,6 +9,8 @@ from modules.ui.view_dialog import InputDialog #1204 joys
 from modules.data_processing.report import WriteReport #1207 joys
 from modules.ui import ProcessBar
 from modules.ui.FinishWidget import FinishWidget
+
+
 class ViewData(QMainWindow):
         def __init__(self,parent):
                 super().__init__()
@@ -23,6 +26,18 @@ class ViewData(QMainWindow):
                 self.centralwidget = QtWidgets.QWidget(self)
                 self.centralwidget.setStyleSheet("background-color:rgb(235,235,235);")
                 self.centralwidget.setObjectName("centralwidget")
+                #Bokgumagik_logo
+                icon = QtGui.QIcon()
+                icon.addPixmap(QtGui.QPixmap("./resource/logo_Bokgumagic.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+                self.setWindowIcon(icon)
+
+                # # 기본 제목 표시줄 숨기기
+                # self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        
+                # # 사용자 지정 제목 표시줄 추가
+                # self.customTitleBar = CustomTitleBar(self)
+                # self.setMenuWidget(self.customTitleBar)
+
                 #전체화면 layout
                 self.centralLayout = QtWidgets.QHBoxLayout(self.centralwidget)
                 self.centralLayout.setContentsMargins(5, 5, 5, 5)
@@ -158,7 +173,7 @@ class ViewData(QMainWindow):
 
         def retranslateUi(self):
                 _translate = QtCore.QCoreApplication.translate
-                self.setWindowTitle(_translate("self", "self"))
+                self.setWindowTitle(_translate("self", "BokguMagic_v2.0"))
                 self.SideLabel.setText(_translate("self", "잔여 데이터"))
                 self.SideButton.setWhatsThis(_translate("self", "<html><head/><body><p><br/></p></body></html>"))
                 __sortingEnabled = self.SideButton.isSortingEnabled()
@@ -266,8 +281,6 @@ class ViewData(QMainWindow):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    self = QtWidgets.Qself()
-    ui = ViewData()
-    ui.setupUi(self)
-    self.show()
+    mainWin = ViewData(None)
+    mainWin.show()
     sys.exit(app.exec_())

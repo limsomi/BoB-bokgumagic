@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout,QHBoxLayout
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import Qt,QSize
+from PyQt5.QtCore import Qt,QSize,QEvent
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
 class ImageWidget(QWidget):#이미지를 보여줄 때 이미지,이미지 파일 이름 포함된 object
@@ -95,3 +95,44 @@ def LoadImage(viewData,folder_name):#gallery, clipboard, pacakge file (cache) �
         gridLayout.setColumnStretch(i, 1)
 
     return len(CacheList)
+
+
+class deviceImage(QWidget):
+    def __init__(self,):
+        super().__init__()
+
+        self.setStyleSheet('background-color:white;margin:0px')
+        # Example model name
+        self.modelname = None
+        deviceImageWidgetLayout=QtWidgets.QHBoxLayout(self)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        deviceImageWidgetLayout.addItem(spacerItem1)
+        self.deviceImageLabel=QtWidgets.QLabel(self)
+        self.deviceImageLabel.setAlignment(Qt.AlignCenter)
+        self.deviceImageLabel.setStyleSheet('''QLabel{border:none;}''')
+        self.deviceImageLabel.setFocusPolicy(Qt.StrongFocus)
+        deviceImageWidgetLayout.addWidget(self.deviceImageLabel)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        deviceImageWidgetLayout.addItem(spacerItem2)
+        deviceImageWidgetLayout.setStretch(0,1)
+        deviceImageWidgetLayout.setStretch(1,2)
+        deviceImageWidgetLayout.setStretch(2,1)
+
+        
+        self.setLayout(deviceImageWidgetLayout)
+
+        # Connect the size change event to the update_pixmap function
+        self.deviceImageLabel.installEventFilter(self)
+
+    def eventFilter(self, obj, event):
+        if obj is self.deviceImageLabel and event.type() == QEvent.Resize and self.modelname!=None:
+            self.update_pixmap()
+        return super().eventFilter(obj, event)
+    def update_modelname(self,modelname):
+         self.modelname=modelname
+
+    def update_pixmap(self):
+
+        self.deviceImage = QPixmap(f'resource/{self.modelname}.jpg')
+        self.deviceImageLabel.setPixmap(self.deviceImage.scaled(
+            self.deviceImageLabel.width(), self.deviceImageLabel.height(), Qt.KeepAspectRatio))

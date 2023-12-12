@@ -99,7 +99,7 @@ class Usage_Thread(QThread):#usagestats 처리
         Packages.reset_index(drop=True,inplace=True)
         Packages.sort_values(by=timeColumnn,ascending=True,inplace=True)
         # EventLog.sort_values(by='time_ms',ascending=True,inplace=True)
-        with open('./modules/userBehaviour_type.json','r',encoding='utf-8') as file:
+        with open('./resource/userBehaviour_type.json','r',encoding='utf-8') as file:
             userBehaviour_type=json.load(file)
 
             
