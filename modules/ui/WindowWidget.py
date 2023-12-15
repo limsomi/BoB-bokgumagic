@@ -2,12 +2,12 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QProgressBar,QDesktopWidget
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
-class FinishWidget(QWidget):#보고서 작성 완료 창
-    def __init__(self,parent):
+class smallWindow(QWidget):
+    def __init__(self,parent,windowTitle,label):
         super().__init__()
         self.parent=parent
-        self.initUI()
-    def initUI(self):
+        self.initUI(windowTitle,label)
+    def initUI(self,windowTitle,label):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("./resource/logo_Bokgumagic.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.setWindowIcon(icon)
@@ -29,15 +29,15 @@ class FinishWidget(QWidget):#보고서 작성 완료 창
         self.horizontalLayout.setObjectName("horizontalLayout")
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.horizontalLayout.addItem(spacerItem)
-        self.finishButton = QtWidgets.QPushButton(self)
+        self.checkButton = QtWidgets.QPushButton(self)
         font = QtGui.QFont()
         font.setFamily("맑은 고딕")
         font.setPointSize(13)
-        self.finishButton.setFont(font)
-        self.finishButton.setStyleSheet("padding:10px;")
-        self.finishButton.setObjectName("finishButton")
-        self.finishButton.clicked.connect(self.finish)
-        self.horizontalLayout.addWidget(self.finishButton)
+        self.checkButton.setFont(font)
+        self.checkButton.setStyleSheet("padding:10px;")
+        self.checkButton.setObjectName("checkButton")
+        self.checkButton.clicked.connect(self.check)
+        self.horizontalLayout.addWidget(self.checkButton)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.horizontalLayout.addItem(spacerItem1)
         self.horizontalLayout.setStretch(0,4)
@@ -51,20 +51,16 @@ class FinishWidget(QWidget):#보고서 작성 완료 창
         self.verticalLayout.setStretch(1, 3)
 
 
-        self.retranslateUi()
+        self.setWindowTitle(windowTitle)
+        self.label.setText(label)
+        self.checkButton.setText('확인')
+        self.centerOnParent()
         QtCore.QMetaObject.connectSlotsByName(self)
         self.show()
         
-    def retranslateUi(self):
-        _translate = QtCore.QCoreApplication.translate
-        self.setWindowTitle(_translate("Form", "보고서 저장 완료"))
-        self.label.setText(_translate("Form", "보고서 작성이 완료되었습니다"))
-        self.finishButton.setText(_translate("Form", "확인"))
-        self.centerOnParent()
 
-    def finish(self):
-        os.system('start Analysis_Report.pdf')
-        exit(0)
+    def check(self):
+        self.close()
     def centerOnParent(self):
         parent_screen = QApplication.desktop().screenGeometry(self.parent)
         child_frame = self.frameGeometry()

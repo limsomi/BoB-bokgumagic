@@ -11,8 +11,8 @@ def TableView(widget,csv_path):#DataView에서 table module
 
     DataCountLabel = QtWidgets.QLabel(widget)
     font = QtGui.QFont()
-    font.setFamily("맑은 고딕 Semilight")
-    font.setPointSize(11)
+    font.setFamily("맑은 고딕")
+    font.setPointSize(13)
     DataCountLabel.setFont(font)
     DataCountLabel.setStyleSheet("background-color:rgb(255,255,255);\n"
 "border:none;\n"
@@ -26,8 +26,8 @@ def TableView(widget,csv_path):#DataView에서 table module
     scrollArea.setStyleSheet('border:none;')
     scrollAreaWidgetContents = QtWidgets.QWidget()
     TextGridLayout = QtWidgets.QGridLayout(scrollAreaWidgetContents)
-    TextGridLayout.setContentsMargins(15, 15, 15, 15)
-    TextGridLayout.setSpacing(15)
+    # TextGridLayout.setContentsMargins(15, 15, 15, 15)
+    # TextGridLayout.setSpacing(15)
     TextGridLayout.setObjectName("TextGridLayout")
 
     TextTable = QtWidgets.QTableView(scrollAreaWidgetContents)
@@ -44,8 +44,24 @@ def TableView(widget,csv_path):#DataView에서 table module
 
         for index,row in df.iterrows():
             df_model.appendRow([QStandardItem(str(item)) for item in row])
-            TextTable.setModel(df_model)
+        TextTable.setModel(df_model)
 
+        TextTable.verticalHeader().setVisible(False)
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        TextTable.setFont(font)
+        TextTable.horizontalHeader().setFont(font)
+        TextTable.setStyleSheet("""                                                 
+        QTableView::item {
+                border: 1px solid black;  /* Set the border for each cell */
+        }
+
+        QHeaderView::section {
+                background-color:rgb(69,71,75);
+                color:white;
+                border: 1px solid black;  /* Set the border for header sections */
+        }
+        """)
         TextTable.resizeColumnsToContents()
         TextTable.horizontalHeader().setCascadingSectionResizes(False)
         TextTable.horizontalHeader().setStretchLastSection(True)

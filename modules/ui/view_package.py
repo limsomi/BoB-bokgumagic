@@ -9,6 +9,7 @@ def PackageCacheView(widget):#package file(cache)
     for cacheFolder in cacheFolder_list:
         file_path=os.path.join('cache',cacheFolder)
         tab=QtWidgets.QWidget()
+        tab.setStyleSheet('background-color:white;')
         CacheView(tab,file_path)
         widget.viewWidget.addTab(tab, cacheFolder)
 
@@ -17,9 +18,7 @@ def SharedPrefsView(widget):#package file(shared_prefs)
     sharedPrefs_list=os.listdir('./result/shared_prefs')
     for sharedPrefs in sharedPrefs_list:
         tab=QtWidgets.QWidget()
-        tab.setStyleSheet('''background-color:rgb(255,255,255);
-                        margin:10px;
-                        margin-top:0px;''')
+        tab.setStyleSheet('''background-color:white;''')
         tabLayout=QtWidgets.QVBoxLayout(tab)
 
         DataCountLabel=QtWidgets.QLabel(tab)
@@ -33,10 +32,13 @@ def SharedPrefsView(widget):#package file(shared_prefs)
         listLayout.setContentsMargins(15, 15, 15, 15)
 
         sharedPrefsList=QtWidgets.QListView(scrollAreaWidgetContents)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        sharedPrefsList.setFont(font)
         sharedPrefsList.setStyleSheet('''QListView{
-                                      border:1px solid rgb(217,217,217);}
+                                      border:2px solid rgb(235,235,235);}
                                       QListView::item{
-                                      border-bottom:1px solid rgb(217,217,217);
+                                      border-bottom:2px solid rgb(235,235,235);
                                       padding:15px;
                                       }
                                       QListView::item:hover{
@@ -63,8 +65,8 @@ def SharedPrefsView(widget):#package file(shared_prefs)
         listLayout.addWidget(sharedPrefsList)
         DataCountLabel.setText(f'발견된 흔적 개수: {len(data_list)}')
         font = QtGui.QFont()
-        font.setFamily("맑은 고딕 Semilight")
-        font.setPointSize(11)
+        font.setFamily("맑은 고딕")
+        font.setPointSize(13)
         DataCountLabel.setFont(font)
         DataCountLabel.setStyleSheet("background-color:rgb(255,255,255);\n"
 "border:none;\n"

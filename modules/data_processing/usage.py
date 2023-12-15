@@ -129,9 +129,10 @@ class Usage_Thread(QThread):#usagestats 처리
         for column_name in total_list:
             filtered_Packages[column_name]=filtered_Packages[column_name].apply(self.convert_to_hms)
 
+        filtered_EventLog=filtered_EventLog.copy()
         mask = (filtered_EventLog['package'].shift(1) == filtered_EventLog['package'].shift(-1)) & (filtered_EventLog['package'].isna())
         non=filtered_EventLog['package'].isna() & ~mask
-        filtered_EventLog = filtered_EventLog[~non]
+        filtered_EventLog = filtered_EventLog.loc[~non]
 
         filtered_EventLog['group'] = (filtered_EventLog['package'] != filtered_EventLog['package'].shift(1)).cumsum()
         none=filtered_EventLog['package'].isna()

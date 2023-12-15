@@ -60,6 +60,7 @@ def clipboardDB_wiping(destination_dir,folder_name,clipboard_name):
                 wiping_data=pd.concat([wiping_data,add_df])
 
     wiping_image=wiping_data[wiping_data['mime_type']=='image/jpeg']
+    wiping_data=wiping_data.copy()
     wiping_data['html']=wiping_data['html']!=''
     wiping_html=wiping_data[wiping_data['html']==True]
     for _,row in wiping_image.iterrows():
@@ -76,8 +77,11 @@ def clipboardDB_wiping(destination_dir,folder_name,clipboard_name):
         time_stamp=row['time_stamp']
         with open(f'./result/clipboard/html/{time_stamp}.txt','w',encoding='utf-8') as html_file:
             html_file.write(row['text'])
-    wiping_data.loc[wiping_data['html'], 'text'] = ''
+    condition = (wiping_data['html'] == True) & (wiping_data['text'].str.count('\n') >1)
+    wiping_data.loc[condition, 'text'] = 'BLOB'
+    wiping_data=wiping_data.copy()
     wiping_data.drop(columns=['id','time_stamp','type','uri_list','wiping_check','group'],inplace=True)
+    wiping_data=wiping_data.copy()
     wiping_data.rename(columns={'formatted_time_stamp':'time_stamp'},inplace=True)
     wiping_data.to_csv('./result/clipboard/clipboard.csv',index=False)
     return check_wiping
