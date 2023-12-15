@@ -17,12 +17,14 @@ class HTMLwidget(QWidget):#html object
     def init_ui(self):
         self.html_browser=QtWidgets.QTextBrowser()
         self.html_browser.setStyleSheet('''background-color:rgb(242,242,242);
-                                        border:none''')
+                                        border:none;
+                                        padding:15px;''')
         self.html_label=QLabel(self.html_date)#html clipboard 시간
         font = QtGui.QFont()
-        font.setFamily("맑은 고딕 Semilight")
-        font.setPointSize(11)
+        font.setFamily("맑은 고딕")
+        font.setPointSize(13)
         self.html_label.setFont(font)
+        self.html_browser.setFont(font)
         self.html_browser.setText(self.html_data)
 
         layout=QVBoxLayout(self)

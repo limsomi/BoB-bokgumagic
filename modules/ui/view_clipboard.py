@@ -7,7 +7,6 @@ import os
 from modules.ui.TableView import TableView
 from modules.ui.view_cache import CacheView
 def ClipboardView(widget):
-
     tab_1 = QtWidgets.QWidget()#clipboard
     tab_1.setStyleSheet('''background-color:rgb(255,255,255);''')
     tab_1.setObjectName("tab_1")
@@ -24,8 +23,8 @@ def ClipboardView(widget):
     "padding:9px\n")
         
         font = QtGui.QFont()
-        font.setFamily("맑은 고딕 Semilight")
-        font.setPointSize(11)
+        font.setFamily("맑은 고딕")
+        font.setPointSize(13)
         clipboardCountLabel.setFont(font)
 
         clipboardLayout.addWidget(clipboardCountLabel)
@@ -44,10 +43,10 @@ def ClipboardView(widget):
             with open('result\clipboard\clipboard.txt','r',encoding='utf-8') as file:
                 data=file.read()
                 clipboardWidget=HTMLwidget(' ',data)
-                clipboardCountLabel.setText(f"발견된 clipboard 흔적 개수: {len(data.splitlines())}")
+                clipboardCountLabel.setText(f"발견된 흔적 개수: {len(data.splitlines())}")
                 clipboardBoxLayout.addWidget(clipboardWidget)
         else:
-             clipboardCountLabel.setText(f"발견된 clipboard 흔적 개수: {0}")
+             clipboardCountLabel.setText(f"발견된 흔적 개수: {0}")
 
 
         clipboardScrollArea.setWidget(clipboardScrollContents)
@@ -76,15 +75,15 @@ def ClipboardView(widget):
     html_list=os.listdir('./result/clipboard/html')
     htmlCountLabel = QtWidgets.QLabel(tab_3)
     htmlCountLabel.setObjectName("htmlCountLabel")
-    htmlCountLabel.setText(f"발견된 html 흔적 개수: {len(html_list)}")
+    htmlCountLabel.setText(f"발견된 흔적 개수: {len(html_list)}")
     htmlCountLabel.setStyleSheet("background-color:rgb(255,255,255);\n"
 "border:none;\n"
 "border-bottom:1px solid rgb(177,177,177);"
 "padding:9px\n")
     
     font = QtGui.QFont()
-    font.setFamily("맑은 고딕 Semilight")
-    font.setPointSize(11)
+    font.setFamily("맑은 고딕")
+    font.setPointSize(13)
     htmlCountLabel.setFont(font)
 
     htmlLayout.addWidget(htmlCountLabel)
@@ -112,3 +111,11 @@ def ClipboardView(widget):
     htmlLayout.setStretch(0, 1)
     htmlLayout.setStretch(1, 15)
     widget.viewWidget.addTab(tab_3, "HTML")
+    font = QtGui.QFont()
+    font.setFamily("맑은 고딕")
+    font.setPointSize(15)
+    font.setBold(True)
+    font.setWeight(75)
+    tab_1.setFont(font)
+    tab_2.setFont(font)
+    tab_3.setFont(font)

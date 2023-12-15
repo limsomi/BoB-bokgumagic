@@ -9,13 +9,18 @@ from modules.ui.view_dialog import InputDialog #1204 joys
 from modules.data_processing.report import WriteReport #1207 joys
 from modules.ui import ProcessBar
 from modules.ui.FinishWidget import FinishWidget
-
-
+from modules.ui.Image import deviceImage
+from modules.ui.osWidget import osWidget
+from PyQt5.QtGui import QStandardItemModel,QStandardItem
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import Qt,QSize,QEvent
 class ViewData(QMainWindow):
-        def __init__(self,parent):
+        def __init__(self,parent,android_version,modelname):
                 super().__init__()
                 self.parent=parent
                 self.wiping_aplication=parent.duplicated_application
+                self.android_version=android_version
+                self.modelname=modelname
                 self.setupUi()
         def setupUi(self):
                 parent_geometry = self.parent.geometry()
@@ -30,7 +35,16 @@ class ViewData(QMainWindow):
                 icon = QtGui.QIcon()
                 icon.addPixmap(QtGui.QPixmap("./resource/logo_Bokgumagic.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
                 self.setWindowIcon(icon)
-
+                self.setStyleSheet('''
+                                QTabBar::tab:selected { 
+                                background: rgb(100, 204, 197); 
+                                }
+                                QTabBar::tab {
+                                background: lightgray; 
+                                color:white;
+                                } 
+                                QTabWidget{background-color:white;}
+                                ''')
                 # # 기본 제목 표시줄 숨기기
                 # self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         
@@ -39,130 +53,190 @@ class ViewData(QMainWindow):
                 # self.setMenuWidget(self.customTitleBar)
 
                 #전체화면 layout
-                self.centralLayout = QtWidgets.QHBoxLayout(self.centralwidget)
+                self.centralLayout = QtWidgets.QVBoxLayout(self.centralwidget)
                 self.centralLayout.setContentsMargins(5, 5, 5, 5)
                 self.centralLayout.setSpacing(5)
                 self.centralLayout.setObjectName("centralLayout")
+                #Menubar
+                self.MenuLayout=QtWidgets.QHBoxLayout()
+                self.logo=QtWidgets.QLabel()
+                logo=QPixmap('./resource/logo2.png')
+                self.logo.setPixmap(logo.scaled(
+            QSize(self.logo.width(), self.logo.height()-100), Qt.KeepAspectRatio))
+
+
+                self.MenuLayout.addWidget(self.logo)
+                self.reportButton = QtWidgets.QPushButton()#reportButton
+                self.reportButton.setText('보고서 작성')
+                font = QtGui.QFont()
+                font.setFamily("맑은 고딕")
+                font.setPointSize(15)
+                font.setBold(True)
+                font.setWeight(75)
+                self.reportButton.setFont(font)
+                self.reportButton.setStyleSheet('''QPushButton{background-color:rgb(100, 204, 197);
+                                            color:white;
+                                            padding:15px;
+                                            border:2px solid rgb(100, 204, 197);
+                                            border-radius:10px;}
+                                        QPushButton:hover{
+                                            background-color:rgb(69,71,75);
+                                            border:2px solid rgb(69,71,75);
+                                            color:white;
+                                            padding:15px;
+                                        }
+                                        ''')     
+                self.reportButton.setObjectName("reportButton")
+                self.reportButton.clicked.connect(lambda:self.dialog_exec())
+
+                spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+                self.MenuLayout.addItem(spacerItem)
+                self.MenuLayout.addWidget(self.reportButton)
+                
+                self.MenuLayout.setStretch(0,4)
+                self.MenuLayout.setStretch(1,10)
+                self.MenuLayout.setStretch(2,2)
+                self.MenuLayout.setContentsMargins(30,10,30,30)
+                self.centralLayout.addLayout(self.MenuLayout)
+
+                self.horizontalLayout=QtWidgets.QHBoxLayout()
                 #sidebar layout
                 self.SideLayout = QtWidgets.QVBoxLayout()
                 self.SideLayout.setSpacing(0)
                 self.SideLayout.setObjectName("SideLayout")
+
+
                 #sidebar header
-                self.SideLabel = QtWidgets.QLabel(self.centralwidget)
+                self.SideBar=QtWidgets.QWidget()
+                effect = QGraphicsDropShadowEffect()
+                effect.setOffset(0, 0)
+                effect.setBlurRadius(15)
+                self.SideBar.setGraphicsEffect(effect)
+                self.SideBarLayout=QtWidgets.QVBoxLayout(self.SideBar)
+                self.SideBarLayout.setContentsMargins(0,0,0,0)
+                self.SideBarLayout.setSpacing(5)
+                self.SideLabel = QtWidgets.QLabel()
+                self.SideLabel.setText('잔여 데이터')
+
                 font = QtGui.QFont()
-                font.setFamily("맑은 고딕 Semilight")
-                font.setPointSize(13)
+                font.setFamily("맑은 고딕")
+                font.setPointSize(15)
                 font.setBold(True)
                 font.setWeight(75)
                 self.SideLabel.setFont(font)
-                self.SideLabel.setStyleSheet("background-color:rgb(242,242,242);\n"
-        "border:1px solid rgb(217,217,217);\n"
+
+                self.SideLabel.setStyleSheet("background-color:rgb(100, 204, 197);\n"
+        "color:white;"
+        "border:1px solid rgb(100,204.197);\n"
         "padding:2px 2px 2px 5px;")#sidebar header style
                 self.SideLabel.setObjectName("SideLabel")
-                self.SideLayout.addWidget(self.SideLabel)
+                self.SideBarLayout.addWidget(self.SideLabel)
                 #sidebar buttons
                 self.SideButton = QtWidgets.QListWidget(self.centralwidget)
                 font = QtGui.QFont()
                 font.setFamily("Segoe UI Semibold")
-                font.setPointSize(11)
-                font.setBold(True)
-                font.setWeight(75)
-                self.SideButton.setFont(font)
-                #sidebar style
-                self.SideButton.setStyleSheet("QListWidget {\n"
-        "        background-color: rgb(255,255,255);\n"
-        "           border:1px solid rgb(217,217,217);\n"
-        "\n"
-        "    }\n"
-        "    QListWidget::item{\n"
-        "        padding:15px;\n"
-        "        border-bottom: 1px solid rgb(217,217,217);\n"
-        "    }\n"
-        "    QListWidget::item:hover{\n"
-        "        background-color:rgb(195, 209, 227);\n"
-        "    }\n"
-        "    QListWidget::item:focus{\n"
-        "        background-color:rgb(195, 209, 227);\n"
-        "        color:black;\n"
-        "    }")
-                self.SideButton.setMidLineWidth(0)
-                self.SideButton.setObjectName("SideButton")
-                item = QtWidgets.QListWidgetItem()
-                self.SideButton.addItem(item)
-                item = QtWidgets.QListWidgetItem()
-                self.SideButton.addItem(item)
-                item = QtWidgets.QListWidgetItem()
-                self.SideButton.addItem(item)
-                item = QtWidgets.QListWidgetItem()
-                self.SideButton.addItem(item)
-                item = QtWidgets.QListWidgetItem()
-                self.SideButton.addItem(item)
-                self.SideLayout.addWidget(self.SideButton)
-
-                self.SideButton.clicked.connect(self.selected_Sidebar)
-
-                self.report = QtWidgets.QWidget(self.centralwidget)#sidebar report 부분
-                self.report.setStyleSheet("background-color:rgb(242,242,242);\n"
-        "border:1px solid rgb(217,217,217);")
-                self.report.setObjectName("report")
-                #sidber report 부분 layout(space 부분 포함)
-                self.reportLayout = QtWidgets.QHBoxLayout(self.report)
-                self.reportLayout.setSpacing(3)
-                self.reportLayout.setObjectName("horizontalLayout_2")
-                spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-                self.reportLayout.addItem(spacerItem)
-
-                self.reportButton = QtWidgets.QPushButton(self.report)#reportButton
-                font = QtGui.QFont()
-                font.setFamily("맑은 고딕 Semilight")
-                font.setPointSize(18)
-                font.setBold(True)
-                font.setWeight(75)
-                self.reportButton.setFont(font)
-                #reportButton style
-                self.reportButton.setStyleSheet("QPushButton{background-color:rgb(217,217,217);\n"
-        "padding:15px 15px 15px 15px;}\n"
-        "\n"
-        "QPushButton:hover{background-color:rgb(195, 209, 227);}\n"
-        "")
-                self.reportButton.setObjectName("reportButton")
-                self.reportButton.clicked.connect(lambda:self.dialog_exec())
-                self.reportLayout.addWidget(self.reportButton)
-                spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-                self.reportLayout.addItem(spacerItem1)
-                self.reportLayout.setStretch(0, 2)
-                self.reportLayout.setStretch(1, 1)
-                self.reportLayout.setStretch(2, 2)
-                self.SideLayout.addWidget(self.report)
-                self.SideLayout.setStretch(0, 1)
-                self.SideLayout.setStretch(1, 10)
-                self.SideLayout.setStretch(2, 5)
-                self.SideLayout.setContentsMargins(10,10,10,10)
-                self.centralLayout.addLayout(self.SideLayout)
-
-                self.viewData = QtWidgets.QWidget(self.centralwidget)#오른쪽 data 출력 부분
-                self.viewData.setStyleSheet("border:1px solid rgb(217,217,217);")
-                self.viewData.setObjectName("viewData")
-                self.viewDataLayout = QtWidgets.QVBoxLayout(self.viewData)
-                self.viewDataLayout.setObjectName("viewDataLayout")
-
-                self.viewDataLabel = QtWidgets.QLabel(self.viewData)#viewData header
-                font = QtGui.QFont()
-                font.setFamily("맑은 고딕 Semilight")
                 font.setPointSize(13)
                 font.setBold(True)
                 font.setWeight(75)
+                self.SideButton.setFont(font)
+
+                #sidebar style
+                self.SideButton.setStyleSheet('''
+                                        QListView::item{
+                                        padding:20px;
+                                        border-bottom: 1px solid rgb(217,217,217);
+                                        }
+                                        QListView::item:hover{
+                                        background-color:rgb(217, 217, 217);
+                                        }
+                                        QListView::item:focus{
+                                        background-color:rgb(217,217,217);
+                                        color:black;
+                                        }
+                                        QListView{
+                                        background-color:rgb(255,255,255);
+                                        border:1px solid rgb(217,217,217);
+                                        }''')
+
+                self.SideButton.setMidLineWidth(0)
+                self.SideButton.setObjectName("SideButton")
+                item = QtWidgets.QListWidgetItem('Gallery Cache')
+                self.SideButton.addItem(item)
+                item = QtWidgets.QListWidgetItem('Clipboard')
+                self.SideButton.addItem(item)
+                item = QtWidgets.QListWidgetItem('Contacts')
+                self.SideButton.addItem(item)
+                item = QtWidgets.QListWidgetItem('PackageFile(Cache)')
+                self.SideButton.addItem(item)
+                item = QtWidgets.QListWidgetItem('PackageFile(Shared Prefs)')
+                self.SideButton.addItem(item)
+                self.SideBarLayout.addWidget(self.SideButton)
+
+                self.SideBarLayout.setStretch(0,1)
+                self.SideBarLayout.setStretch(1,7)
+                self.SideLayout.addWidget(self.SideBar)
+
+                self.SideButton.clicked.connect(self.selected_Sidebar)
+
+                #osWidget
+                self.osWidget=osWidget(500,550)
+                self.osWidget.deviceImageWidget.update_modelname(self.modelname)
+                self.SideLayout.addWidget(self.osWidget)
+                self.osWidget.versionLabel.setText(f'Android Version {self.android_version}')
+                self.osWidget.nameLabel.setText(self.modelname)
+
+
+
+        
+                self.SideLayout.setStretch(0,5)
+                self.SideLayout.setStretch(1,3)
+                self.SideLayout.setContentsMargins(0,0,10,10)
+                self.SideLayout.setSpacing(30)
+                self.horizontalLayout.addLayout(self.SideLayout)
+
+                self.viewData = QtWidgets.QWidget()#오른쪽 data 출력 부분
+                effect = QGraphicsDropShadowEffect()
+                effect.setOffset(0, 0)
+                effect.setBlurRadius(15)
+                self.viewData.setGraphicsEffect(effect)
+                self.viewData.setStyleSheet('''
+                        border:1px solid rgb(217,217,217);
+                        ''')
+                self.viewData.setObjectName("viewData")
+                self.viewDataLayout = QtWidgets.QVBoxLayout(self.viewData)
+                self.viewDataLayout.setObjectName("viewDataLayout")
+                self.viewDataLabel = QtWidgets.QLabel('View Details')#viewData header
+                font = QtGui.QFont()
+                font.setFamily("맑은 고딕")
+                font.setPointSize(15)
+                font.setBold(True)
+                font.setWeight(75)
                 self.viewDataLabel.setFont(font)
-                self.viewDataLabel.setStyleSheet("background-color:rgb(242,242,242);\n"
+                self.viewDataLabel.setStyleSheet("background-color:rgb(69, 71, 75);\n"
         "border:1px solid rgb(217,217,217);\n"
-        "padding:9px;\n")
+        "padding:9px;\n"
+        "margin:0px;"
+        "color:white;")
                 self.viewDataLabel.setObjectName("viewDataLabel")
                 self.viewDataLayout.addWidget(self.viewDataLabel)
+                self.viewWidget=QtWidgets.QWidget(self.viewData)
+                self.viewWidget.setStyleSheet('background-color:white;')
+                self.viewDataLayout.addWidget(self.viewWidget)
+                self.viewDataLayout.setStretch(0,1)
+                self.viewDataLayout.setStretch(1,17)
 
+                self.viewDataLayout.setContentsMargins(10,10,10,10)
+                self.viewDataLayout.setSpacing(0)
+                self.horizontalLayout.addWidget(self.viewData)
+                self.horizontalLayout.setStretch(0, 5)
+                self.horizontalLayout.setStretch(1, 17)
+                self.horizontalLayout.setSpacing(30)
+                self.horizontalLayout.setContentsMargins(30,10,30,30)
 
-                self.centralLayout.addWidget(self.viewData)
-                self.centralLayout.setStretch(0, 5)
-                self.centralLayout.setStretch(1, 17)
+                self.centralLayout.addLayout(self.horizontalLayout)
+                self.centralLayout.setStretch(0,1)
+                self.centralLayout.setStretch(1,17)
+
                 self.setCentralWidget(self.centralwidget)
                 self.statusbar = QtWidgets.QStatusBar(self)
                 self.statusbar.setObjectName("statusbar")
@@ -174,24 +248,8 @@ class ViewData(QMainWindow):
         def retranslateUi(self):
                 _translate = QtCore.QCoreApplication.translate
                 self.setWindowTitle(_translate("self", "BokguMagic_v2.0"))
-                self.SideLabel.setText(_translate("self", "잔여 데이터"))
-                self.SideButton.setWhatsThis(_translate("self", "<html><head/><body><p><br/></p></body></html>"))
-                __sortingEnabled = self.SideButton.isSortingEnabled()
-                self.SideButton.setSortingEnabled(False)
-                item = self.SideButton.item(0)
-                item.setText(_translate("self", "Gallery Cache"))
-                item = self.SideButton.item(1)
-                item.setText(_translate("self", "Clipboard"))
-                item = self.SideButton.item(2)
-                item.setText(_translate("self", "Contacts"))
-                item = self.SideButton.item(3)
-                item.setText(_translate("self", "Package File (Cache)"))
-                item = self.SideButton.item(4)
-                item.setText(_translate("self", "Package file (Shared_Prefs)"))
-                self.SideButton.setSortingEnabled(__sortingEnabled)
-                self.reportButton.setText(_translate("self", "보고서 작성"))
-                self.viewDataLabel.setText(_translate("self", "View Details"))
-                self.SideButton.clicked.connect(self.selected_Sidebar)
+                # self.reportButton.setText(_translate("self", "보고서 작성"))
+                
 
         def dialog_exec(self): #report progressbar 출력
                 self.dialog=InputDialog(self)
@@ -205,73 +263,50 @@ class ViewData(QMainWindow):
                 
 
         def selected_Sidebar(self):
-                #각 버튼에 따라 데이터 보여줌
-                #viewData는 viewWidget, viewLabel으로 이루어져 있음(viewWidget이 데이터 보여주는 부분)
                 selected_item=self.SideButton.currentItem()
-                if self.viewDataCheck==True and self.viewDataLayout.indexOf(self.viewWidget)!=-1:
-                        self.viewDataLayout.removeWidget(self.viewWidget)
-                        self.viewWidget.setParent(None)
+                self.viewDataLayout.removeWidget(self.viewWidget)
+                self.viewWidget.setParent(None)
                 if selected_item.text()=='Gallery Cache':
                         self.viewDataCheck=True
                         self.viewWidget=QtWidgets.QWidget(self.viewData)
-
                         CacheView(self.viewWidget,'gallery3d_cache')
                 elif selected_item.text()=='Clipboard':
                         self.viewDataCheck=True
                         self.viewWidget=QtWidgets.QTabWidget(self.viewData)
                         font = QtGui.QFont()
-                        font.setFamily("맑은 고딕 Semilight")
-                        font.setPointSize(11)
+                        font.setFamily("맑은 고딕")
+                        font.setPointSize(13)
                         font.setBold(True)
                         font.setWeight(75)
                         self.viewWidget.setFont(font)
                         ClipboardView(self)
-                        self.viewWidget.setStyleSheet('''
-                                QTabWidget::pane {
-                                border: 1px solid lightgray;
-                                top:-1px; 
-                                background: rgb(245, 245, 245);; 
-                                } 
-                                QTabBar::tab {
-                                background: rgb(230, 230, 230); 
-                                border: 1px solid lightgray; 
-                                padding: 15px;
-                                } 
-
-                                QTabBar::tab:selected { 
-                                background: red; 
-                                margin-bottom: -1px; 
-                                }
-                        ''')
                 elif selected_item.text()=='Contacts':
                         self.viewDataCheck=True
                         self.viewWidget=QtWidgets.QWidget(self.viewData)
                         self.viewWidget.setStyleSheet('background-color:rgb(255,255,255);')
                         TableView(self.viewWidget,'./result/contacts.csv')
-                elif selected_item.text()=='Package File (Cache)':
+                elif selected_item.text()=='PackageFile(Cache)':
                         self.viewDataCheck=True
                         self.viewWidget=QtWidgets.QTabWidget(self.viewData)
-                        # self.viewWidget.setStyleSheet('background-color:rgb(255,255,255);')
                         font = QtGui.QFont()
-                        font.setFamily("맑은 고딕 Semilight")
-                        font.setPointSize(11)
+                        font.setFamily("맑은 고딕")
+                        font.setPointSize(13)
                         font.setBold(True)
                         font.setWeight(75)
                         self.viewWidget.setFont(font)
                         PackageCacheView(self)
-                elif selected_item.text()=='Package file (Shared_Prefs)':
+                elif selected_item.text()=='PackageFile(Shared Prefs)':
                         self.viewDataCheck=True
                         self.viewWidget=QtWidgets.QTabWidget(self.viewData)
                         font = QtGui.QFont()
-                        font.setFamily("맑은 고딕 Semilight")
-                        font.setPointSize(11)
+                        font.setFamily("맑은 고딕")
+                        font.setPointSize(13)
                         font.setBold(True)
                         font.setWeight(75)
                         self.viewWidget.setFont(font)
                         SharedPrefsView(self)
-                self.viewDataLayout.setContentsMargins(10, 10, 10, 10)
-                self.viewWidget.setStyleSheet('border:none;')
-                self.viewDataLayout.setSpacing(1)
+                # self.viewDataLayout.setContentsMargins(10, 10, 10, 10)
+                self.viewWidget.setStyleSheet('border:none;background-color:white;margin:0px;')
                 self.viewDataLayout.addWidget(self.viewWidget)
                 self.viewDataLayout.setStretch(0, 1)
                 self.viewDataLayout.setStretch(1, 17)

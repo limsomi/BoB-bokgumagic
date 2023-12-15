@@ -9,7 +9,9 @@ class InputDialog(QtWidgets.QDialog):
         self.setWindowTitle("User Information")
         self.setGeometry(0, 0, 500, 200)
         layout = QtWidgets.QFormLayout(self)
-
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("./resource/logo_Bokgumagic.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.setWindowIcon(icon)
         # 오늘 날짜를 기본값으로 설정
         self.dateEdit = QtWidgets.QDateEdit(self)
         self.dateEdit.setCalendarPopup(True)

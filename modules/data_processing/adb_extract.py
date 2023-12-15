@@ -17,7 +17,7 @@ def get_device():
 
     if not devices:
         print("No Android devices found.")
-        return
+        return False
     device = devices[0]
     return device
 def get_modelname(device):

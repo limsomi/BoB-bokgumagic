@@ -18,6 +18,7 @@ import hashlib
 from pathlib import Path
 import pythoncom
 import win32com.client
+import textwrap
 class WriteReport(QThread):
     progress_signal=pyqtSignal(int,str)
     result_signal = pyqtSignal()
@@ -137,17 +138,22 @@ class WriteReport(QThread):
         y_position=Cm(5)
         self.add_table_from_csv(sample,prs,slide,data,y_position,title)
 
+
+    
     def htmlSlide(self,sample,pre,path,dataTitle):
         fileList=os.listdir(path)
         for fileName in fileList:
             if '.txt' in fileName:
                 filePath=os.path.join(path,fileName)
                 with open(filePath, 'r', encoding='utf-8') as file:
+                    if len(file.readline()):
+                        pass
                     text = file.read()
+                    result = textwrap.wrap(text, width=55)
                     start = 0
-                    max_lines = 35
+                    max_lines = 25
 
-                    while start < len(text):
+                    while start < len(result):
                         slide=self.copy_slide(sample,pre,9)
                         self.set_background(slide, pre)
                         shape=self.select_shape_by_text(slide,'content')
@@ -159,22 +165,22 @@ class WriteReport(QThread):
 
                         content=''
                         for _ in range(max_lines):
-                            if start < len(text):
-                                end = text.find('\n', start) + 1 if text.find('\n', start) != -1 else len(text)
-                                content += text[start:end]
-                                start = end
+
+                            if start < len(result):
+                                content += result[start] + '\n'
+                                start += 1
                             else:
                                 break
-        
                         shape.text=content
                         for paragraph in shape.text_frame.paragraphs:
+                            paragraph.line_spacing = 1.5
                             for run in paragraph.runs:
                                 run.font.color.rgb = RGBColor(0, 0, 0)  # 검은색
                                 run.font.size = Pt(11)
 
     def ListSlide(self,sample,prs,path,dataTitle):
        
-        readData=open(path,'r').read()
+        readData=open(path,'r',encoding='utf-8').read()
         dataList=readData.split('\n\n')
         for i in range(0,len(dataList),4):
             end_num=min(len(dataList)-i,4)
@@ -264,6 +270,9 @@ class WriteReport(QThread):
 
 
             y_position=packageShape.top+packageShape.height+Cm(1)
+            eventlog_grouped = eventlog_grouped.copy()
+            eventlog_grouped.drop(columns=['type','group','new_group'],inplace=True)
+            
             self.add_table_from_csv(sample,prs,slide,eventlog_grouped,y_position,'UsageStats')
                 
     

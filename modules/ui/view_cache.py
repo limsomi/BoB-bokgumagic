@@ -7,8 +7,8 @@ import os
 def CacheView(widget,file_path):#gallery cache, clipboard image,package file(cache)
         DataCountLabel = QtWidgets.QLabel(widget)
         font = QtGui.QFont()
-        font.setFamily("맑은 고딕 Semilight")
-        font.setPointSize(11)
+        font.setFamily("맑은 고딕")
+        font.setPointSize(13)
         DataCountLabel.setFont(font)
         DataCountLabel.setStyleSheet("background-color:rgb(255,255,255);\n"
 "border:none;\n"

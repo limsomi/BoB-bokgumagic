@@ -73,6 +73,6 @@ class viewData_Thread(QThread):
         #contacts
         signal+=10
         self.progress_signal.emit(signal,f'contacts2.db 흔적 분석 중')
-        # contacts.contacts_wiping('extractdata','com.samsung.android.providers.contacts/databases/contacts2.db')
+        contacts.contacts_wiping('extractdata','com.samsung.android.providers.contacts/databases/contacts2.db')
         self.result_signal.emit()
         self.finished_signal.emit()
